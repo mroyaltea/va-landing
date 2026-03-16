@@ -4,7 +4,6 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VA Home Loan | Matthew Royal | SFMC Home Lending</title>
-  <!-- Dancing Script replaces Pinyon Script — S is clearly readable -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +27,6 @@
     ::-webkit-scrollbar-track { background: var(--dark2); }
     ::-webkit-scrollbar-thumb { background: var(--gold); }
 
-    /* ══ NAV ══ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       height: 72px; display: flex; align-items: center; justify-content: space-between;
@@ -37,13 +35,9 @@
       border-bottom: 1px solid rgba(201,135,38,0.2);
     }
     .nav-left { display: flex; align-items: center; gap: 16px; }
-    .nav-logo-block {
-      background: var(--cream); padding: 6px 12px 5px;
-      display: flex; flex-direction: column; line-height: 1.15;
-    }
+    .nav-logo-block { background: var(--cream); padding: 6px 12px 5px; display: flex; flex-direction: column; line-height: 1.15; }
     .nav-logo-sfmc { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--dark); letter-spacing: 0.04em; }
     .nav-logo-hl   { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.6rem; color: var(--dark); letter-spacing: 0.18em; text-transform: uppercase; }
-    /* Dancing Script — S is unmistakably an S */
     .nav-script { font-family: 'Dancing Script', cursive; font-size: 1.75rem; font-weight: 700; color: var(--gold); line-height: 1; }
     .nav-nmls { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm); display: block; margin-top: 2px; }
     .nav-sep { width: 1px; height: 32px; background: rgba(255,255,255,0.12); }
@@ -55,15 +49,8 @@
     .nav-apply { background: var(--maroon); color: var(--white); padding: 0.55rem 1.4rem; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); }
     .nav-apply:hover { background: var(--maroon2); }
 
-    /* ══ HERO ══ */
     .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
-    .hero-img {
-      position: absolute; inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=1600&q=80&fit=crop&crop=faces,center');
-      background-size: cover; background-position: center 30%;
-      filter: brightness(0.35); transform: scale(1.04);
-      animation: slowZoom 12s ease-in-out infinite alternate;
-    }
+    .hero-img { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=1600&q=80&fit=crop&crop=faces,center'); background-size: cover; background-position: center 30%; filter: brightness(0.35); transform: scale(1.04); animation: slowZoom 12s ease-in-out infinite alternate; }
     @keyframes slowZoom { from{transform:scale(1.04)} to{transform:scale(1.00)} }
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(115deg,rgba(26,33,41,0.95) 0%,rgba(26,33,41,0.75) 45%,rgba(36,46,56,0.3) 100%); }
     .hero-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: linear-gradient(180deg,transparent,var(--gold),transparent); }
@@ -71,10 +58,7 @@
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1.4rem; }
     .eyebrow-line { width: 36px; height: 1px; background: var(--gold); }
     .eyebrow-text { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
-
-    /* HERO SCRIPT — Dancing Script, gold, clearly legible */
     .hero-script { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: clamp(3rem,6.5vw,5rem); color: var(--gold); line-height: 1; margin-bottom: 0.3rem; display: block; }
-
     .hero-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem,5vw,4rem); font-weight: 600; line-height: 1.1; color: var(--white); margin-bottom: 1.4rem; letter-spacing: -0.01em; }
     .hero-p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.65); max-width: 520px; margin-bottom: 2.5rem; font-weight: 300; }
     .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
@@ -82,14 +66,13 @@
     .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
     .btn-ghost { background: transparent; color: var(--white); padding: 0.9rem 2.2rem; border: 1px solid rgba(255,255,255,0.3); font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s,color 0.2s; }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
-    .hero-stats { display: flex; }
-    .h-stat { padding: 0 2.5rem 0 0; border-right: 1px solid rgba(255,255,255,0.12); margin-right: 2.5rem; }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 0; }
+    .h-stat { padding: 0 2rem 0 0; border-right: 1px solid rgba(255,255,255,0.12); margin-right: 2rem; }
     .h-stat:last-child { border-right: none; margin-right: 0; }
     .h-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
     .h-stat-l { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 4px; }
     .hero-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--cream); clip-path: polygon(0 100%,100% 0,100% 100%); z-index: 3; }
 
-    /* ══ RATES ══ */
     .rates-section { background: var(--cream); padding: 80px 6% 100px; position: relative; }
     .section-tag { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
     .tag-line { width: 30px; height: 1px; background: var(--gold); }
@@ -127,7 +110,6 @@
     @keyframes spin { to{transform:rotate(360deg)} }
     .cream-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 100%,100% 60%,100% 100%); }
 
-    /* ══ VA BENEFITS ══ */
     .va-benefits { background: var(--dark2); padding: 90px 6% 110px; position: relative; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
     .va-benefits .section-h { color: var(--white); }
@@ -148,7 +130,6 @@
     .pb-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-top: 4px; }
     .dark2-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: #f0ede8; clip-path: polygon(0 60%,100% 0,100% 100%,0 100%); }
 
-    /* ══ PROCESS ══ */
     .process-section { background: #f0ede8; padding: 100px 6% 120px; position: relative; }
     .process-section .section-h { color: var(--dark); }
     .process-section .section-h em { color: var(--brown); }
@@ -163,7 +144,6 @@
     .process-step:last-child .ps-arrow { display: none; }
     .light-clip-bottom { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--white); clip-path: polygon(0 100%,100% 60%,100% 100%); }
 
-    /* ══ PHOTO STRIP — using <img> tags for reliability ══ */
     .photo-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 380px; overflow: hidden; position: relative; background: var(--dark); }
     .ps-photo { overflow: hidden; position: relative; }
     .ps-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.5) saturate(0.8); transition: filter 0.5s,transform 0.5s; }
@@ -171,7 +151,6 @@
     .ps-photo-label { position: absolute; bottom: 20px; left: 20px; z-index: 2; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
     .photo-strip-overlay { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(26,33,41,0.7) 0%,transparent 30%,transparent 70%,rgba(26,33,41,0.7) 100%); pointer-events: none; z-index: 1; }
 
-    /* ══ TESTIMONIALS ══ */
     .testimonials { background: var(--white); padding: 100px 6% 80px; position: relative; }
     .test-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
     .testimonials .section-h { color: var(--dark); }
@@ -197,23 +176,13 @@
     .t-dot.active { background: var(--gold); transform: scale(1.3); }
     .white-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 100%,100% 0,100% 100%); }
 
-    /* ══ SOCIAL FEED (Juicer) ══ */
     .social-section { background: var(--dark2); padding: 80px 6%; }
     .social-section .section-h { color: var(--white); }
     .social-section .section-h em { color: var(--gold-lt); }
     .social-intro { font-size: 0.9rem; color: rgba(255,255,255,0.45); margin-top: 0.5rem; margin-bottom: 2.5rem; }
-    /* Juicer embed placeholder — replace YOUR_JUICER_FEED_NAME below */
-    .juicer-placeholder {
-      border: 1px dashed rgba(201,135,38,0.3);
-      padding: 3rem;
-      text-align: center;
-      color: rgba(255,255,255,0.3);
-      font-size: 0.85rem;
-      line-height: 1.8;
-    }
+    .juicer-placeholder { border: 1px dashed rgba(201,135,38,0.3); padding: 3rem; text-align: center; color: rgba(255,255,255,0.3); font-size: 0.85rem; line-height: 1.8; }
     .juicer-placeholder strong { color: var(--gold); }
 
-    /* ══ CTA ══ */
     .cta-section { position: relative; padding: 0; overflow: hidden; }
     .cta-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80&fit=crop'); background-size: cover; background-position: center; filter: brightness(0.18) saturate(0.6); }
     .cta-inner { position: relative; z-index: 2; padding: 100px 6%; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
@@ -227,7 +196,6 @@
     .cta-call { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); color: var(--white); padding: 0.95rem 2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.05em; transition: border-color 0.2s,color 0.2s; }
     .cta-call:hover { border-color: var(--gold); color: var(--gold); }
 
-    /* ══ FOOTER ══ */
     footer { background: var(--dark2); padding: 50px 6% 30px; border-top: 1px solid rgba(201,135,38,0.15); }
     .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .footer-brand-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
@@ -245,7 +213,6 @@
     .footer-legal { font-size: 0.68rem; color: rgba(255,255,255,0.2); line-height: 1.8; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
     .eq-symbol { font-size: 1.4rem; opacity: 0.3; }
 
-    /* ══ AI CHAT ══ */
     .chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1000; width: 60px; height: 60px; background: var(--maroon); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 8px 30px rgba(102,19,17,0.5); clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s,transform 0.2s; }
     .chat-fab:hover { background: var(--maroon2); transform: scale(1.06); }
     .chat-fab .fab-badge { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); color: var(--dark2); font-size: 0.62rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
@@ -304,12 +271,12 @@
       .t-card { flex: 0 0 80vw; }
       .chat-fab { bottom: 16px; right: 16px; }
       .chat-panel { width: calc(100vw - 40px); right: 20px; }
+      .h-stat { padding-right: 1.2rem; margin-right: 1.2rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
 <nav>
   <div class="nav-left">
     <div>
@@ -334,7 +301,6 @@
   </div>
 </nav>
 
-<!-- ══ HERO ══ -->
 <section class="hero">
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
@@ -361,39 +327,25 @@
   <div class="hero-clip"></div>
 </section>
 
-<!-- ══ RATES ══ -->
-async function loadRates() {
-  try {
-    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error('fail');
-    const csv = await res.text();
-    const lines = csv.split('\n').map(l =>
-      l.split(',').map(c => c.replace(/^"|"$/g,'').trim())
-    );
+<section class="rates-section">
+  <div class="reveal">
+    <div class="section-tag"><span class="tag-line"></span><span class="tag-text">Today's VA Rates</span></div>
+    <h2 class="section-h">Competitive Rates for <em>Those Who Served</em></h2>
+    <p class="rates-disclaimer">Rates change daily based on creditworthiness, loan amount, and market conditions. Call <strong>(469) 634-4500</strong> or <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank">apply online</a> for your personalized rate.</p>
+  </div>
+  <div class="rates-table-wrap reveal" style="transition-delay:0.1s" id="ratesContainer">
+    <div class="rates-loading"><span class="rates-spinner"></span>Loading current rates...</div>
+  </div>
+  <div class="rates-footer reveal" style="transition-delay:0.15s">
+    <div class="rates-note-wrap">
+      <p class="rates-note">¹ Rates assume a 740+ credit score, owner-occupied primary residence, and standard loan conditions. Rates subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
+      <p class="rates-timestamp" id="ratesTimestamp"></p>
+    </div>
+    <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="rates-cta-btn">Lock My Rate →</a>
+  </div>
+  <div class="cream-clip"></div>
+</section>
 
-    // Find timestamp — look for any row where col A contains "updated"
-    let timestamp = null;
-    for (const line of lines) {
-      if ((line[0]||'').toLowerCase().includes('updated') && line[1]) {
-        timestamp = line[1];
-        break;
-      }
-    }
-
-    // Find rate rows — any row where col A starts with "VA"
-    const rows = [];
-    for (const line of lines) {
-      if ((line[0]||'').toUpperCase().startsWith('VA') && line[1]) {
-        rows.push({ name: line[0], rate: line[1], points: line[2]||'—' });
-      }
-    }
-
-    buildTable(rows.length ? rows : FALLBACK, timestamp);
-  } catch(e) { buildTable(FALLBACK, null); }
-}
-
-<!-- ══ VA BENEFITS ══ -->
 <section class="va-benefits">
   <div class="two-col">
     <div class="reveal">
@@ -410,7 +362,7 @@ async function loadRates() {
     </div>
     <div class="benefits-visual reveal" style="transition-delay:0.15s">
       <div class="photo-frame">
-        <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=900&q=80&fit=crop&crop=faces,center" alt="Veteran family in new home" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=900&q=80&fit=crop&crop=faces,center" alt="Veteran family" loading="lazy"/>
         <div class="photo-badge"><div class="pb-num">25+</div><div class="pb-label">Years Serving<br/>Homebuyers</div></div>
       </div>
     </div>
@@ -418,7 +370,6 @@ async function loadRates() {
   <div class="dark2-clip"></div>
 </section>
 
-<!-- ══ PROCESS ══ -->
 <section class="process-section">
   <div class="reveal">
     <div class="section-tag"><span class="tag-line"></span><span class="tag-text">How It Works</span></div>
@@ -433,7 +384,6 @@ async function loadRates() {
   <div class="light-clip-bottom"></div>
 </section>
 
-<!-- ══ PHOTO STRIP — using <img> tags for cross-origin reliability ══ -->
 <div class="photo-strip">
   <div class="ps-photo">
     <img src="https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=700&q=75&fit=crop&crop=faces,center" alt="Veteran" loading="lazy"/>
@@ -450,7 +400,6 @@ async function loadRates() {
   <div class="photo-strip-overlay"></div>
 </div>
 
-<!-- ══ TESTIMONIALS ══ -->
 <section class="testimonials">
   <div class="test-header reveal">
     <div>
@@ -482,29 +431,23 @@ async function loadRates() {
   <div class="white-clip"></div>
 </section>
 
-<!-- ══ SOCIAL FEED ══ -->
-<!-- TO ACTIVATE: Sign up at juicer.io, connect your Instagram, copy your feed name, replace YOUR_JUICER_FEED_NAME below, then delete the placeholder div -->
 <section class="social-section">
   <div class="reveal">
     <div class="section-tag"><span class="tag-line"></span><span class="tag-text" style="color:rgba(201,135,38,0.6)">Latest from Instagram</span></div>
     <h2 class="section-h" style="color:var(--white)">Follow the <em>Journey</em></h2>
     <p class="social-intro">VA tips, client wins, and market updates — straight from the source.</p>
   </div>
-
-  <!-- JUICER EMBED — Replace YOUR_JUICER_FEED_NAME with your actual Juicer feed name -->
-  <!-- <div class="juicer-feed" data-feed-id="YOUR_JUICER_FEED_NAME" data-per="9" data-truncate="50"></div> -->
-  <!-- <script src="https://assets.juicer.io/embed.js" async></script> -->
-  <!-- <link rel="stylesheet" href="https://assets.juicer.io/embed.css"/> -->
-
-  <!-- PLACEHOLDER — remove this div once Juicer is connected -->
+  <!-- JUICER EMBED — uncomment and replace YOUR_FEED_NAME when ready -->
+  <!-- <link rel="stylesheet" href="https://assets.juicer.io/embed.css"/>
+  <div class="juicer-feed" data-feed-id="YOUR_FEED_NAME" data-per="9"></div>
+  <script src="https://assets.juicer.io/embed.js" async></script> -->
   <div class="juicer-placeholder reveal">
-    <strong>Instagram Feed Coming Soon</strong><br/>
-    Set up at <strong>juicer.io</strong> → connect your Instagram → paste your feed name into the code above.<br/>
-    Pair with <strong>Metricool</strong> auto-posting for a hands-free content engine that keeps this page fresh for Google.
+    <strong>Instagram Feed — Coming Soon</strong><br/>
+    Sign up at juicer.io → connect Instagram → replace YOUR_FEED_NAME in the code.<br/>
+    Pairs with Metricool auto-posting for a hands-free content engine.
   </div>
 </section>
 
-<!-- ══ CTA ══ -->
 <section class="cta-section">
   <div class="cta-bg"></div>
   <div class="cta-inner">
@@ -520,7 +463,6 @@ async function loadRates() {
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-top">
     <div>
@@ -549,7 +491,6 @@ async function loadRates() {
   </div>
 </footer>
 
-<!-- ══ AI CHAT ══ -->
 <button class="chat-fab" id="chatFab" aria-label="Ask a question">💬<span class="fab-badge">?</span></button>
 <div class="chat-panel" id="chatPanel">
   <div class="chat-header">
@@ -576,6 +517,16 @@ async function loadRates() {
 
 <script>
 // ══ GOOGLE SHEETS LIVE RATES ══
+// Sheet ID: 1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698
+// Tab: Daily_Rates
+// Structure:
+//   Row 1: "Last Updated:" | date (col B)
+//   Row 3: headers
+//   Row 4: VA Purchase       | rate | points
+//   Row 5: VA Jumbo Purchase | rate | points
+//   Row 6: VA IRRRL          | rate | points
+// IMPORTANT: Share sheet as "Anyone with link → Viewer"
+
 const SHEET_ID   = '1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698';
 const SHEET_NAME = 'Daily_Rates';
 
@@ -598,7 +549,9 @@ const FALLBACK = [
 ];
 
 function buildTable(rows, timestamp) {
-  let html = `<table class="rates-table"><thead><tr><th>Loan Type</th><th>Interest Rate</th><th>Points</th></tr></thead><tbody>`;
+  let html = `<table class="rates-table"><thead><tr>
+    <th>Loan Type</th><th>Interest Rate</th><th>Points</th>
+  </tr></thead><tbody>`;
   rows.forEach(r => {
     const m = getMeta(r.name);
     html += `<tr><td>
@@ -619,9 +572,26 @@ async function loadRates() {
     if (!res.ok) throw new Error('fail');
     const csv = await res.text();
     const lines = csv.split('\n').map(l => l.split(',').map(c => c.replace(/^"|"$/g,'').trim()));
-    const timestamp = lines[1]?.[1] || null;
+
+    // Find timestamp — look for row where col A contains "updated"
+    let timestamp = null;
+    for (const line of lines) {
+      if ((line[0]||'').toLowerCase().includes('updated') && line[1]) {
+        timestamp = line[1];
+        break;
+      }
+    }
+
+    // Find rate rows — any row where col A starts with "VA" and col B looks like a rate
     const rows = [];
-    for (let i=3; i<=5; i++) { if (lines[i]?.[0]) rows.push({ name:lines[i][0], rate:lines[i][1]||'—', points:lines[i][2]||'—' }); }
+    for (const line of lines) {
+      const name = (line[0]||'').trim();
+      const rate = (line[1]||'').trim();
+      if (name.toUpperCase().startsWith('VA') && rate && rate.includes('%')) {
+        rows.push({ name, rate, points: line[2]||'—' });
+      }
+    }
+
     buildTable(rows.length ? rows : FALLBACK, timestamp);
   } catch(e) { buildTable(FALLBACK, null); }
 }
@@ -662,16 +632,16 @@ document.getElementById('chatClose').onclick = () => document.getElementById('ch
 const KB = [
   {k:['qualify','eligible','veteran','active duty','service member','surviving spouse'], a:`You may qualify if you are:\n• Active duty service member (90+ days)\n• Veteran with honorable discharge\n• National Guard/Reserve (6+ years)\n• Surviving spouse of a veteran who died in service\n\nMatthew pulls your COE at no cost. Call **(469) 634-4500**.`},
   {k:['irrrl','streamline','refinance','lower rate','reduce rate'], a:`The **VA IRRRL** lets you lower your current VA rate with minimal paperwork and **no appraisal required**.\n\nSee today's IRRRL rate in the table above. Call **(469) 634-4500)** to see if it makes sense.`},
-  {k:['25 day','25-day','guarantee','close fast','closing guarantee'], a:`SFMC offers a **25-Day Guarantee Close** on VA loans. In-house underwriting means no third-party delays — Matthew controls the timeline from application to keys.\n\nCall **(469) 634-4500** to get started today.`},
+  {k:['25 day','25-day','guarantee','close fast','closing guarantee'], a:`SFMC offers a **25-Day Guarantee Close** on VA loans. In-house underwriting means no third-party delays. Matthew controls the timeline from application to keys.\n\nCall **(469) 634-4500** to get started.`},
   {k:['down payment','zero down','0 down'], a:`VA loans require **$0 down payment** — finance up to 100% of the home's value.`},
-  {k:['pmi','mortgage insurance'], a:`VA loans have **no PMI ever** — saving $150–$300/month vs. conventional.`},
+  {k:['pmi','mortgage insurance'], a:`VA loans have **no PMI ever** — saving $150–$300/month vs. conventional loans.`},
   {k:['jumbo','2 million','large loan'], a:`SFMC offers VA Jumbo loans up to **$2,000,000** with $0 down. See today's rate in the table above.`},
   {k:['limit','how much','borrow','maximum'], a:`No VA loan limit with full entitlement. SFMC offers up to **$2 million**. Call **(469) 634-4500** for your exact number.`},
   {k:['close','closing','fast','how long','timeline'], a:`SFMC guarantees closing in **25 days** on most VA loans with in-house underwriting.`},
-  {k:['rate','rates','interest','today','current'], a:`Today's VA rates are shown live in the table on this page — updated directly by Matthew.\n\nFor your personalized rate: **(469) 634-4500**.`},
-  {k:['funding fee','fee','cost'], a:`VA Funding Fee ranges **1.25%–3.3%**. You may be **exempt** with VA disability compensation.`},
-  {k:['apply','start','begin'], a:`Start in ~10 minutes:\n\n👉 Click "Start Application" above\n📞 Or call **(469) 634-4500**`},
-  {k:['credit','fico','score'], a:`Most lenders look for **620+**. Call Matthew at **(469) 634-4500** — he can often work with you on a plan.`},
+  {k:['rate','rates','interest','today','current'], a:`Today's VA rates are shown live in the table on this page — updated directly by Matthew.\n\nFor your personalized rate call **(469) 634-4500**.`},
+  {k:['funding fee','fee','cost'], a:`VA Funding Fee ranges **1.25%–3.3%**. You may be **exempt** with VA disability compensation. Matthew confirms during application.`},
+  {k:['apply','start','begin'], a:`Start in ~10 minutes:\n\n👉 Click "Start Application" above\n📞 Or call **(469) 634-4500)**`},
+  {k:['credit','fico','score'], a:`Most lenders look for **620+**. Call Matthew at **(469) 634-4500)** — he can often work with you on a plan.`},
 ];
 
 function getAnswer(q) {
