@@ -362,24 +362,36 @@
 </section>
 
 <!-- ══ RATES ══ -->
-<section class="rates-section">
-  <div class="reveal">
-    <div class="section-tag"><span class="tag-line"></span><span class="tag-text">Today's VA Rates</span></div>
-    <h2 class="section-h">Competitive Rates for <em>Those Who Served</em></h2>
-    <p class="rates-disclaimer">Rates change daily based on creditworthiness, loan amount, and market conditions. Call <strong>(469) 634-4500</strong> or <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank">apply online</a> for your personalized rate.</p>
-  </div>
-  <div class="rates-table-wrap reveal" style="transition-delay:0.1s" id="ratesContainer">
-    <div class="rates-loading"><span class="rates-spinner"></span>Loading current rates...</div>
-  </div>
-  <div class="rates-footer reveal" style="transition-delay:0.15s">
-    <div class="rates-note-wrap">
-      <p class="rates-note">¹ Rates assume a 740+ credit score, owner-occupied primary residence, and standard loan conditions. Rates subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
-      <p class="rates-timestamp" id="ratesTimestamp"></p>
-    </div>
-    <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="rates-cta-btn">Lock My Rate →</a>
-  </div>
-  <div class="cream-clip"></div>
-</section>
+async function loadRates() {
+  try {
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('fail');
+    const csv = await res.text();
+    const lines = csv.split('\n').map(l =>
+      l.split(',').map(c => c.replace(/^"|"$/g,'').trim())
+    );
+
+    // Find timestamp — look for any row where col A contains "updated"
+    let timestamp = null;
+    for (const line of lines) {
+      if ((line[0]||'').toLowerCase().includes('updated') && line[1]) {
+        timestamp = line[1];
+        break;
+      }
+    }
+
+    // Find rate rows — any row where col A starts with "VA"
+    const rows = [];
+    for (const line of lines) {
+      if ((line[0]||'').toUpperCase().startsWith('VA') && line[1]) {
+        rows.push({ name: line[0], rate: line[1], points: line[2]||'—' });
+      }
+    }
+
+    buildTable(rows.length ? rows : FALLBACK, timestamp);
+  } catch(e) { buildTable(FALLBACK, null); }
+}
 
 <!-- ══ VA BENEFITS ══ -->
 <section class="va-benefits">
