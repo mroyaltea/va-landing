@@ -4,7 +4,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VA Home Loan | Matthew Royal | SFMC Home Lending</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Pinyon+Script&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Dancing Script replaces Pinyon Script — S is clearly readable -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -27,7 +28,7 @@
     ::-webkit-scrollbar-track { background: var(--dark2); }
     ::-webkit-scrollbar-thumb { background: var(--gold); }
 
-    /* ── NAV ── */
+    /* ══ NAV ══ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       height: 72px; display: flex; align-items: center; justify-content: space-between;
@@ -35,316 +36,274 @@
       background: rgba(26,33,41,0.94); backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(201,135,38,0.2);
     }
-    .nav-left { display: flex; align-items: center; gap: 20px; }
-    .logo-sfmc { font-family:'Outfit',sans-serif; font-weight:600; font-size:1.6rem; color:var(--dark); letter-spacing:-0.01em; line-height:1; background:var(--cream); padding:4px 10px 2px; }
-    .logo-script { font-family:'Pinyon Script',cursive; font-size:1.55rem; color:var(--gold); line-height:1; }
-    .logo-sub { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--warm); display:block; margin-top:-2px; }
-    .nav-sep { width:1px; height:32px; background:rgba(255,255,255,0.12); }
-    .nav-officer-name { font-size:0.85rem; font-weight:500; color:var(--white); }
-    .nav-officer-nmls { font-size:0.72rem; color:var(--muted); }
-    .nav-right { display:flex; align-items:center; gap:1rem; }
-    .nav-call { font-size:0.85rem; color:var(--warm); text-decoration:none; font-weight:400; transition:color 0.2s; }
-    .nav-call:hover { color:var(--gold); }
-    .nav-apply { background:var(--maroon); color:var(--white); padding:0.55rem 1.4rem; font-family:'Outfit',sans-serif; font-weight:500; font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:background 0.2s; clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); }
-    .nav-apply:hover { background:var(--maroon2); }
+    .nav-left { display: flex; align-items: center; gap: 16px; }
+    .nav-logo-block {
+      background: var(--cream); padding: 6px 12px 5px;
+      display: flex; flex-direction: column; line-height: 1.15;
+    }
+    .nav-logo-sfmc { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--dark); letter-spacing: 0.04em; }
+    .nav-logo-hl   { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.6rem; color: var(--dark); letter-spacing: 0.18em; text-transform: uppercase; }
+    /* Dancing Script — S is unmistakably an S */
+    .nav-script { font-family: 'Dancing Script', cursive; font-size: 1.75rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .nav-nmls { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm); display: block; margin-top: 2px; }
+    .nav-sep { width: 1px; height: 32px; background: rgba(255,255,255,0.12); }
+    .nav-officer-name { font-size: 0.85rem; font-weight: 500; color: var(--white); }
+    .nav-officer-nmls { font-size: 0.72rem; color: var(--muted); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .nav-call { font-size: 0.85rem; color: var(--warm); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+    .nav-call:hover { color: var(--gold); }
+    .nav-apply { background: var(--maroon); color: var(--white); padding: 0.55rem 1.4rem; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); }
+    .nav-apply:hover { background: var(--maroon2); }
 
-    /* ── HERO ── */
-    .hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; }
-    .hero-img { position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=1600&q=80&fit=crop&crop=center'); background-size:cover; background-position:center 30%; filter:brightness(0.35); transform:scale(1.04); animation:slowZoom 12s ease-in-out infinite alternate; }
+    /* ══ HERO ══ */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+    .hero-img {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=1600&q=80&fit=crop&crop=faces,center');
+      background-size: cover; background-position: center 30%;
+      filter: brightness(0.35); transform: scale(1.04);
+      animation: slowZoom 12s ease-in-out infinite alternate;
+    }
     @keyframes slowZoom { from{transform:scale(1.04)} to{transform:scale(1.00)} }
-    .hero-overlay { position:absolute; inset:0; background:linear-gradient(115deg,rgba(26,33,41,0.95) 0%,rgba(26,33,41,0.75) 45%,rgba(36,46,56,0.3) 100%); }
-    .hero-bar { position:absolute; left:0; top:0; bottom:0; width:5px; background:linear-gradient(180deg,transparent,var(--gold),transparent); }
-    .hero-content { position:relative; z-index:2; padding:120px 6% 80px; max-width:700px; animation:fadeUp 0.9s ease both; }
-    .hero-eyebrow { display:inline-flex; align-items:center; gap:10px; margin-bottom:1.4rem; }
-    .eyebrow-line { width:36px; height:1px; background:var(--gold); }
-    .eyebrow-text { font-size:0.72rem; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); }
-    .hero-script { font-family:'Pinyon Script',cursive; font-size:clamp(2.8rem,6vw,4.5rem); color:var(--gold); line-height:1; margin-bottom:0.3rem; display:block; }
-    .hero-h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.6rem,5vw,4rem); font-weight:600; line-height:1.1; color:var(--white); margin-bottom:1.4rem; letter-spacing:-0.01em; }
-    .hero-p { font-size:1.05rem; line-height:1.8; color:rgba(255,255,255,0.65); max-width:520px; margin-bottom:2.5rem; font-weight:300; }
-    .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:3.5rem; }
-    .btn-gold { background:var(--gold); color:var(--dark2); padding:0.9rem 2.2rem; font-family:'Outfit',sans-serif; font-weight:600; font-size:0.9rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; display:inline-block; clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition:background 0.2s,transform 0.15s; }
-    .btn-gold:hover { background:var(--gold-lt); transform:translateY(-2px); }
-    .btn-ghost { background:transparent; color:var(--white); padding:0.9rem 2.2rem; border:1px solid rgba(255,255,255,0.3); font-family:'Outfit',sans-serif; font-weight:400; font-size:0.9rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:border-color 0.2s,color 0.2s; }
-    .btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
-    .hero-stats { display:flex; gap:0; }
-    .h-stat { padding:0 2.5rem 0 0; border-right:1px solid rgba(255,255,255,0.12); margin-right:2.5rem; }
-    .h-stat:last-child { border-right:none; margin-right:0; }
-    .h-stat-n { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:var(--gold); line-height:1; }
-    .h-stat-l { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:4px; }
-    .hero-clip { position:absolute; bottom:-1px; left:0; right:0; height:80px; background:var(--cream); clip-path:polygon(0 100%,100% 0,100% 100%); z-index:3; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(115deg,rgba(26,33,41,0.95) 0%,rgba(26,33,41,0.75) 45%,rgba(36,46,56,0.3) 100%); }
+    .hero-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: linear-gradient(180deg,transparent,var(--gold),transparent); }
+    .hero-content { position: relative; z-index: 2; padding: 120px 6% 80px; max-width: 700px; animation: fadeUp 0.9s ease both; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1.4rem; }
+    .eyebrow-line { width: 36px; height: 1px; background: var(--gold); }
+    .eyebrow-text { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
 
-    /* ── RATES SECTION ── */
-    .rates-section { background:var(--cream); padding:80px 6% 100px; position:relative; }
-    .section-tag { display:inline-flex; align-items:center; gap:10px; margin-bottom:1rem; }
-    .tag-line { width:30px; height:1px; background:var(--gold); }
-    .tag-text { font-size:0.7rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
-    .section-h { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.5vw,3rem); font-weight:600; color:var(--dark); line-height:1.15; margin-bottom:0.6rem; }
-    .section-h em { font-style:italic; color:var(--brown); }
-    .rates-disclaimer { font-size:0.8rem; color:#8a9099; margin-bottom:2.2rem; line-height:1.5; }
-    .rates-disclaimer a { color:var(--gold); }
+    /* HERO SCRIPT — Dancing Script, gold, clearly legible */
+    .hero-script { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: clamp(3rem,6.5vw,5rem); color: var(--gold); line-height: 1; margin-bottom: 0.3rem; display: block; }
 
-    .rates-table-wrap { overflow-x:auto; }
-    .rates-table { width:100%; border-collapse:collapse; font-size:0.92rem; }
-    .rates-table thead tr { border-bottom:2px solid var(--dark); }
-    .rates-table thead th { padding:0.9rem 1.2rem; text-align:left; font-weight:600; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--dark); }
-    .rates-table thead th:not(:first-child) { text-align:right; }
-    .rates-table tbody tr { border-bottom:1px solid rgba(36,46,56,0.1); transition:background 0.15s; }
-    .rates-table tbody tr:nth-child(even) { background:rgba(36,46,56,0.04); }
-    .rates-table tbody tr:hover { background:rgba(201,135,38,0.08); }
-    .rates-table td { padding:1.1rem 1.2rem; color:var(--dark); vertical-align:middle; }
-    .rates-table td:not(:first-child) { text-align:right; font-weight:500; }
-    .loan-type-name { font-weight:500; font-size:0.95rem; }
-    .loan-type-desc { font-size:0.76rem; color:#8a9099; margin-top:2px; }
-    .rate-big { font-size:1.05rem; font-weight:600; color:var(--maroon); }
-    .rate-apr { color:#5a6470; }
-    .rate-pts { color:#8a9099; }
-    .rates-badge { display:inline-block; font-size:0.65rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:2px 8px; margin-left:8px; vertical-align:middle; }
-    .badge-va { background:rgba(102,19,17,0.1); color:var(--maroon); }
-    .badge-irrrl { background:rgba(112,115,71,0.12); color:var(--olive); }
-    .rates-footer { margin-top:1.5rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
-    .rates-note { font-size:0.74rem; color:#9aa0a8; line-height:1.6; flex:1; }
-    .rates-cta-btn { background:var(--maroon); color:var(--white); padding:0.75rem 1.8rem; font-family:'Outfit',sans-serif; font-weight:600; font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); white-space:nowrap; transition:background 0.2s; }
-    .rates-cta-btn:hover { background:var(--maroon2); }
+    .hero-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem,5vw,4rem); font-weight: 600; line-height: 1.1; color: var(--white); margin-bottom: 1.4rem; letter-spacing: -0.01em; }
+    .hero-p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.65); max-width: 520px; margin-bottom: 2.5rem; font-weight: 300; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+    .btn-gold { background: var(--gold); color: var(--dark2); padding: 0.9rem 2.2rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; display: inline-block; clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s,transform 0.15s; }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--white); padding: 0.9rem 2.2rem; border: 1px solid rgba(255,255,255,0.3); font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s,color 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-stats { display: flex; }
+    .h-stat { padding: 0 2.5rem 0 0; border-right: 1px solid rgba(255,255,255,0.12); margin-right: 2.5rem; }
+    .h-stat:last-child { border-right: none; margin-right: 0; }
+    .h-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
+    .h-stat-l { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 4px; }
+    .hero-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--cream); clip-path: polygon(0 100%,100% 0,100% 100%); z-index: 3; }
 
-    .cream-clip { position:absolute; bottom:-1px; left:0; right:0; height:80px; background:var(--dark2); clip-path:polygon(0 100%,100% 60%,100% 100%); }
+    /* ══ RATES ══ */
+    .rates-section { background: var(--cream); padding: 80px 6% 100px; position: relative; }
+    .section-tag { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+    .tag-line { width: 30px; height: 1px; background: var(--gold); }
+    .tag-text { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .section-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,3rem); font-weight: 600; color: var(--dark); line-height: 1.15; margin-bottom: 0.6rem; }
+    .section-h em { font-style: italic; color: var(--brown); }
+    .rates-disclaimer { font-size: 0.8rem; color: #8a9099; margin-bottom: 2.2rem; line-height: 1.5; }
+    .rates-disclaimer a { color: var(--gold); }
+    .rates-table-wrap { overflow-x: auto; }
+    .rates-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .rates-table thead tr { border-bottom: 2px solid var(--dark); }
+    .rates-table thead th { padding: 0.9rem 1.2rem; text-align: left; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); }
+    .rates-table thead th:not(:first-child) { text-align: right; }
+    .rates-table tbody tr { border-bottom: 1px solid rgba(36,46,56,0.1); transition: background 0.15s; }
+    .rates-table tbody tr:nth-child(even) { background: rgba(36,46,56,0.04); }
+    .rates-table tbody tr:hover { background: rgba(201,135,38,0.08); }
+    .rates-table td { padding: 1.1rem 1.2rem; color: var(--dark); vertical-align: middle; }
+    .rates-table td:not(:first-child) { text-align: right; font-weight: 500; }
+    .loan-type-name { font-weight: 500; font-size: 0.95rem; }
+    .loan-type-desc { font-size: 0.76rem; color: #8a9099; margin-top: 2px; }
+    .loan-type-note { font-size: 0.73rem; color: var(--maroon); margin-top: 3px; font-weight: 600; }
+    .rate-big { font-size: 1.05rem; font-weight: 600; color: var(--maroon); }
+    .rate-pts { color: #5a6470; }
+    .rates-badge { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px; margin-left: 8px; vertical-align: middle; }
+    .badge-va    { background: rgba(102,19,17,0.1); color: var(--maroon); }
+    .badge-irrrl { background: rgba(112,115,71,0.12); color: var(--olive); }
+    .rates-footer { margin-top: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; }
+    .rates-note-wrap { flex: 1; }
+    .rates-note { font-size: 0.74rem; color: #9aa0a8; line-height: 1.6; }
+    .rates-timestamp { font-size: 0.74rem; color: var(--gold); font-weight: 500; margin-top: 0.4rem; }
+    .rates-cta-btn { background: var(--maroon); color: var(--white); padding: 0.75rem 1.8rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); white-space: nowrap; transition: background 0.2s; align-self: center; }
+    .rates-cta-btn:hover { background: var(--maroon2); }
+    .rates-loading { text-align: center; padding: 2rem; color: #aaa; font-size: 0.88rem; }
+    .rates-spinner { display: inline-block; width: 18px; height: 18px; border: 2px solid rgba(201,135,38,0.2); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 8px; vertical-align: middle; }
+    @keyframes spin { to{transform:rotate(360deg)} }
+    .cream-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 100%,100% 60%,100% 100%); }
 
-    /* ── VA BENEFITS ── */
-    .va-benefits { background:var(--dark2); padding:90px 6% 110px; position:relative; }
-    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
-    .va-benefits .section-h { color:var(--white); }
-    .va-benefits .section-h em { color:var(--gold-lt); }
-    .section-p { font-size:0.95rem; line-height:1.85; color:rgba(255,255,255,0.5); margin-bottom:2rem; }
-    .benefit-list { list-style:none; }
-    .benefit-list li { display:flex; align-items:flex-start; gap:14px; padding:1rem 0; border-bottom:1px solid rgba(201,135,38,0.12); }
-    .benefit-list li:first-child { border-top:1px solid rgba(201,135,38,0.12); }
-    .b-icon { width:36px; height:36px; background:rgba(201,135,38,0.15); display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%); }
-    .b-title { font-weight:600; font-size:0.95rem; color:var(--white); }
-    .b-desc  { font-size:0.82rem; color:rgba(255,255,255,0.42); margin-top:2px; line-height:1.5; }
-    .benefits-visual { position:relative; }
-    .photo-frame { position:relative; overflow:visible; }
-    .photo-frame::before { content:''; position:absolute; top:-16px; right:-16px; width:100%; height:100%; border:2px solid var(--gold); opacity:0.35; z-index:0; }
-    .photo-frame img { width:100%; height:460px; object-fit:cover; display:block; position:relative; z-index:1; clip-path:polygon(0 0,100% 0,100% 88%,88% 100%,0 100%); }
-    .photo-badge { position:absolute; bottom:40px; left:-30px; z-index:2; background:var(--dark); padding:1.4rem 1.6rem; border-left:3px solid var(--gold); box-shadow:0 20px 50px rgba(0,0,0,0.4); }
-    .pb-num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:var(--gold); line-height:1; }
-    .pb-label { font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--warm); margin-top:4px; }
-    .dark2-clip { position:absolute; bottom:-1px; left:0; right:0; height:80px; background:#f0ede8; clip-path:polygon(0 60%,100% 0,100% 100%,0 100%); }
+    /* ══ VA BENEFITS ══ */
+    .va-benefits { background: var(--dark2); padding: 90px 6% 110px; position: relative; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .va-benefits .section-h { color: var(--white); }
+    .va-benefits .section-h em { color: var(--gold-lt); }
+    .section-p { font-size: 0.95rem; line-height: 1.85; color: rgba(255,255,255,0.5); margin-bottom: 2rem; }
+    .benefit-list { list-style: none; }
+    .benefit-list li { display: flex; align-items: flex-start; gap: 14px; padding: 1rem 0; border-bottom: 1px solid rgba(201,135,38,0.12); }
+    .benefit-list li:first-child { border-top: 1px solid rgba(201,135,38,0.12); }
+    .b-icon { width: 36px; height: 36px; background: rgba(201,135,38,0.15); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%); }
+    .b-title { font-weight: 600; font-size: 0.95rem; color: var(--white); }
+    .b-desc  { font-size: 0.82rem; color: rgba(255,255,255,0.42); margin-top: 2px; line-height: 1.5; }
+    .benefits-visual { position: relative; }
+    .photo-frame { position: relative; overflow: visible; }
+    .photo-frame::before { content: ''; position: absolute; top: -16px; right: -16px; width: 100%; height: 100%; border: 2px solid var(--gold); opacity: 0.35; z-index: 0; }
+    .photo-frame img { width: 100%; height: 460px; object-fit: cover; display: block; position: relative; z-index: 1; clip-path: polygon(0 0,100% 0,100% 88%,88% 100%,0 100%); }
+    .photo-badge { position: absolute; bottom: 40px; left: -30px; z-index: 2; background: var(--dark); padding: 1.4rem 1.6rem; border-left: 3px solid var(--gold); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+    .pb-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
+    .pb-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-top: 4px; }
+    .dark2-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: #f0ede8; clip-path: polygon(0 60%,100% 0,100% 100%,0 100%); }
 
-    /* ── PROCESS ── */
-    .process-section { background:#f0ede8; padding:100px 6% 120px; position:relative; }
-    .process-section .section-h { color:var(--dark); }
-    .process-section .section-h em { color:var(--brown); }
-    .process-section .section-p { color:#7a8490; }
-    .process-section .tag-text { color:var(--gold); }
-    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin-top:3.5rem; }
-    .process-step { background:rgba(36,46,56,0.04); padding:2.5rem 2rem; position:relative; border-top:2px solid transparent; transition:border-color 0.3s,background 0.3s; }
-    .process-step:hover { border-color:var(--gold); background:rgba(201,135,38,0.06); }
-    .ps-num { font-family:'Cormorant Garamond',serif; font-size:4rem; font-weight:300; color:rgba(201,135,38,0.2); line-height:1; margin-bottom:1rem; }
-    .ps-title { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--dark); margin-bottom:0.6rem; }
-    .ps-desc { font-size:0.85rem; color:#7a8490; line-height:1.7; }
-    .ps-arrow { position:absolute; top:50%; right:-12px; transform:translateY(-50%); color:var(--gold); font-size:1rem; opacity:0.4; z-index:2; }
-    .process-step:last-child .ps-arrow { display:none; }
-    .light-clip-bottom { position:absolute; bottom:-1px; left:0; right:0; height:80px; background:var(--white); clip-path:polygon(0 100%,100% 60%,100% 100%); }
+    /* ══ PROCESS ══ */
+    .process-section { background: #f0ede8; padding: 100px 6% 120px; position: relative; }
+    .process-section .section-h { color: var(--dark); }
+    .process-section .section-h em { color: var(--brown); }
+    .process-section .tag-text { color: var(--gold); }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; margin-top: 3.5rem; }
+    .process-step { background: rgba(36,46,56,0.04); padding: 2.5rem 2rem; position: relative; border-top: 2px solid transparent; transition: border-color 0.3s,background 0.3s; }
+    .process-step:hover { border-color: var(--gold); background: rgba(201,135,38,0.06); }
+    .ps-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: rgba(201,135,38,0.2); line-height: 1; margin-bottom: 1rem; }
+    .ps-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--dark); margin-bottom: 0.6rem; }
+    .ps-desc { font-size: 0.85rem; color: #7a8490; line-height: 1.7; }
+    .ps-arrow { position: absolute; top: 50%; right: -12px; transform: translateY(-50%); color: var(--gold); font-size: 1rem; opacity: 0.4; z-index: 2; }
+    .process-step:last-child .ps-arrow { display: none; }
+    .light-clip-bottom { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--white); clip-path: polygon(0 100%,100% 60%,100% 100%); }
 
-    /* ── PHOTO STRIP ── */
-    .photo-strip { background:var(--dark); display:grid; grid-template-columns:1fr 1fr 1fr; height:360px; overflow:hidden; position:relative; }
-    .ps-photo { overflow:hidden; position:relative; }
-    .ps-photo img { width:100%; height:100%; object-fit:cover; filter:brightness(0.48) saturate(0.75); transition:filter 0.5s,transform 0.5s; }
-    .ps-photo:hover img { filter:brightness(0.62) saturate(1); transform:scale(1.04); }
-    .ps-photo-label { position:absolute; bottom:20px; left:20px; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.45); }
-    .photo-strip-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(26,33,41,0.7) 0%,transparent 30%,transparent 70%,rgba(26,33,41,0.7) 100%); pointer-events:none; z-index:2; }
+    /* ══ PHOTO STRIP — using <img> tags for reliability ══ */
+    .photo-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 380px; overflow: hidden; position: relative; background: var(--dark); }
+    .ps-photo { overflow: hidden; position: relative; }
+    .ps-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.5) saturate(0.8); transition: filter 0.5s,transform 0.5s; }
+    .ps-photo:hover img { filter: brightness(0.7) saturate(1); transform: scale(1.04); }
+    .ps-photo-label { position: absolute; bottom: 20px; left: 20px; z-index: 2; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .photo-strip-overlay { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(26,33,41,0.7) 0%,transparent 30%,transparent 70%,rgba(26,33,41,0.7) 100%); pointer-events: none; z-index: 1; }
 
-    /* ── TESTIMONIALS (LIGHT) ── */
-    .testimonials { background:var(--white); padding:100px 6% 80px; position:relative; }
-    .test-header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:3rem; flex-wrap:wrap; gap:1rem; }
-    .testimonials .section-h { color:var(--dark); }
-    .testimonials .section-h em { color:var(--brown); }
-    .testimonials .tag-text { color:var(--gold); }
-    .exp-pill { display:flex; align-items:center; gap:12px; padding:10px 18px; border:1px solid rgba(201,135,38,0.3); background:rgba(201,135,38,0.05); }
-    .exp-pill-stars { color:var(--gold); font-size:0.9rem; letter-spacing:2px; }
-    .exp-pill-label { font-size:0.72rem; color:var(--dark); line-height:1.5; font-weight:500; }
-    .exp-pill-label a { color:var(--gold); text-decoration:none; font-size:0.68rem; display:block; font-weight:400; }
-    .testimonials-slider { overflow:hidden; position:relative; }
-    .t-track { display:flex; gap:1.5rem; transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); }
-    .t-card { min-width:calc(33.333% - 1rem); flex-shrink:0; background:#f7f5f2; border-top:2px solid var(--gold); padding:2.2rem; position:relative; }
-    .t-quote-mark { font-family:'Cormorant Garamond',serif; font-size:5rem; font-weight:300; color:rgba(201,135,38,0.18); line-height:0.7; margin-bottom:0.5rem; }
-    .t-text { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; font-weight:300; color:#3a4450; line-height:1.8; margin-bottom:1.5rem; }
-    .t-name { font-size:0.85rem; font-weight:600; color:var(--maroon); }
-    .t-src  { font-size:0.72rem; color:#aab0b8; margin-top:2px; }
-    .t-stars-sm { color:var(--gold); font-size:0.75rem; letter-spacing:1px; margin-bottom:1rem; }
-    .t-nav { display:flex; gap:0.75rem; margin-top:2.5rem; align-items:center; }
-    .t-btn { width:44px; height:44px; border:1px solid rgba(36,46,56,0.2); background:transparent; color:var(--dark); font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); transition:background 0.2s,border-color 0.2s,color 0.2s; }
-    .t-btn:hover { background:var(--gold); border-color:var(--gold); color:var(--dark2); }
-    .t-dots { display:flex; gap:6px; margin-left:12px; }
-    .t-dot { width:6px; height:6px; background:rgba(36,46,56,0.15); border-radius:50%; cursor:pointer; transition:background 0.2s,transform 0.2s; }
-    .t-dot.active { background:var(--gold); transform:scale(1.3); }
-    .white-clip { position:absolute; bottom:-1px; left:0; right:0; height:80px; background:var(--dark2); clip-path:polygon(0 100%,100% 0,100% 100%); }
+    /* ══ TESTIMONIALS ══ */
+    .testimonials { background: var(--white); padding: 100px 6% 80px; position: relative; }
+    .test-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .testimonials .section-h { color: var(--dark); }
+    .testimonials .section-h em { color: var(--brown); }
+    .testimonials .tag-text { color: var(--gold); }
+    .exp-pill { display: flex; align-items: center; gap: 12px; padding: 10px 18px; border: 1px solid rgba(201,135,38,0.3); background: rgba(201,135,38,0.05); }
+    .exp-pill-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; }
+    .exp-pill-label { font-size: 0.72rem; color: var(--dark); line-height: 1.5; font-weight: 500; }
+    .exp-pill-label a { color: var(--gold); text-decoration: none; font-size: 0.68rem; display: block; font-weight: 400; }
+    .testimonials-slider { overflow: hidden; width: 100%; }
+    .t-track { display: flex; gap: 24px; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform; }
+    .t-card { flex: 0 0 calc((100% - 48px) / 3); min-width: 0; background: #f7f5f2; border-top: 2px solid var(--gold); padding: 2.2rem; }
+    .t-quote-mark { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: rgba(201,135,38,0.18); line-height: 0.7; margin-bottom: 0.5rem; }
+    .t-text { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; font-weight: 300; color: #3a4450; line-height: 1.8; margin-bottom: 1.5rem; }
+    .t-name { font-size: 0.85rem; font-weight: 600; color: var(--maroon); }
+    .t-src  { font-size: 0.72rem; color: #aab0b8; margin-top: 2px; }
+    .t-stars-sm { color: var(--gold); font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 1rem; }
+    .t-nav { display: flex; gap: 0.75rem; margin-top: 2.5rem; align-items: center; }
+    .t-btn { width: 44px; height: 44px; border: 1px solid rgba(36,46,56,0.2); background: transparent; color: var(--dark); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); transition: background 0.2s,color 0.2s; }
+    .t-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--dark2); }
+    .t-dots { display: flex; gap: 6px; margin-left: 12px; }
+    .t-dot { width: 6px; height: 6px; background: rgba(36,46,56,0.15); border-radius: 50%; cursor: pointer; transition: background 0.2s,transform 0.2s; }
+    .t-dot.active { background: var(--gold); transform: scale(1.3); }
+    .white-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 100%,100% 0,100% 100%); }
 
-    /* ── CTA SECTION ── */
-    .cta-section { position:relative; padding:0; overflow:hidden; }
-    .cta-bg { position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80&fit=crop'); background-size:cover; background-position:center; filter:brightness(0.18) saturate(0.6); }
-    .cta-inner { position:relative; z-index:2; padding:100px 6%; display:grid; grid-template-columns:1fr auto; gap:4rem; align-items:center; }
-    .cta-inner::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(180deg,transparent,var(--gold),transparent); }
-    .cta-script { font-family:'Pinyon Script',cursive; font-size:2.5rem; color:var(--gold); line-height:1; margin-bottom:0.5rem; }
-    .cta-h { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.8rem); font-weight:600; color:var(--white); line-height:1.2; margin-bottom:0.8rem; }
-    .cta-p { font-size:0.95rem; color:rgba(255,255,255,0.55); line-height:1.7; }
-    .cta-btns { display:flex; flex-direction:column; gap:0.9rem; min-width:220px; }
-    .cta-apply { display:block; text-align:center; background:var(--gold); color:var(--dark2); padding:1rem 2rem; font-family:'Outfit',sans-serif; font-weight:600; font-size:0.88rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition:background 0.2s; }
-    .cta-apply:hover { background:var(--gold-lt); }
-    .cta-call { display:flex; align-items:center; justify-content:center; gap:8px; border:1px solid rgba(255,255,255,0.25); color:var(--white); padding:0.95rem 2rem; font-family:'Outfit',sans-serif; font-weight:400; font-size:0.88rem; text-decoration:none; letter-spacing:0.05em; transition:border-color 0.2s,color 0.2s; }
-    .cta-call:hover { border-color:var(--gold); color:var(--gold); }
-
-    /* ── FOOTER ── */
-    footer { background:var(--dark2); padding:50px 6% 30px; border-top:1px solid rgba(201,135,38,0.15); }
-    .footer-top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3rem; margin-bottom:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.06); }
-    .footer-logo-script { font-family:'Pinyon Script',cursive; font-size:2rem; color:var(--gold); line-height:1; margin-bottom:0.5rem; }
-    .footer-logo-name { font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--warm); }
-    .footer-p { font-size:0.8rem; color:rgba(255,255,255,0.28); line-height:1.7; margin-top:1rem; }
-    .footer-col-title { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1.2rem; font-weight:500; }
-    .footer-contact-row { display:flex; align-items:flex-start; gap:10px; margin-bottom:0.9rem; }
-    .fc-icon { font-size:0.9rem; margin-top:1px; }
-    .fc-label { font-size:0.72rem; color:rgba(255,255,255,0.3); }
-    .fc-val   { font-size:0.85rem; color:var(--white); }
-    .fc-val a { color:var(--white); text-decoration:none; }
-    .fc-val a:hover { color:var(--gold); }
-    .footer-legal { font-size:0.68rem; color:rgba(255,255,255,0.2); line-height:1.8; display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap; }
-    .eq-symbol { font-size:1.4rem; opacity:0.3; }
-
-    /* ── AI CHAT WIDGET ── */
-    .chat-fab {
-      position: fixed; bottom: 28px; right: 28px; z-index: 1000;
-      width: 60px; height: 60px;
-      background: var(--maroon);
-      border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      box-shadow: 0 8px 30px rgba(102,19,17,0.5);
-      clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
-      transition: background 0.2s, transform 0.2s;
+    /* ══ SOCIAL FEED (Juicer) ══ */
+    .social-section { background: var(--dark2); padding: 80px 6%; }
+    .social-section .section-h { color: var(--white); }
+    .social-section .section-h em { color: var(--gold-lt); }
+    .social-intro { font-size: 0.9rem; color: rgba(255,255,255,0.45); margin-top: 0.5rem; margin-bottom: 2.5rem; }
+    /* Juicer embed placeholder — replace YOUR_JUICER_FEED_NAME below */
+    .juicer-placeholder {
+      border: 1px dashed rgba(201,135,38,0.3);
+      padding: 3rem;
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.85rem;
+      line-height: 1.8;
     }
+    .juicer-placeholder strong { color: var(--gold); }
+
+    /* ══ CTA ══ */
+    .cta-section { position: relative; padding: 0; overflow: hidden; }
+    .cta-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80&fit=crop'); background-size: cover; background-position: center; filter: brightness(0.18) saturate(0.6); }
+    .cta-inner { position: relative; z-index: 2; padding: 100px 6%; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
+    .cta-inner::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg,transparent,var(--gold),transparent); }
+    .cta-script { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 2.5rem; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .cta-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 600; color: var(--white); line-height: 1.2; margin-bottom: 0.8rem; }
+    .cta-p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+    .cta-btns { display: flex; flex-direction: column; gap: 0.9rem; min-width: 220px; }
+    .cta-apply { display: block; text-align: center; background: var(--gold); color: var(--dark2); padding: 1rem 2rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s; }
+    .cta-apply:hover { background: var(--gold-lt); }
+    .cta-call { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); color: var(--white); padding: 0.95rem 2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.05em; transition: border-color 0.2s,color 0.2s; }
+    .cta-call:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ══ FOOTER ══ */
+    footer { background: var(--dark2); padding: 50px 6% 30px; border-top: 1px solid rgba(201,135,38,0.15); }
+    .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+    .footer-sfmc { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--cream); letter-spacing: 0.04em; }
+    .footer-script { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.6rem; color: var(--gold); line-height: 1; }
+    .footer-hl { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm); }
+    .footer-p { font-size: 0.8rem; color: rgba(255,255,255,0.28); line-height: 1.7; margin-top: 0.8rem; }
+    .footer-col-title { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; font-weight: 500; }
+    .footer-contact-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.9rem; }
+    .fc-icon { font-size: 0.9rem; margin-top: 1px; }
+    .fc-label { font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+    .fc-val { font-size: 0.85rem; color: var(--white); }
+    .fc-val a { color: var(--white); text-decoration: none; }
+    .fc-val a:hover { color: var(--gold); }
+    .footer-legal { font-size: 0.68rem; color: rgba(255,255,255,0.2); line-height: 1.8; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
+    .eq-symbol { font-size: 1.4rem; opacity: 0.3; }
+
+    /* ══ AI CHAT ══ */
+    .chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1000; width: 60px; height: 60px; background: var(--maroon); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 8px 30px rgba(102,19,17,0.5); clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s,transform 0.2s; }
     .chat-fab:hover { background: var(--maroon2); transform: scale(1.06); }
-    .chat-fab .fab-badge {
-      position: absolute; top: -4px; right: -4px;
-      width: 18px; height: 18px; border-radius: 50%;
-      background: var(--gold); color: var(--dark2);
-      font-size: 0.62rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .chat-panel {
-      position: fixed; bottom: 100px; right: 28px; z-index: 999;
-      width: 360px; max-height: 540px;
-      background: var(--white);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-      display: flex; flex-direction: column;
-      opacity: 0; pointer-events: none;
-      transform: translateY(16px) scale(0.97);
-      transition: opacity 0.25s, transform 0.25s;
-      border-top: 3px solid var(--gold);
-    }
+    .chat-fab .fab-badge { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); color: var(--dark2); font-size: 0.62rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .chat-panel { position: fixed; bottom: 100px; right: 28px; z-index: 999; width: 360px; max-height: 540px; background: var(--white); box-shadow: 0 20px 60px rgba(0,0,0,0.25); display: flex; flex-direction: column; opacity: 0; pointer-events: none; transform: translateY(16px) scale(0.97); transition: opacity 0.25s,transform 0.25s; border-top: 3px solid var(--gold); }
     .chat-panel.open { opacity: 1; pointer-events: all; transform: translateY(0) scale(1); }
-
-    .chat-header {
-      background: var(--dark);
-      padding: 1rem 1.2rem;
-      display: flex; align-items: center; justify-content: space-between;
-    }
+    .chat-header { background: var(--dark); padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; }
     .chat-header-info { display: flex; align-items: center; gap: 10px; }
-    .chat-avatar {
-      width: 36px; height: 36px;
-      background: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-      clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
-    }
+    .chat-avatar { width: 36px; height: 36px; background: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 1rem; clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%); }
     .chat-header-name { font-size: 0.88rem; font-weight: 600; color: var(--white); }
     .chat-header-status { font-size: 0.7rem; color: var(--gold); }
-    .chat-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.1rem; cursor: pointer; padding: 4px; line-height: 1; }
+    .chat-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.1rem; cursor: pointer; padding: 4px; }
     .chat-close:hover { color: var(--white); }
-
-    .chat-messages {
-      flex: 1; overflow-y: auto; padding: 1rem;
-      display: flex; flex-direction: column; gap: 0.75rem;
-      max-height: 380px;
-    }
+    .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; max-height: 380px; }
     .chat-messages::-webkit-scrollbar { width: 3px; }
     .chat-messages::-webkit-scrollbar-thumb { background: var(--warm); }
-
     .msg { max-width: 82%; }
     .msg-bot { align-self: flex-start; }
     .msg-user { align-self: flex-end; }
-    .msg-bubble {
-      padding: 0.7rem 0.95rem;
-      font-size: 0.85rem;
-      line-height: 1.55;
-      border-radius: 0;
-    }
+    .msg-bubble { padding: 0.7rem 0.95rem; font-size: 0.85rem; line-height: 1.55; }
     .msg-bot .msg-bubble { background: #f2f0ed; color: var(--dark); border-left: 2px solid var(--gold); }
     .msg-user .msg-bubble { background: var(--maroon); color: var(--white); }
     .msg-time { font-size: 0.64rem; color: #aaa; margin-top: 3px; padding: 0 4px; }
-
-    .chat-suggestions {
-      padding: 0.5rem 1rem;
-      display: flex; flex-wrap: wrap; gap: 6px;
-      border-top: 1px solid #eee;
-    }
-    .suggest-btn {
-      background: rgba(201,135,38,0.08);
-      border: 1px solid rgba(201,135,38,0.3);
-      color: var(--brown);
-      padding: 5px 10px;
-      font-size: 0.72rem;
-      cursor: pointer;
-      font-family: 'Outfit', sans-serif;
-      transition: background 0.15s;
-    }
+    .chat-suggestions { padding: 0.5rem 1rem; display: flex; flex-wrap: wrap; gap: 6px; border-top: 1px solid #eee; }
+    .suggest-btn { background: rgba(201,135,38,0.08); border: 1px solid rgba(201,135,38,0.3); color: var(--brown); padding: 5px 10px; font-size: 0.72rem; cursor: pointer; font-family: 'Outfit', sans-serif; transition: background 0.15s; }
     .suggest-btn:hover { background: rgba(201,135,38,0.18); }
-
-    .chat-input-row {
-      display: flex; gap: 0; border-top: 1px solid #eee;
-    }
-    .chat-input {
-      flex: 1; border: none; padding: 0.85rem 1rem;
-      font-family: 'Outfit', sans-serif; font-size: 0.85rem; color: var(--dark);
-      outline: none; background: #fafafa;
-    }
+    .chat-input-row { display: flex; border-top: 1px solid #eee; }
+    .chat-input { flex: 1; border: none; padding: 0.85rem 1rem; font-family: 'Outfit', sans-serif; font-size: 0.85rem; color: var(--dark); outline: none; background: #fafafa; }
     .chat-input::placeholder { color: #bbb; }
-    .chat-send {
-      background: var(--maroon); color: var(--white);
-      border: none; padding: 0 1.2rem;
-      cursor: pointer; font-size: 1rem;
-      transition: background 0.2s;
-    }
+    .chat-send { background: var(--maroon); color: var(--white); border: none; padding: 0 1.2rem; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
     .chat-send:hover { background: var(--maroon2); }
-
     .typing-indicator { display: flex; align-items: center; gap: 4px; padding: 0.7rem 0.95rem; }
     .typing-dot { width: 6px; height: 6px; background: var(--warm); border-radius: 50%; animation: typingBounce 1.2s infinite; }
     .typing-dot:nth-child(2) { animation-delay: 0.2s; }
     .typing-dot:nth-child(3) { animation-delay: 0.4s; }
     @keyframes typingBounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
-
-    /* ── UTILS ── */
     @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-    .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.65s ease,transform 0.65s ease; }
-    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease,transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    @media (max-width:960px) {
-      .two-col { grid-template-columns:1fr; gap:3rem; }
-      .process-grid { grid-template-columns:1fr 1fr; }
-      .photo-strip { grid-template-columns:1fr 1fr; height:260px; }
-      .photo-strip .ps-photo:last-child { display:none; }
-      .cta-inner { grid-template-columns:1fr; }
-      .footer-top { grid-template-columns:1fr; }
-      .t-card { min-width:calc(50% - 0.75rem); }
-      .chat-panel { width:calc(100vw - 40px); right:20px; }
+    @media (max-width: 960px) {
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .photo-strip { grid-template-columns: 1fr 1fr; }
+      .photo-strip .ps-photo:last-child { display: none; }
+      .cta-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .t-card { flex: 0 0 calc((100% - 24px) / 2); }
     }
-    @media (max-width:640px) {
-      nav { padding:0 4%; }
-      .nav-officer-name,.nav-sep { display:none; }
-      .process-grid { grid-template-columns:1fr; }
-      .photo-badge { left:10px; }
-      .t-card { min-width:80vw; }
-      .rates-table { font-size:0.82rem; }
-      .chat-fab { bottom:16px; right:16px; }
+    @media (max-width: 640px) {
+      nav { padding: 0 4%; }
+      .nav-officer-name,.nav-sep { display: none; }
+      .process-grid { grid-template-columns: 1fr; }
+      .photo-badge { left: 10px; }
+      .photo-strip { grid-template-columns: 1fr; height: 260px; }
+      .photo-strip .ps-photo:not(:first-child) { display: none; }
+      .t-card { flex: 0 0 80vw; }
+      .chat-fab { bottom: 16px; right: 16px; }
+      .chat-panel { width: calc(100vw - 40px); right: 20px; }
     }
   </style>
 </head>
@@ -354,11 +313,14 @@
 <nav>
   <div class="nav-left">
     <div>
-      <div style="display:flex;align-items:baseline;gap:10px;">
-        <span class="logo-sfmc">SFMC</span>
-        <span class="logo-script">Service First</span>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="nav-logo-block">
+          <span class="nav-logo-sfmc">SFMC</span>
+          <span class="nav-logo-hl">Home Lending</span>
+        </div>
+        <span class="nav-script">Service First</span>
       </div>
-      <span class="logo-sub">Home Lending &nbsp;·&nbsp; NMLS# 166487</span>
+      <span class="nav-nmls">NMLS# 166487</span>
     </div>
     <div class="nav-sep"></div>
     <div>
@@ -392,67 +354,29 @@
     <div class="hero-stats">
       <div class="h-stat"><div class="h-stat-n">$0</div><div class="h-stat-l">Down Payment</div></div>
       <div class="h-stat"><div class="h-stat-n">No PMI</div><div class="h-stat-l">Ever</div></div>
-      <div class="h-stat"><div class="h-stat-n">~2 Wks</div><div class="h-stat-l">To Close</div></div>
+      <div class="h-stat"><div class="h-stat-n">25 Days</div><div class="h-stat-l">Guarantee Close</div></div>
       <div class="h-stat"><div class="h-stat-n">5★</div><div class="h-stat-l">Experience.com</div></div>
     </div>
   </div>
   <div class="hero-clip"></div>
 </section>
 
-<!-- ══ RATES SECTION ══ -->
+<!-- ══ RATES ══ -->
 <section class="rates-section">
   <div class="reveal">
     <div class="section-tag"><span class="tag-line"></span><span class="tag-text">Today's VA Rates</span></div>
     <h2 class="section-h">Competitive Rates for <em>Those Who Served</em></h2>
-    <p class="rates-disclaimer">
-      Sample rates shown for informational purposes. Rates change daily and are based on creditworthiness, loan amount, and market conditions.
-      <strong>Call (469) 634-4500</strong> or <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank">apply online</a> for your personalized rate today.
-    </p>
+    <p class="rates-disclaimer">Rates change daily based on creditworthiness, loan amount, and market conditions. Call <strong>(469) 634-4500</strong> or <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank">apply online</a> for your personalized rate.</p>
   </div>
-  <div class="rates-table-wrap reveal" style="transition-delay:0.1s">
-    <table class="rates-table">
-      <thead>
-        <tr>
-          <th>Loan Type</th>
-          <th>Interest Rate</th>
-          <th>APR</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="loan-type-name">VA Purchase Loan <span class="rates-badge badge-va">VA</span></div>
-            <div class="loan-type-desc">$0 down · No PMI · Primary residence</div>
-          </td>
-          <td><span class="rate-big">5.500%</span></td>
-          <td><span class="rate-apr">5.822%</span></td>
-          <td><span class="rate-pts">0.953</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="loan-type-name">VA Jumbo Purchase Loan <span class="rates-badge badge-va">VA</span></div>
-            <div class="loan-type-desc">Loan amounts above conforming limit</div>
-          </td>
-          <td><span class="rate-big">5.750%</span></td>
-          <td><span class="rate-apr">6.053%</span></td>
-          <td><span class="rate-pts">0.787</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="loan-type-name">VA IRRRL — Streamline Refinance <span class="rates-badge badge-irrrl">REFI</span></div>
-            <div class="loan-type-desc">No appraisal required · Reduce your current VA rate</div>
-          </td>
-          <td><span class="rate-big">5.375%</span></td>
-          <td><span class="rate-apr">5.641%</span></td>
-          <td><span class="rate-pts">0.875</span></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="rates-footer">
-      <p class="rates-note">¹ Interest rates assume a 740+ credit score, owner-occupied primary residence, and standard loan conditions. ² APR includes applicable fees. Rates are subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
-      <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="rates-cta-btn">Lock My Rate →</a>
+  <div class="rates-table-wrap reveal" style="transition-delay:0.1s" id="ratesContainer">
+    <div class="rates-loading"><span class="rates-spinner"></span>Loading current rates...</div>
+  </div>
+  <div class="rates-footer reveal" style="transition-delay:0.15s">
+    <div class="rates-note-wrap">
+      <p class="rates-note">¹ Rates assume a 740+ credit score, owner-occupied primary residence, and standard loan conditions. Rates subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
+      <p class="rates-timestamp" id="ratesTimestamp"></p>
     </div>
+    <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="rates-cta-btn">Lock My Rate →</a>
   </div>
   <div class="cream-clip"></div>
 </section>
@@ -465,20 +389,17 @@
       <h2 class="section-h">A Benefit You <em>Earned.</em><br/>Use It with Confidence.</h2>
       <p class="section-p">SFMC has been closing VA loans with speed, precision, and care since 1997. In-house underwriting means no delays, no hand-offs — just results.</p>
       <ul class="benefit-list">
-        <li><div class="b-icon">🏠</div><div><div class="b-title">Zero Down Payment</div><div class="b-desc">Finance up to 100% of the purchase price. Keep your savings.</div></div></li>
+        <li><div class="b-icon">🏠</div><div><div class="b-title">Zero Down Payment</div><div class="b-desc">Finance up to 100% of the purchase price.</div></div></li>
         <li><div class="b-icon">🛡️</div><div><div class="b-title">No Private Mortgage Insurance</div><div class="b-desc">Save hundreds per month vs. conventional loans.</div></div></li>
         <li><div class="b-icon">📉</div><div><div class="b-title">Competitive VA Rates</div><div class="b-desc">VA-backed rates typically beat conventional alternatives.</div></div></li>
-        <li><div class="b-icon">🔄</div><div><div class="b-title">Reusable — Again and Again</div><div class="b-desc">Your entitlement restores. Buy again or use it concurrently.</div></div></li>
-        <li><div class="b-icon">⚡</div><div><div class="b-title">In-House Underwriting</div><div class="b-desc">We control the process start to finish. Closings in ~2 weeks.</div></div></li>
+        <li><div class="b-icon">🔄</div><div><div class="b-title">Reusable — Again and Again</div><div class="b-desc">Your entitlement restores. Use it multiple times.</div></div></li>
+        <li><div class="b-icon">⚡</div><div><div class="b-title">25-Day Guarantee Close</div><div class="b-desc">We control the process start to finish. On time, every time.</div></div></li>
       </ul>
     </div>
     <div class="benefits-visual reveal" style="transition-delay:0.15s">
       <div class="photo-frame">
-        <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=900&q=80&fit=crop&crop=center" alt="Veteran family in new home"/>
-        <div class="photo-badge">
-          <div class="pb-num">25+</div>
-          <div class="pb-label">Years Serving<br/>Homebuyers</div>
-        </div>
+        <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=900&q=80&fit=crop&crop=faces,center" alt="Veteran family in new home" loading="lazy"/>
+        <div class="photo-badge"><div class="pb-num">25+</div><div class="pb-label">Years Serving<br/>Homebuyers</div></div>
       </div>
     </div>
   </div>
@@ -492,23 +413,32 @@
     <h2 class="section-h">4 Steps to Your <em>New Home</em></h2>
   </div>
   <div class="process-grid">
-    <div class="process-step reveal"><div class="ps-num">01</div><div class="ps-title">Apply Online</div><div class="ps-desc">10 minutes on your phone. No branch visit. No paper chasing.</div><span class="ps-arrow">›</span></div>
+    <div class="process-step reveal"><div class="ps-num">01</div><div class="ps-title">Apply Online</div><div class="ps-desc">10 minutes on your phone. No branch visit required.</div><span class="ps-arrow">›</span></div>
     <div class="process-step reveal" style="transition-delay:0.1s"><div class="ps-num">02</div><div class="ps-title">Get Pre-Approved</div><div class="ps-desc">Receive your letter and shop with full confidence.</div><span class="ps-arrow">›</span></div>
-    <div class="process-step reveal" style="transition-delay:0.2s"><div class="ps-num">03</div><div class="ps-title">Lock Your Rate</div><div class="ps-desc">Found your home? We lock in and move straight to underwriting.</div><span class="ps-arrow">›</span></div>
-    <div class="process-step reveal" style="transition-delay:0.3s"><div class="ps-num">04</div><div class="ps-title">Close &amp; Move In</div><div class="ps-desc">We handle the heavy lifting. You show up to collect the keys.</div></div>
+    <div class="process-step reveal" style="transition-delay:0.2s"><div class="ps-num">03</div><div class="ps-title">Lock Your Rate</div><div class="ps-desc">Found your home? We lock in and move to underwriting.</div><span class="ps-arrow">›</span></div>
+    <div class="process-step reveal" style="transition-delay:0.3s"><div class="ps-num">04</div><div class="ps-title">25-Day Guarantee Close</div><div class="ps-desc">We handle the heavy lifting. Keys in hand in 25 days.</div></div>
   </div>
   <div class="light-clip-bottom"></div>
 </section>
 
-<!-- ══ PHOTO STRIP ══ -->
+<!-- ══ PHOTO STRIP — using <img> tags for cross-origin reliability ══ -->
 <div class="photo-strip">
-  <div class="ps-photo"><img src="https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=700&q=75&fit=crop&crop=center" alt="Veteran"/><div class="ps-photo-label">Service &amp; Sacrifice</div></div>
-  <div class="ps-photo"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=75&fit=crop&crop=center" alt="New Home"/><div class="ps-photo-label">Your New Beginning</div></div>
-  <div class="ps-photo"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=75&fit=crop&crop=center" alt="Dream Home"/><div class="ps-photo-label">Built for Families</div></div>
+  <div class="ps-photo">
+    <img src="https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=700&q=75&fit=crop&crop=faces,center" alt="Veteran" loading="lazy"/>
+    <div class="ps-photo-label">Service &amp; Sacrifice</div>
+  </div>
+  <div class="ps-photo">
+    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=75&fit=crop&crop=center" alt="New Home" loading="lazy"/>
+    <div class="ps-photo-label">Your New Beginning</div>
+  </div>
+  <div class="ps-photo">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=75&fit=crop&crop=center" alt="Dream Home" loading="lazy"/>
+    <div class="ps-photo-label">Built for Families</div>
+  </div>
   <div class="photo-strip-overlay"></div>
 </div>
 
-<!-- ══ TESTIMONIALS (LIGHT) ══ -->
+<!-- ══ TESTIMONIALS ══ -->
 <section class="testimonials">
   <div class="test-header reveal">
     <div>
@@ -524,11 +454,11 @@
   </div>
   <div class="testimonials-slider">
     <div class="t-track" id="tTrack">
-      <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">Being able to close on a house in less than a month was great. The Service First team was ready to close within two weeks which made things great. Thank you for the hard work and helping us get in our new house!</p><div class="t-name">Nolan A.</div><div class="t-src">Verified · Experience.com</div></div>
+      <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">Being able to close on a house in less than a month was great. The Service First team was ready to close within two weeks. Thank you for the hard work and helping us get in our new house!</p><div class="t-name">Nolan A.</div><div class="t-src">Verified · Experience.com</div></div>
       <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">Knowing I had an experienced team gave me confidence that all the paperwork was in order when I went to closing. They took care of me from start to finish.</p><div class="t-name">Kimberly W.</div><div class="t-src">Verified · Experience.com</div></div>
       <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">They explained what I didn't understand and their response was fast. They were in constant communication with me and made me feel comfortable going through this amazing process!</p><div class="t-name">Mayra A.</div><div class="t-src">Verified · Experience.com</div></div>
-      <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">I was always fully informed and team members in charge of my loan always advocated for me, even helping reduce the list price of my home.</p><div class="t-name">Tomas M.</div><div class="t-src">Verified · Experience.com</div></div>
-      <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">The team made it a great experience! From start to finish, it was a smooth transaction for us. As first-time homebuyers we will be using them again in the future for our next one.</p><div class="t-name">Ricardo G.</div><div class="t-src">Verified · Experience.com</div></div>
+      <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">I was always fully informed and team members always advocated for me, even helping reduce the list price of my home.</p><div class="t-name">Tomas M.</div><div class="t-src">Verified · Experience.com</div></div>
+      <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">The team made it a great experience! From start to finish, it was a smooth transaction. As first-time homebuyers we will be using them again for our next one.</p><div class="t-name">Ricardo G.</div><div class="t-src">Verified · Experience.com</div></div>
       <div class="t-card"><div class="t-stars-sm">★★★★★</div><div class="t-quote-mark">"</div><p class="t-text">They never stopped helping me get a house for my mom. Every single person I worked with went above and beyond what I expected.</p><div class="t-name">SFMC Client</div><div class="t-src">Verified · Experience.com</div></div>
     </div>
   </div>
@@ -538,6 +468,28 @@
     <div class="t-dots" id="tDots"></div>
   </div>
   <div class="white-clip"></div>
+</section>
+
+<!-- ══ SOCIAL FEED ══ -->
+<!-- TO ACTIVATE: Sign up at juicer.io, connect your Instagram, copy your feed name, replace YOUR_JUICER_FEED_NAME below, then delete the placeholder div -->
+<section class="social-section">
+  <div class="reveal">
+    <div class="section-tag"><span class="tag-line"></span><span class="tag-text" style="color:rgba(201,135,38,0.6)">Latest from Instagram</span></div>
+    <h2 class="section-h" style="color:var(--white)">Follow the <em>Journey</em></h2>
+    <p class="social-intro">VA tips, client wins, and market updates — straight from the source.</p>
+  </div>
+
+  <!-- JUICER EMBED — Replace YOUR_JUICER_FEED_NAME with your actual Juicer feed name -->
+  <!-- <div class="juicer-feed" data-feed-id="YOUR_JUICER_FEED_NAME" data-per="9" data-truncate="50"></div> -->
+  <!-- <script src="https://assets.juicer.io/embed.js" async></script> -->
+  <!-- <link rel="stylesheet" href="https://assets.juicer.io/embed.css"/> -->
+
+  <!-- PLACEHOLDER — remove this div once Juicer is connected -->
+  <div class="juicer-placeholder reveal">
+    <strong>Instagram Feed Coming Soon</strong><br/>
+    Set up at <strong>juicer.io</strong> → connect your Instagram → paste your feed name into the code above.<br/>
+    Pair with <strong>Metricool</strong> auto-posting for a hands-free content engine that keeps this page fresh for Google.
+  </div>
 </section>
 
 <!-- ══ CTA ══ -->
@@ -560,8 +512,11 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-logo-script">Service First</div>
-      <div class="footer-logo-name">SFMC Home Lending</div>
+      <div class="footer-brand-row">
+        <span class="footer-sfmc">SFMC</span>
+        <span class="footer-script">Service First</span>
+      </div>
+      <div class="footer-hl">Home Lending · NMLS# 166487</div>
       <p class="footer-p">Established 1997. In-house underwriting. Speed, Service &amp; Synergy. Equal Housing Lender.</p>
     </div>
     <div>
@@ -578,35 +533,28 @@
   </div>
   <div class="footer-legal">
     <span class="eq-symbol">⊕</span>
-    <span>Equal Housing Lender. Licensed as SFMC, LP; Service First Mortgage in TX. NMLS# 166487. Matthew Royal NMLS# 430390.<br/>This is not a commitment to lend. All loans subject to credit approval. VA loans available to eligible veterans, active duty service members, and surviving spouses. Rates shown are sample rates for informational purposes and subject to change without notice.</span>
+    <span>Equal Housing Lender. Licensed as SFMC, LP; Service First Mortgage in TX. NMLS# 166487. Matthew Royal NMLS# 430390. This is not a commitment to lend. All loans subject to credit approval. VA loans available to eligible veterans, active duty service members, and surviving spouses. 25-day close guarantee subject to timely receipt of all required documents. Rates subject to change without notice.</span>
   </div>
 </footer>
 
-<!-- ══ AI CHAT WIDGET ══ -->
-<button class="chat-fab" id="chatFab" aria-label="Ask a question">
-  💬
-  <span class="fab-badge">?</span>
-</button>
-
+<!-- ══ AI CHAT ══ -->
+<button class="chat-fab" id="chatFab" aria-label="Ask a question">💬<span class="fab-badge">?</span></button>
 <div class="chat-panel" id="chatPanel">
   <div class="chat-header">
     <div class="chat-header-info">
       <div class="chat-avatar">🏠</div>
-      <div>
-        <div class="chat-header-name">Matthew's VA Loan Assistant</div>
-        <div class="chat-header-status">● Online — Ask me anything</div>
-      </div>
+      <div><div class="chat-header-name">Matthew's VA Loan Assistant</div><div class="chat-header-status">● Online — Ask me anything</div></div>
     </div>
     <button class="chat-close" id="chatClose">✕</button>
   </div>
   <div class="chat-messages" id="chatMessages">
-    <div class="msg msg-bot"><div class="msg-bubble">Hi! I'm Matthew's VA loan assistant. I can answer questions about VA loans, rates, eligibility, and the application process. What can I help you with?</div><div class="msg-time">Just now</div></div>
+    <div class="msg msg-bot"><div class="msg-bubble">Hi! I'm Matthew's VA loan assistant. Ask me anything about VA loans, rates, eligibility, or the process.</div><div class="msg-time">Just now</div></div>
   </div>
   <div class="chat-suggestions" id="chatSuggestions">
     <button class="suggest-btn" onclick="askQuestion('Do I qualify for a VA loan?')">Do I qualify?</button>
     <button class="suggest-btn" onclick="askQuestion('What is an IRRRL refinance?')">What is IRRRL?</button>
-    <button class="suggest-btn" onclick="askQuestion('How much can I borrow with a VA loan?')">Loan limits?</button>
-    <button class="suggest-btn" onclick="askQuestion('How fast can I close?')">How fast to close?</button>
+    <button class="suggest-btn" onclick="askQuestion('How much can I borrow?')">Loan limits?</button>
+    <button class="suggest-btn" onclick="askQuestion('Tell me about the 25-day close guarantee')">25-day close?</button>
   </div>
   <div class="chat-input-row">
     <input class="chat-input" id="chatInput" type="text" placeholder="Ask a VA loan question..." autocomplete="off"/>
@@ -615,140 +563,141 @@
 </div>
 
 <script>
-// ── Chat toggle ──
-const fab = document.getElementById('chatFab');
-const panel = document.getElementById('chatPanel');
-const closeBtn = document.getElementById('chatClose');
-fab.addEventListener('click', () => { panel.classList.toggle('open'); if(panel.classList.contains('open')) document.getElementById('chatInput').focus(); });
-closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+// ══ GOOGLE SHEETS LIVE RATES ══
+const SHEET_ID   = '1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698';
+const SHEET_NAME = 'Daily_Rates';
 
-// ── VA Loan Knowledge Base ──
-const KB = [
-  { keys:['qualify','eligible','eligibility','who can','veteran','active duty','service member','surviving spouse'],
-    answer:`You may qualify for a VA loan if you are:\n• An active duty service member (90+ days)\n• A veteran with honorable discharge\n• A National Guard or Reserve member (6+ years)\n• A surviving spouse of a veteran who died in service\n\nThe best way to confirm is to apply — Matthew will pull your Certificate of Eligibility (COE) for you at no cost. Ready? Call (469) 634-4500 or apply at the link above.` },
-  { keys:['irrrl','streamline','refinance','reduce rate','lower rate','refi'],
-    answer:`The **VA IRRRL** (Interest Rate Reduction Refinance Loan) — also called a "VA Streamline Refi" — lets you lower your current VA loan rate with minimal paperwork and **no appraisal required**.\n\n• Must already have a VA loan\n• Must reduce your interest rate (with limited exceptions)\n• Typically closes faster than a standard refinance\n\nCurrent IRRRL sample rate: **5.375% / 5.641% APR**\nCall Matthew at (469) 634-4500 to see if it makes sense for you.` },
-  { keys:['down payment','downpayment','zero down','0 down'],
-    answer:`VA loans require **$0 down payment** — that's one of the biggest benefits. You can finance up to 100% of the home's purchase price.\n\nMost conventional loans require 3–20% down, so on a $400,000 home you'd save $12,000–$80,000 out of pocket.` },
-  { keys:['pmi','private mortgage','mortgage insurance'],
-    answer:`VA loans have **no PMI (Private Mortgage Insurance)** — ever. This alone can save you $150–$300/month compared to a conventional loan with less than 20% down. Over 30 years, that's $54,000–$108,000 in savings.` },
-  { keys:['limit','how much','borrow','loan amount','max','maximum'],
-    answer:`There is **no VA loan limit** for borrowers with full entitlement (no active VA loans). You can borrow what you qualify for based on income and credit.\n\nFor reference:\n• Standard VA loan: full purchase price, no down payment needed\n• VA Jumbo: above conforming limits (~$766,550 in most areas)\n\nMatthew can tell you your exact number — call (469) 634-4500.` },
-  { keys:['close','closing','fast','how long','timeline','weeks'],
-    answer:`SFMC closes most VA loans in **approximately 2 weeks** thanks to in-house underwriting. There are no hand-offs to third parties — Matthew's team controls the process from start to finish.\n\nTypical timeline:\n• Day 1–3: Application + COE\n• Day 3–7: Appraisal ordered\n• Day 7–12: Underwriting\n• Day 14: Closing` },
-  { keys:['rate','rates','interest','apr','today','current'],
-    answer:`Today's sample VA rates through Matthew at SFMC:\n\n• **VA Purchase: 5.500%** (5.822% APR)\n• **VA Jumbo: 5.750%** (6.053% APR)\n• **VA IRRRL: 5.375%** (5.641% APR)\n\nRates change daily based on the market. For your personalized rate, apply online or call Matthew at **(469) 634-4500**.` },
-  { keys:['funding fee','fee','cost','closing cost'],
-    answer:`The VA Funding Fee is a one-time fee paid to the VA (not to your lender). It ranges from **1.25%–3.3%** of the loan amount depending on your usage and down payment.\n\n**Good news:** You may be **exempt** from the funding fee if you receive VA disability compensation. Matthew can confirm your status during the application process.` },
-  { keys:['apply','application','start','begin','get started'],
-    answer:`You can start your application right now — it takes about **10 minutes** from your phone.\n\n👉 Apply online: Use the "Start My Application" button above\n📞 Or call Matthew directly: **(469) 634-4500**\n\nMatthew handles VA loans personally and will follow up with you — not a call center.` },
-  { keys:['credit score','credit','fico','score'],
-    answer:`The VA doesn't set a minimum credit score, but most lenders (including SFMC) look for **620+**. Higher scores get better rates.\n\nIf your score is below 620, Matthew can often work with you on a plan to qualify. Call (469) 634-4500 to discuss your situation.` },
-  { keys:['certificate','coe','entitlement'],
-    answer:`The **Certificate of Eligibility (COE)** proves to your lender that you qualify for the VA loan benefit. Matthew will pull this for you at no cost as part of the application process — you don't need to do it yourself.` },
-  { keys:['jumbo','large loan','high value','expensive'],
-    answer:`A **VA Jumbo loan** is for purchase prices above the conforming loan limit (~$766,550 in most Texas counties). SFMC offers VA Jumbo with the same $0 down benefit.\n\nCurrent VA Jumbo sample rate: **5.750% / 6.053% APR**\nContact Matthew at (469) 634-4500 for details.` },
+const LOAN_META = {
+  'va purchase':          { badge:'VA',   cls:'badge-va',    desc:'$0 down · No PMI · Primary residence',                note:'' },
+  'va jumbo':             { badge:'VA',   cls:'badge-va',    desc:'Loan amounts above conforming limit',                 note:'Loan amounts up to $2,000,000' },
+  'va irrrl':             { badge:'REFI', cls:'badge-irrrl', desc:'No appraisal required · Reduce your current VA rate', note:'' },
+};
+
+function getMeta(name) {
+  const n = (name||'').toLowerCase();
+  for (const [k,v] of Object.entries(LOAN_META)) { if (n.includes(k)) return v; }
+  return { badge:'VA', cls:'badge-va', desc:'', note:'' };
+}
+
+const FALLBACK = [
+  { name:'VA Purchase',          rate:'5.375%', points:'0.875%' },
+  { name:'VA Jumbo Purchase',    rate:'5.500%', points:'1.000%' },
+  { name:'VA IRRRL - Refinance', rate:'5.490%', points:'0.750%' },
 ];
 
-function getAnswer(q) {
-  const lower = q.toLowerCase();
-  for (const item of KB) {
-    if (item.keys.some(k => lower.includes(k))) return item.answer;
-  }
-  return `Great question. For the most accurate answer, Matthew recommends a quick call or application.\n\n📞 **(469) 634-4500** — Matthew Royal, NMLS# 430390\n🌐 Or apply online using the button above.\n\nHe specializes in VA loans and can give you a straight answer in minutes.`;
+function buildTable(rows, timestamp) {
+  let html = `<table class="rates-table"><thead><tr><th>Loan Type</th><th>Interest Rate</th><th>Points</th></tr></thead><tbody>`;
+  rows.forEach(r => {
+    const m = getMeta(r.name);
+    html += `<tr><td>
+      <div class="loan-type-name">${r.name} <span class="rates-badge ${m.cls}">${m.badge}</span></div>
+      <div class="loan-type-desc">${m.desc}</div>
+      ${m.note ? `<div class="loan-type-note">▸ ${m.note}</div>` : ''}
+    </td><td><span class="rate-big">${r.rate}</span></td><td><span class="rate-pts">${r.points}</span></td></tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('ratesContainer').innerHTML = html;
+  document.getElementById('ratesTimestamp').textContent = timestamp ? `Rates as of ${timestamp}` : '';
 }
 
-function formatMsg(text) {
-  return text.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br/>');
+async function loadRates() {
+  try {
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('fail');
+    const csv = await res.text();
+    const lines = csv.split('\n').map(l => l.split(',').map(c => c.replace(/^"|"$/g,'').trim()));
+    const timestamp = lines[1]?.[1] || null;
+    const rows = [];
+    for (let i=3; i<=5; i++) { if (lines[i]?.[0]) rows.push({ name:lines[i][0], rate:lines[i][1]||'—', points:lines[i][2]||'—' }); }
+    buildTable(rows.length ? rows : FALLBACK, timestamp);
+  } catch(e) { buildTable(FALLBACK, null); }
 }
+loadRates();
 
-function addMsg(text, role) {
-  const msgs = document.getElementById('chatMessages');
-  const wrap = document.createElement('div');
-  wrap.className = `msg msg-${role}`;
-  const bubble = document.createElement('div');
-  bubble.className = 'msg-bubble';
-  bubble.innerHTML = formatMsg(text);
-  const time = document.createElement('div');
-  time.className = 'msg-time';
-  time.textContent = 'Just now';
-  wrap.appendChild(bubble);
-  wrap.appendChild(time);
-  msgs.appendChild(wrap);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function showTyping() {
-  const msgs = document.getElementById('chatMessages');
-  const wrap = document.createElement('div');
-  wrap.className = 'msg msg-bot';
-  wrap.id = 'typingIndicator';
-  wrap.innerHTML = `<div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
-  msgs.appendChild(wrap);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function removeTyping() {
-  const t = document.getElementById('typingIndicator');
-  if(t) t.remove();
-}
-
-function askQuestion(q) {
-  document.getElementById('chatSuggestions').style.display = 'none';
-  addMsg(q, 'user');
-  showTyping();
-  setTimeout(() => {
-    removeTyping();
-    addMsg(getAnswer(q), 'bot');
-  }, 900 + Math.random() * 600);
-}
-
-document.getElementById('chatSend').addEventListener('click', sendChat);
-document.getElementById('chatInput').addEventListener('keydown', e => { if(e.key === 'Enter') sendChat(); });
-
-function sendChat() {
-  const input = document.getElementById('chatInput');
-  const val = input.value.trim();
-  if(!val) return;
-  input.value = '';
-  document.getElementById('chatSuggestions').style.display = 'none';
-  addMsg(val, 'user');
-  showTyping();
-  setTimeout(() => { removeTyping(); addMsg(getAnswer(val), 'bot'); }, 800 + Math.random() * 700);
-}
-
-// ── Testimonial Slider ──
+// ══ TESTIMONIAL SLIDER ══
 const track = document.getElementById('tTrack');
-const cards = track.querySelectorAll('.t-card');
+const cards = Array.from(track.querySelectorAll('.t-card'));
 const dotsEl = document.getElementById('tDots');
 let cur = 0;
 const vis = () => window.innerWidth < 640 ? 1 : window.innerWidth < 960 ? 2 : 3;
+
 function buildDots() {
   dotsEl.innerHTML = '';
-  const max = cards.length - vis() + 1;
-  for(let i=0;i<max;i++){
-    const d=document.createElement('div');
-    d.className='t-dot'+(i===0?' active':'');
-    d.addEventListener('click',()=>moveTo(i));
+  for (let i=0; i<=cards.length-vis(); i++) {
+    const d = document.createElement('div');
+    d.className = 't-dot'+(i===cur?' active':'');
+    d.onclick = () => moveTo(i);
     dotsEl.appendChild(d);
   }
 }
 function updateDots() { dotsEl.querySelectorAll('.t-dot').forEach((d,i)=>d.classList.toggle('active',i===cur)); }
-function getSlideW() { return cards[0].offsetWidth + 24; }
 function moveTo(idx) {
-  const max = cards.length - vis();
-  cur = Math.max(0, Math.min(idx, max));
-  track.style.transform = `translateX(-${cur * getSlideW()}px)`;
+  cur = Math.max(0, Math.min(idx, cards.length-vis()));
+  track.style.transform = `translateX(-${cur*(cards[0].getBoundingClientRect().width+24)}px)`;
   updateDots();
 }
-document.getElementById('tNext').addEventListener('click',()=>moveTo(cur+1));
-document.getElementById('tPrev').addEventListener('click',()=>moveTo(cur-1));
+document.getElementById('tNext').onclick = () => moveTo(cur+1);
+document.getElementById('tPrev').onclick = () => moveTo(cur-1);
 buildDots();
-setInterval(()=>{ moveTo(cur < cards.length - vis() ? cur+1 : 0); }, 5500);
-window.addEventListener('resize',()=>{ moveTo(0); buildDots(); });
+setInterval(() => moveTo(cur < cards.length-vis() ? cur+1 : 0), 5500);
+window.addEventListener('resize', () => { cur=0; moveTo(0); buildDots(); });
 
-// ── Scroll Reveal ──
-const ro = new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:0.1});
+// ══ AI CHAT ══
+document.getElementById('chatFab').onclick = () => document.getElementById('chatPanel').classList.toggle('open');
+document.getElementById('chatClose').onclick = () => document.getElementById('chatPanel').classList.remove('open');
+
+const KB = [
+  {k:['qualify','eligible','veteran','active duty','service member','surviving spouse'], a:`You may qualify if you are:\n• Active duty service member (90+ days)\n• Veteran with honorable discharge\n• National Guard/Reserve (6+ years)\n• Surviving spouse of a veteran who died in service\n\nMatthew pulls your COE at no cost. Call **(469) 634-4500**.`},
+  {k:['irrrl','streamline','refinance','lower rate','reduce rate'], a:`The **VA IRRRL** lets you lower your current VA rate with minimal paperwork and **no appraisal required**.\n\nSee today's IRRRL rate in the table above. Call **(469) 634-4500)** to see if it makes sense.`},
+  {k:['25 day','25-day','guarantee','close fast','closing guarantee'], a:`SFMC offers a **25-Day Guarantee Close** on VA loans. In-house underwriting means no third-party delays — Matthew controls the timeline from application to keys.\n\nCall **(469) 634-4500** to get started today.`},
+  {k:['down payment','zero down','0 down'], a:`VA loans require **$0 down payment** — finance up to 100% of the home's value.`},
+  {k:['pmi','mortgage insurance'], a:`VA loans have **no PMI ever** — saving $150–$300/month vs. conventional.`},
+  {k:['jumbo','2 million','large loan'], a:`SFMC offers VA Jumbo loans up to **$2,000,000** with $0 down. See today's rate in the table above.`},
+  {k:['limit','how much','borrow','maximum'], a:`No VA loan limit with full entitlement. SFMC offers up to **$2 million**. Call **(469) 634-4500** for your exact number.`},
+  {k:['close','closing','fast','how long','timeline'], a:`SFMC guarantees closing in **25 days** on most VA loans with in-house underwriting.`},
+  {k:['rate','rates','interest','today','current'], a:`Today's VA rates are shown live in the table on this page — updated directly by Matthew.\n\nFor your personalized rate: **(469) 634-4500**.`},
+  {k:['funding fee','fee','cost'], a:`VA Funding Fee ranges **1.25%–3.3%**. You may be **exempt** with VA disability compensation.`},
+  {k:['apply','start','begin'], a:`Start in ~10 minutes:\n\n👉 Click "Start Application" above\n📞 Or call **(469) 634-4500**`},
+  {k:['credit','fico','score'], a:`Most lenders look for **620+**. Call Matthew at **(469) 634-4500** — he can often work with you on a plan.`},
+];
+
+function getAnswer(q) {
+  const l = q.toLowerCase();
+  for (const item of KB) { if (item.k.some(k=>l.includes(k))) return item.a; }
+  return `Great question. Call Matthew directly:\n\n📞 **(469) 634-4500**\n🌐 Or click "Start Application" above.\n\nHe specializes in VA loans and gives straight answers in minutes.`;
+}
+function fmt(t) { return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br/>'); }
+function addMsg(text, role) {
+  const msgs = document.getElementById('chatMessages');
+  const w = document.createElement('div');
+  w.className = `msg msg-${role}`;
+  w.innerHTML = `<div class="msg-bubble">${fmt(text)}</div><div class="msg-time">Just now</div>`;
+  msgs.appendChild(w); msgs.scrollTop = msgs.scrollHeight;
+}
+function showTyping() {
+  const msgs = document.getElementById('chatMessages');
+  const w = document.createElement('div'); w.className='msg msg-bot'; w.id='ti';
+  w.innerHTML=`<div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+  msgs.appendChild(w); msgs.scrollTop=msgs.scrollHeight;
+}
+function removeTyping() { const t=document.getElementById('ti'); if(t)t.remove(); }
+function askQuestion(q) {
+  document.getElementById('chatSuggestions').style.display='none';
+  addMsg(q,'user'); showTyping();
+  setTimeout(()=>{removeTyping();addMsg(getAnswer(q),'bot');}, 850+Math.random()*450);
+}
+document.getElementById('chatSend').onclick = sendChat;
+document.getElementById('chatInput').onkeydown = e => { if(e.key==='Enter') sendChat(); };
+function sendChat() {
+  const inp=document.getElementById('chatInput'); const v=inp.value.trim(); if(!v)return;
+  inp.value=''; document.getElementById('chatSuggestions').style.display='none';
+  addMsg(v,'user'); showTyping();
+  setTimeout(()=>{removeTyping();addMsg(getAnswer(v),'bot');},850+Math.random()*450);
+}
+
+// ══ SCROLL REVEAL ══
+const ro = new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 </script>
 </body>
