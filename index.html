@@ -67,7 +67,6 @@
     .h-stat-l { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 4px; }
     .hero-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--cream); clip-path: polygon(0 100%,100% 0,100% 100%); z-index: 3; }
 
-    /* ══ RATES ══ */
     .rates-section { background: var(--cream); padding: 80px 6% 100px; position: relative; }
     .section-tag { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
     .tag-line { width: 30px; height: 1px; background: var(--gold); }
@@ -105,7 +104,6 @@
     @keyframes spin { to{transform:rotate(360deg)} }
     .cream-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 100%,100% 60%,100% 100%); }
 
-    /* ══ VA BENEFITS ══ */
     .va-benefits { background: var(--dark2); padding: 90px 6% 110px; position: relative; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
     .va-benefits .section-h { color: var(--white); }
@@ -118,116 +116,24 @@
     .b-title { font-weight: 600; font-size: 0.95rem; color: var(--white); }
     .b-desc { font-size: 0.82rem; color: rgba(255,255,255,0.42); margin-top: 2px; line-height: 1.5; }
 
-    /* Matthew's photo — smaller, circular with gold ring */
-    .benefits-visual { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2rem; }
-    .matt-photo-wrap {
-      position: relative;
-      width: 220px;
-      height: 220px;
-      flex-shrink: 0;
-    }
-    .matt-photo-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -6px;
-      border-radius: 50%;
-      border: 2px solid var(--gold);
-      opacity: 0.5;
-    }
-    .matt-photo-wrap img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      border: 3px solid rgba(201,135,38,0.3);
-    }
-    .matt-name-badge {
-      text-align: center;
-    }
-    .matt-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--white); }
-    .matt-title { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 3px; }
-    .matt-nmls { font-size: 0.7rem; color: rgba(255,255,255,0.35); margin-top: 2px; }
-    .matt-quote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.95rem;
-      font-style: italic;
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      line-height: 1.7;
-      max-width: 280px;
-      border-top: 1px solid rgba(201,135,38,0.2);
-      padding-top: 1.2rem;
-    }
+    /* Matthew photo — clean, circular, no quote */
+    .benefits-visual { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+    .matt-photo-wrap { position: relative; width: 220px; height: 220px; flex-shrink: 0; }
+    .matt-photo-wrap::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--gold); opacity: 0.5; }
+    .matt-photo-wrap img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; object-position: center top; display: block; border: 3px solid rgba(201,135,38,0.3); }
+    .matt-name-badge { text-align: center; }
+    .matt-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--white); }
+    .matt-title { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px; }
+    .matt-nmls { font-size: 0.7rem; color: rgba(255,255,255,0.35); margin-top: 3px; }
+    .matt-actions { display: flex; flex-direction: column; gap: 0.6rem; width: 100%; max-width: 240px; }
+    .matt-btn-apply { display: block; text-align: center; background: var(--gold); color: var(--dark2); padding: 0.75rem 1.2rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); transition: background 0.2s; }
+    .matt-btn-apply:hover { background: var(--gold-lt); }
+    .matt-btn-call { display: flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid rgba(255,255,255,0.2); color: var(--white); padding: 0.7rem 1.2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.82rem; text-decoration: none; transition: border-color 0.2s,color 0.2s; }
+    .matt-btn-call:hover { border-color: var(--gold); color: var(--gold); }
 
     .dark2-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: #f0ede8; clip-path: polygon(0 60%,100% 0,100% 100%,0 100%); }
 
-    /* ══ ABOUT + SARAH PARTNER ══ */
-    .about-section { background: #f0ede8; padding: 90px 6% 110px; position: relative; }
-    .about-section .section-h { color: var(--dark); }
-    .about-section .section-h em { color: var(--brown); }
-    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .about-text { font-size: 1rem; line-height: 1.85; color: #5a6470; }
-    .about-text p { margin-bottom: 1.2rem; }
-    .about-text p:last-child { margin-bottom: 0; }
-    .about-text strong { color: var(--dark); font-weight: 600; }
-
-    /* Sarah partner card */
-    .sarah-card {
-      background: var(--dark);
-      border-top: 3px solid var(--gold);
-      padding: 2.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-    }
-    .sarah-card-label {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-    .sarah-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.2;
-    }
-    .sarah-card-title em { font-style: italic; color: var(--gold-lt); }
-    .sarah-card-body {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.75;
-    }
-    .sarah-card-body strong { color: var(--white); font-weight: 500; }
-    .sarah-details { display: flex; flex-direction: column; gap: 0.6rem; }
-    .sarah-detail-row { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: rgba(255,255,255,0.55); }
-    .sarah-detail-row span:first-child { font-size: 0.9rem; }
-    .sarah-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold);
-      color: var(--dark2);
-      padding: 0.8rem 1.6rem;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
-      transition: background 0.2s;
-      align-self: flex-start;
-    }
-    .sarah-btn:hover { background: var(--gold-lt); }
-    .about-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--white); clip-path: polygon(0 100%,100% 60%,100% 100%); }
-
-    /* ══ PROCESS ══ */
-    .process-section { background: var(--white); padding: 100px 6% 120px; position: relative; }
+    .process-section { background: #f0ede8; padding: 100px 6% 120px; position: relative; }
     .process-section .section-h { color: var(--dark); }
     .process-section .section-h em { color: var(--brown); }
     .process-section .tag-text { color: var(--gold); }
@@ -239,9 +145,8 @@
     .ps-desc { font-size: 0.85rem; color: #7a8490; line-height: 1.7; }
     .ps-arrow { position: absolute; top: 50%; right: -12px; transform: translateY(-50%); color: var(--gold); font-size: 1rem; opacity: 0.4; z-index: 2; }
     .process-step:last-child .ps-arrow { display: none; }
-    .white-clip-bottom { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark); clip-path: polygon(0 100%,100% 60%,100% 100%); }
+    .light-clip-bottom { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--white); clip-path: polygon(0 100%,100% 60%,100% 100%); }
 
-    /* ══ PHOTO STRIP ══ */
     .photo-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 380px; overflow: hidden; position: relative; background: var(--dark); }
     .ps-photo { overflow: hidden; position: relative; }
     .ps-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.5) saturate(0.8); transition: filter 0.5s,transform 0.5s; }
@@ -249,7 +154,6 @@
     .ps-photo-label { position: absolute; bottom: 20px; left: 20px; z-index: 2; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
     .photo-strip-overlay { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(26,33,41,0.7) 0%,transparent 30%,transparent 70%,rgba(26,33,41,0.7) 100%); pointer-events: none; z-index: 1; }
 
-    /* ══ TESTIMONIALS ══ */
     .testimonials { background: var(--white); padding: 100px 6% 80px; position: relative; }
     .test-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
     .testimonials .section-h { color: var(--dark); }
@@ -275,7 +179,6 @@
     .t-dot.active { background: var(--gold); transform: scale(1.3); }
     .white-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark); clip-path: polygon(0 100%,100% 0,100% 100%); }
 
-    /* ══ BOOT CAMPAIGN ══ */
     .giving-section { background: var(--dark); padding: 90px 6%; position: relative; overflow: hidden; }
     .giving-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg,var(--maroon),var(--gold),var(--maroon)); }
     .giving-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; position: relative; z-index: 2; }
@@ -301,7 +204,6 @@
     .boot-badge-text strong { color: var(--white); font-weight: 600; display: block; margin-bottom: 2px; }
     .giving-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 60%,100% 0,100% 100%); }
 
-    /* ══ SOCIAL ══ */
     .social-section { background: var(--dark2); padding: 80px 6%; }
     .social-section .section-h { color: var(--white); }
     .social-section .section-h em { color: var(--gold-lt); }
@@ -309,7 +211,6 @@
     .juicer-placeholder { border: 1px dashed rgba(201,135,38,0.3); padding: 3rem; text-align: center; color: rgba(255,255,255,0.3); font-size: 0.85rem; line-height: 1.8; }
     .juicer-placeholder strong { color: var(--gold); }
 
-    /* ══ CTA ══ */
     .cta-section { position: relative; padding: 0; overflow: hidden; }
     .cta-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80&fit=crop'); background-size: cover; background-position: center; filter: brightness(0.18) saturate(0.6); }
     .cta-inner { position: relative; z-index: 2; padding: 100px 6%; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
@@ -323,7 +224,6 @@
     .cta-call { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); color: var(--white); padding: 0.95rem 2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.05em; transition: border-color 0.2s,color 0.2s; }
     .cta-call:hover { border-color: var(--gold); color: var(--gold); }
 
-    /* ══ FOOTER ══ */
     footer { background: var(--dark2); padding: 50px 6% 30px; border-top: 1px solid rgba(201,135,38,0.15); }
     .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .footer-brand-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
@@ -341,7 +241,6 @@
     .footer-legal { font-size: 0.68rem; color: rgba(255,255,255,0.2); line-height: 1.8; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
     .eq-symbol { font-size: 1.4rem; opacity: 0.3; }
 
-    /* ══ CHAT ══ */
     .chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1000; width: 60px; height: 60px; background: var(--maroon); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 8px 30px rgba(102,19,17,0.5); clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s,transform 0.2s; }
     .chat-fab:hover { background: var(--maroon2); transform: scale(1.06); }
     .chat-fab .fab-badge { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); color: var(--dark2); font-size: 0.62rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
@@ -382,14 +281,14 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 960px) {
-      .two-col,.giving-inner,.about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .two-col,.giving-inner { grid-template-columns: 1fr; gap: 3rem; }
       .process-grid { grid-template-columns: 1fr 1fr; }
       .photo-strip { grid-template-columns: 1fr 1fr; }
       .photo-strip .ps-photo:last-child { display: none; }
       .cta-inner { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
       .t-card { flex: 0 0 calc((100% - 24px) / 2); }
-      .benefits-visual { flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; }
+      .benefits-visual { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     }
     @media (max-width: 640px) {
       nav { padding: 0 4%; }
@@ -489,7 +388,6 @@
         <li><div class="b-icon">⚡</div><div><div class="b-title">25-Day Guarantee Close</div><div class="b-desc">We control the process start to finish. On time, every time.</div></div></li>
       </ul>
     </div>
-    <!-- Matthew's photo — smaller, circular -->
     <div class="benefits-visual reveal" style="transition-delay:0.15s">
       <div class="matt-photo-wrap">
         <img src="matt_royal.avif" alt="Matthew Royal — VA Loan Specialist" loading="lazy"/>
@@ -499,45 +397,13 @@
         <div class="matt-title">VA Loan Specialist · SFMC Home Lending</div>
         <div class="matt-nmls">NMLS# 430390</div>
       </div>
-      <p class="matt-quote">"Military service is part of my family story. Helping veterans use the benefit they've earned isn't just a job — it's personal."</p>
+      <div class="matt-actions">
+        <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="matt-btn-apply">Start My Application →</a>
+        <a href="tel:4696344500" class="matt-btn-call">📞 (469) 634-4500</a>
+      </div>
     </div>
   </div>
   <div class="dark2-clip"></div>
-</section>
-
-<!-- ══ ABOUT + SARAH PREFERRED PARTNER ══ -->
-<section class="about-section">
-  <div class="section-tag reveal"><span class="tag-line"></span><span class="tag-text">About Matthew</span></div>
-  <div class="about-inner" style="margin-top:1.5rem;">
-    <div class="about-text reveal">
-      <h2 class="section-h" style="margin-bottom:1.4rem;">A Loan Officer Who<br/><em>Takes It Personally</em></h2>
-      <p>I'm Matthew Royal, VA loan specialist at SFMC Home Lending. I've spent my career in mortgage finance, construction, and real estate — and I've built my practice around one belief: <strong>veterans deserve a straight answer and a fast close, not a runaround.</strong></p>
-      <p>Military service is part of my family story. That's not something I put on a flyer — it's the reason I pick up the phone, give you the real numbers, and fight to get you to the closing table on time.</p>
-      <p>I work alongside my wife <strong>Sarah Royal</strong>, a DFW Realtor who specializes in helping military families find their home. Together we cover both sides of the transaction — lending and real estate — so you have one trusted team from your first question to your closing day.</p>
-      <p style="margin-top:1.5rem;">
-        <a href="tel:4696344500" style="color:var(--maroon);font-weight:600;text-decoration:none;font-size:0.95rem;">📞 (469) 634-4500</a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
-        <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" style="color:var(--gold);font-weight:500;text-decoration:none;font-size:0.9rem;">Apply Online →</a>
-      </p>
-    </div>
-
-    <!-- Sarah card -->
-    <div class="sarah-card reveal" style="transition-delay:0.15s">
-      <div class="sarah-card-label">Preferred Real Estate Partner</div>
-      <div class="sarah-card-title">Sarah Royal<br/><em>DFW VA Real Estate Specialist</em></div>
-      <div class="sarah-card-body">
-        Sarah specializes in helping <strong>veterans and military families</strong> navigate the home buying process in the Dallas–Fort Worth area. Military service runs deep in her family — she understands this community firsthand.<br/><br/>
-        Together, Matthew and Sarah provide a complete VA homebuying experience — from rate quote to keys — with one team you can trust.
-      </div>
-      <div class="sarah-details">
-        <div class="sarah-detail-row"><span>📞</span><span>(214) 236-8573</span></div>
-        <div class="sarah-detail-row"><span>✉️</span><span>sarah@royalselling.com</span></div>
-        <div class="sarah-detail-row"><span>🏠</span><span>Dallas–Fort Worth, TX</span></div>
-      </div>
-      <a href="https://www.royalselling.com/vaguide" target="_blank" class="sarah-btn">View Sarah's VA Guide →</a>
-    </div>
-  </div>
-  <div class="about-clip"></div>
 </section>
 
 <section class="process-section">
@@ -551,7 +417,7 @@
     <div class="process-step reveal" style="transition-delay:0.2s"><div class="ps-num">03</div><div class="ps-title">Lock Your Rate</div><div class="ps-desc">Found your home? We lock in and move to underwriting.</div><span class="ps-arrow">›</span></div>
     <div class="process-step reveal" style="transition-delay:0.3s"><div class="ps-num">04</div><div class="ps-title">25-Day Guarantee Close</div><div class="ps-desc">We handle the heavy lifting. Keys in hand in 25 days.</div></div>
   </div>
-  <div class="white-clip-bottom"></div>
+  <div class="light-clip-bottom"></div>
 </section>
 
 <div class="photo-strip">
@@ -613,7 +479,7 @@
         <div class="boot-attr">John Donnelly</div>
         <div class="boot-attr-sub">VP of Sales, Service First Mortgage · via Boot Campaign</div>
       </div>
-      <div class="boot-badge-row"><span class="boot-flag">🇺🇸</span><div class="boot-badge-text"><strong>Proud Partner — Boot Campaign</strong>Veterans · Health · Wellness · Housing · Dallas, TX</div></div>
+      <div class="boot-badge-row"><span class="boot-flag">🇺🇸</span><div class="boot-badge-text"><strong>Proud Partner — Boot Campaign</strong>Veterans · Health · Wellness · Housing · Texas</div></div>
       <div class="boot-badge-row"><span class="boot-flag">🏠</span><div class="boot-badge-text"><strong>When You Close a VA Loan with SFMC</strong>You're doing business with a company that actively invests in veteran communities.</div></div>
     </div>
   </div>
@@ -656,16 +522,15 @@
       <p class="footer-p">Established 1997. In-house underwriting. Speed, Service &amp; Synergy. Equal Housing Lender.</p>
     </div>
     <div>
-      <div class="footer-col-title">Matthew Royal — Loan Officer</div>
+      <div class="footer-col-title">Your Loan Officer</div>
+      <div class="footer-contact-row"><span class="fc-icon">👤</span><div><div class="fc-label">Name &amp; NMLS</div><div class="fc-val">Matthew Royal · NMLS# 430390</div></div></div>
       <div class="footer-contact-row"><span class="fc-icon">📞</span><div><div class="fc-label">Direct Line</div><div class="fc-val"><a href="tel:4696344500">(469) 634-4500</a></div></div></div>
       <div class="footer-contact-row"><span class="fc-icon">🌐</span><div><div class="fc-label">Apply Online</div><div class="fc-val"><a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank">Start Application →</a></div></div></div>
-      <div class="footer-contact-row"><span class="fc-icon">👤</span><div><div class="fc-label">NMLS</div><div class="fc-val">NMLS# 430390</div></div></div>
     </div>
     <div>
-      <div class="footer-col-title">Sarah Royal — Preferred Agent</div>
-      <div class="footer-contact-row"><span class="fc-icon">📞</span><div><div class="fc-label">Direct Line</div><div class="fc-val"><a href="tel:2142368573">(214) 236-8573</a></div></div></div>
-      <div class="footer-contact-row"><span class="fc-icon">🏠</span><div><div class="fc-label">VA Home Buyer Guide</div><div class="fc-val"><a href="https://www.royalselling.com/vaguide" target="_blank">royalselling.com/vaguide →</a></div></div></div>
-      <div class="footer-contact-row"><span class="fc-icon">⭐</span><div><div class="fc-label">Reviews</div><div class="fc-val"><a href="https://www.experience.com/reviews/division/service-first-mortgage-65945" target="_blank">Experience.com →</a></div></div></div>
+      <div class="footer-col-title">Company</div>
+      <div class="footer-contact-row"><span class="fc-icon">📍</span><div><div class="fc-label">Headquarters</div><div class="fc-val">5408 W. Plano Pkwy<br/>Plano, TX 75093</div></div></div>
+      <div class="footer-contact-row"><span class="fc-icon">⭐</span><div><div class="fc-label">Client Reviews</div><div class="fc-val"><a href="https://www.experience.com/reviews/division/service-first-mortgage-65945" target="_blank">Experience.com →</a></div></div></div>
     </div>
   </div>
   <div class="footer-legal">
@@ -701,36 +566,14 @@
 </div>
 
 <script>
-const SHEET_ID='1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698', SHEET_NAME='Daily_Rates';
-const LOAN_META={
-  'va purchase':{ badge:'VA', cls:'badge-va', desc:'$0 down · No PMI · Primary residence', note:'' },
-  'va jumbo':{ badge:'VA', cls:'badge-va', desc:'Loan amounts above conforming limit', note:'Standard up to $1,500,000 · Up to $2,000,000 with exception approval' },
-  'va irrrl':{ badge:'REFI', cls:'badge-irrrl', desc:'No appraisal required · Reduce your current VA rate', note:'' },
-};
-function getMeta(n){ const l=(n||'').toLowerCase(); for(const[k,v] of Object.entries(LOAN_META)){if(l.includes(k))return v;} return{badge:'VA',cls:'badge-va',desc:'',note:''}; }
+const SHEET_ID='1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698',SHEET_NAME='Daily_Rates';
+const LOAN_META={'va purchase':{badge:'VA',cls:'badge-va',desc:'$0 down · No PMI · Primary residence',note:''},'va jumbo':{badge:'VA',cls:'badge-va',desc:'Loan amounts above conforming limit',note:'Standard up to $1,500,000 · Up to $2,000,000 with exception approval'},'va irrrl':{badge:'REFI',cls:'badge-irrrl',desc:'No appraisal required · Reduce your current VA rate',note:''}};
+function getMeta(n){const l=(n||'').toLowerCase();for(const[k,v]of Object.entries(LOAN_META)){if(l.includes(k))return v;}return{badge:'VA',cls:'badge-va',desc:'',note:''};}
 const FALLBACK=[{name:'VA Purchase',rate:'5.375%',points:'0.875%'},{name:'VA Jumbo Purchase',rate:'5.500%',points:'1.000%'},{name:'VA IRRRL - Refinance',rate:'5.490%',points:'0.750%'}];
-function buildTable(rows,ts){
-  let h=`<table class="rates-table"><thead><tr><th>Loan Type</th><th>Interest Rate</th><th>Points</th></tr></thead><tbody>`;
-  rows.forEach(r=>{const m=getMeta(r.name);h+=`<tr><td><div class="loan-type-name">${r.name} <span class="rates-badge ${m.cls}">${m.badge}</span></div><div class="loan-type-desc">${m.desc}</div>${m.note?`<div class="loan-type-note">▸ ${m.note}</div>`:''}</td><td><span class="rate-big">${r.rate}</span></td><td><span class="rate-pts">${r.points}</span></td></tr>`;});
-  h+='</tbody></table>';
-  document.getElementById('ratesContainer').innerHTML=h;
-  document.getElementById('ratesTimestamp').textContent=ts?`Rates as of ${ts}`:'';
-}
-async function loadRates(){
-  try{
-    const res=await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`);
-    if(!res.ok)throw new Error();
-    const lines=(await res.text()).split('\n').map(l=>l.split(',').map(c=>c.replace(/^"|"$/g,'').trim()));
-    let ts=null;
-    for(const l of lines){if((l[0]||'').toLowerCase().includes('updated')&&l[1]){ts=l[1];break;}}
-    const rows=[];
-    for(const l of lines){const n=(l[0]||'').trim(),r=(l[1]||'').trim();if(n.toUpperCase().startsWith('VA')&&r&&r.includes('%'))rows.push({name:n,rate:r,points:l[2]||'—'});}
-    buildTable(rows.length?rows:FALLBACK,ts);
-  }catch(e){buildTable(FALLBACK,null);}
-}
+function buildTable(rows,ts){let h=`<table class="rates-table"><thead><tr><th>Loan Type</th><th>Interest Rate</th><th>Points</th></tr></thead><tbody>`;rows.forEach(r=>{const m=getMeta(r.name);h+=`<tr><td><div class="loan-type-name">${r.name} <span class="rates-badge ${m.cls}">${m.badge}</span></div><div class="loan-type-desc">${m.desc}</div>${m.note?`<div class="loan-type-note">▸ ${m.note}</div>`:''}</td><td><span class="rate-big">${r.rate}</span></td><td><span class="rate-pts">${r.points}</span></td></tr>`;});h+='</tbody></table>';document.getElementById('ratesContainer').innerHTML=h;document.getElementById('ratesTimestamp').textContent=ts?`Rates as of ${ts}`:'';}
+async function loadRates(){try{const res=await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`);if(!res.ok)throw new Error();const lines=(await res.text()).split('\n').map(l=>l.split(',').map(c=>c.replace(/^"|"$/g,'').trim()));let ts=null;for(const l of lines){if((l[0]||'').toLowerCase().includes('updated')&&l[1]){ts=l[1];break;}}const rows=[];for(const l of lines){const n=(l[0]||'').trim(),r=(l[1]||'').trim();if(n.toUpperCase().startsWith('VA')&&r&&r.includes('%'))rows.push({name:n,rate:r,points:l[2]||'—'});}buildTable(rows.length?rows:FALLBACK,ts);}catch(e){buildTable(FALLBACK,null);}}
 loadRates();
 
-// Testimonial slider
 const track=document.getElementById('tTrack'),cards=Array.from(track.querySelectorAll('.t-card')),dotsEl=document.getElementById('tDots');
 let cur=0;
 const vis=()=>window.innerWidth<640?1:window.innerWidth<960?2:3;
@@ -739,11 +582,9 @@ function updateDots(){dotsEl.querySelectorAll('.t-dot').forEach((d,i)=>d.classLi
 function moveTo(idx){cur=Math.max(0,Math.min(idx,cards.length-vis()));track.style.transform=`translateX(-${cur*(cards[0].getBoundingClientRect().width+24)}px)`;updateDots();}
 document.getElementById('tNext').onclick=()=>moveTo(cur+1);
 document.getElementById('tPrev').onclick=()=>moveTo(cur-1);
-buildDots();
-setInterval(()=>moveTo(cur<cards.length-vis()?cur+1:0),5500);
+buildDots();setInterval(()=>moveTo(cur<cards.length-vis()?cur+1:0),5500);
 window.addEventListener('resize',()=>{cur=0;moveTo(0);buildDots();});
 
-// Chat
 document.getElementById('chatFab').onclick=()=>document.getElementById('chatPanel').classList.toggle('open');
 document.getElementById('chatClose').onclick=()=>document.getElementById('chatPanel').classList.remove('open');
 const KB=[
@@ -751,12 +592,12 @@ const KB=[
   {k:['irrrl','streamline','lower rate','reduce rate','streamline refinance'],a:`The VA IRRRL (Streamline Refinance) may help lower your current VA rate with reduced paperwork and no appraisal in many cases.\n• Minimum FICO is generally 600\n• Scores below 600 may be considered with automated underwriting approval and an approved exception\n• Max loan amount is subject to county conforming limits\n\nSee today's IRRRL rate in the table above. Call **(469) 634-4500** to see if it makes sense for you.`},
   {k:['25 day','25-day','guarantee close','closing guarantee','close fast','how fast'],a:`SFMC offers a **25-Day Close Guarantee** on VA loans. In-house underwriting helps reduce delays and keeps Matthew in control of the timeline from application to keys.\n\nCall **(469) 634-4500** to get started.`},
   {k:['down payment','zero down','0 down','no down'],a:`VA loans allow eligible borrowers to buy with **$0 down payment**, financing up to 100% of the home's value.\n\nCall **(469) 634-4500** to review your eligibility.`},
-  {k:['pmi','mortgage insurance','monthly insurance'],a:`VA loans have **no monthly PMI**, which can save many borrowers $150 to $300 per month compared to conventional financing.\n\nCall **(469) 634-4500** to compare options.`},
+  {k:['pmi','mortgage insurance','monthly insurance'],a:`VA loans have **no monthly PMI**, which can save many borrowers $150 to $300 per month compared to conventional financing.`},
   {k:['jumbo','high balance','large loan','million','max loan','loan over'],a:`SFMC offers VA High Balance and Jumbo VA financing for larger loan amounts.\n• Standard guidelines support loan amounts up to **$1,500,000**\n• Loan amounts above $1,500,000 and up to **$2,000,000** may be available with review and exception approval\n• Minimum FICO is generally 600. Scores below 600 may be considered with automated underwriting approval and an approved exception\n• No foreclosure or bankruptcy in the last 2 years\n• No housing late payments in the last 12 months\n\nCall **(469) 634-4500** to discuss your scenario.`},
   {k:['limit','how much','borrow','maximum','loan amount','entitlement amount'],a:`VA loans do not have a standard loan limit for borrowers with full entitlement, subject to qualifying guidelines.\n• Standard guidelines support up to **$1,500,000**\n• Up to **$2,000,000** may be available with review and exception approval\n\nCall Matthew at **(469) 634-4500** for your exact qualifying amount.`},
   {k:['how long','timeline','when can i close','close date'],a:`Most VA loans can close quickly, and SFMC offers a **25-Day Close Guarantee** on eligible files.\n\nCall **(469) 634-4500** to discuss your timeline.`},
   {k:['rate','rates','interest rate','today','current rate','what are rates'],a:`Today's VA rates are shown live in the table on this page. For a personalized quote based on your credit, entitlement, and scenario, call **(469) 634-4500**.`},
-  {k:['funding fee','fee','cost','closing cost','how much does it cost'],a:`The VA Funding Fee typically ranges from **1.25% to 3.3%**, depending on your usage and down payment.\n• Some veterans may be exempt due to VA disability compensation\n• Your Certificate of Eligibility confirms your exact funding fee status\n\nCall **(469) 634-4500** for details.`},
+  {k:['funding fee','fee','cost','closing cost'],a:`The VA Funding Fee typically ranges from **1.25% to 3.3%**, depending on your usage and down payment.\n• Some veterans may be exempt due to VA disability compensation\n• Your Certificate of Eligibility confirms your exact funding fee status\n\nCall **(469) 634-4500** for details.`},
   {k:['apply','start','begin','get started','how do i apply'],a:`Getting started takes about **10 minutes**.\n\n👉 Click "Start Application" above\n📞 Or call **(469) 634-4500**`},
   {k:['credit','fico','score','minimum credit','credit score','minimum score'],a:`SFMC generally looks for a **600 minimum FICO** on VA loans.\n• Scores below 600 may be considered with automated underwriting approval and an approved exception\n• Larger loan amounts may require additional review\n\nCall Matthew at **(469) 634-4500** to discuss your scenario.`},
   {k:['dti','debt to income','debt ratio','income ratio','how much debt'],a:`VA loans generally target a debt-to-income ratio of **41%**, but higher ratios may be possible — sometimes up to **50%** — with strong compensating factors.\n\nCall Matthew at **(469) 634-4500** to run your numbers.`},
@@ -764,9 +605,8 @@ const KB=[
   {k:['bonus entitlement','used entitlement','second va loan','another va loan','have a va loan','can i get another','already have va'],a:`You may still be able to use your VA benefit again. Many veterans have remaining or bonus entitlement that may allow them to buy another home.\n\nMatthew can pull your COE at no cost to determine:\n• How much entitlement you have remaining\n• Whether bonus entitlement may apply\n• What loan amount you may still qualify for\n\nCall **(469) 634-4500** for an exact answer.`},
   {k:['sell and buy','same day closing','sell my va home','restore entitlement','sell current','transfer va'],a:`Yes. In many cases you can sell your current VA-financed home and buy your next VA home on the same day. We structure the transactions so your current VA loan closes first, then your entitlement is restored.\n\nCall Matthew at **(469) 634-4500** to coordinate the timing.`},
   {k:['property tax','texas tax','disabled veteran','disability exemption','texas veteran','tax benefit','tax exemption','tax break'],a:`Texas offers valuable **property tax benefits** for veterans with service-related disabilities, including partial or full exemptions based on disability rating.\n\nWe close your loan using that tax benefit in the payment calculation so your numbers reflect the reduced property tax as accurately as possible.\n\nCall Matthew at **(469) 634-4500** to review your eligibility and estimated payment.`},
-  {k:['realtor','agent','real estate agent','find a home','buy a home','sarah','royalselling'],a:`Matthew works alongside his wife **Sarah Royal**, a DFW Realtor who specializes in helping military families find their home.\n\nVisit Sarah's VA Home Buyer Guide at **royalselling.com/vaguide** or call her at **(214) 236-8573**.\n\nTogether they cover both sides — lending and real estate — so you have one trusted team from first question to closing day.`},
 ];
-function getAnswer(q){const l=q.toLowerCase();for(const i of KB){if(i.k.some(k=>l.includes(k)))return i.a;}return `Great question. Call Matthew directly at **(469) 634-4500** or click "Start Application" above. He specializes in VA loans and can usually give you a clear answer in minutes.`;}
+function getAnswer(q){const l=q.toLowerCase();for(const i of KB){if(i.k.some(k=>l.includes(k)))return i.a;}return`Great question. Call Matthew directly at **(469) 634-4500** or click "Start Application" above. He specializes in VA loans and can usually give you a clear answer in minutes.`;}
 function fmt(t){return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br/>');}
 function addMsg(text,role){const msgs=document.getElementById('chatMessages');const w=document.createElement('div');w.className=`msg msg-${role}`;w.innerHTML=`<div class="msg-bubble">${fmt(text)}</div><div class="msg-time">Just now</div>`;msgs.appendChild(w);msgs.scrollTop=msgs.scrollHeight;}
 function showTyping(){const msgs=document.getElementById('chatMessages');const w=document.createElement('div');w.className='msg msg-bot';w.id='ti';w.innerHTML=`<div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;msgs.appendChild(w);msgs.scrollTop=msgs.scrollHeight;}
@@ -776,8 +616,8 @@ document.getElementById('chatSend').onclick=sendChat;
 document.getElementById('chatInput').onkeydown=e=>{if(e.key==='Enter')sendChat();};
 function sendChat(){const inp=document.getElementById('chatInput');const v=inp.value.trim();if(!v)return;inp.value='';document.getElementById('chatSuggestions').style.display='none';addMsg(v,'user');showTyping();setTimeout(()=>{removeTyping();addMsg(getAnswer(v),'bot');},850+Math.random()*450);}
 
-new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1}).observe=
-(()=>{const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));})();
+const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 </script>
 </body>
 </html>
