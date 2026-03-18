@@ -27,17 +27,11 @@
     ::-webkit-scrollbar-track { background: var(--dark2); }
     ::-webkit-scrollbar-thumb { background: var(--gold); }
 
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
-      height: 72px; display: flex; align-items: center; justify-content: space-between;
-      padding: 0 6%;
-      background: rgba(26,33,41,0.94); backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(201,135,38,0.2);
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; background: rgba(26,33,41,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(201,135,38,0.2); }
     .nav-left { display: flex; align-items: center; gap: 16px; }
     .nav-logo-block { background: var(--cream); padding: 6px 12px 5px; display: flex; flex-direction: column; line-height: 1.15; }
     .nav-logo-sfmc { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--dark); letter-spacing: 0.04em; }
-    .nav-logo-hl   { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.6rem; color: var(--dark); letter-spacing: 0.18em; text-transform: uppercase; }
+    .nav-logo-hl { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.6rem; color: var(--dark); letter-spacing: 0.18em; text-transform: uppercase; }
     .nav-script { font-family: 'Dancing Script', cursive; font-size: 1.75rem; font-weight: 700; color: var(--gold); line-height: 1; }
     .nav-nmls { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm); display: block; margin-top: 2px; }
     .nav-sep { width: 1px; height: 32px; background: rgba(255,255,255,0.12); }
@@ -66,7 +60,7 @@
     .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
     .btn-ghost { background: transparent; color: var(--white); padding: 0.9rem 2.2rem; border: 1px solid rgba(255,255,255,0.3); font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s,color 0.2s; }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
-    .hero-stats { display: flex; flex-wrap: wrap; gap: 0; }
+    .hero-stats { display: flex; flex-wrap: wrap; }
     .h-stat { padding: 0 2rem 0 0; border-right: 1px solid rgba(255,255,255,0.12); margin-right: 2rem; }
     .h-stat:last-child { border-right: none; margin-right: 0; }
     .h-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
@@ -97,7 +91,7 @@
     .rate-big { font-size: 1.05rem; font-weight: 600; color: var(--maroon); }
     .rate-pts { color: #5a6470; }
     .rates-badge { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px; margin-left: 8px; vertical-align: middle; }
-    .badge-va    { background: rgba(102,19,17,0.1); color: var(--maroon); }
+    .badge-va { background: rgba(102,19,17,0.1); color: var(--maroon); }
     .badge-irrrl { background: rgba(112,115,71,0.12); color: var(--olive); }
     .rates-footer { margin-top: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; }
     .rates-note-wrap { flex: 1; }
@@ -120,7 +114,7 @@
     .benefit-list li:first-child { border-top: 1px solid rgba(201,135,38,0.12); }
     .b-icon { width: 36px; height: 36px; background: rgba(201,135,38,0.15); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%); }
     .b-title { font-weight: 600; font-size: 0.95rem; color: var(--white); }
-    .b-desc  { font-size: 0.82rem; color: rgba(255,255,255,0.42); margin-top: 2px; line-height: 1.5; }
+    .b-desc { font-size: 0.82rem; color: rgba(255,255,255,0.42); margin-top: 2px; line-height: 1.5; }
     .benefits-visual { position: relative; }
     .photo-frame { position: relative; overflow: visible; }
     .photo-frame::before { content: ''; position: absolute; top: -16px; right: -16px; width: 100%; height: 100%; border: 2px solid var(--gold); opacity: 0.35; z-index: 0; }
@@ -166,7 +160,7 @@
     .t-quote-mark { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: rgba(201,135,38,0.18); line-height: 0.7; margin-bottom: 0.5rem; }
     .t-text { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; font-weight: 300; color: #3a4450; line-height: 1.8; margin-bottom: 1.5rem; }
     .t-name { font-size: 0.85rem; font-weight: 600; color: var(--maroon); }
-    .t-src  { font-size: 0.72rem; color: #aab0b8; margin-top: 2px; }
+    .t-src { font-size: 0.72rem; color: #aab0b8; margin-top: 2px; }
     .t-stars-sm { color: var(--gold); font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 1rem; }
     .t-nav { display: flex; gap: 0.75rem; margin-top: 2.5rem; align-items: center; }
     .t-btn { width: 44px; height: 44px; border: 1px solid rgba(36,46,56,0.2); background: transparent; color: var(--dark); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); transition: background 0.2s,color 0.2s; }
@@ -216,7 +210,7 @@
     .chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1000; width: 60px; height: 60px; background: var(--maroon); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 8px 30px rgba(102,19,17,0.5); clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s,transform 0.2s; }
     .chat-fab:hover { background: var(--maroon2); transform: scale(1.06); }
     .chat-fab .fab-badge { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); color: var(--dark2); font-size: 0.62rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-    .chat-panel { position: fixed; bottom: 100px; right: 28px; z-index: 999; width: 360px; max-height: 540px; background: var(--white); box-shadow: 0 20px 60px rgba(0,0,0,0.25); display: flex; flex-direction: column; opacity: 0; pointer-events: none; transform: translateY(16px) scale(0.97); transition: opacity 0.25s,transform 0.25s; border-top: 3px solid var(--gold); }
+    .chat-panel { position: fixed; bottom: 100px; right: 28px; z-index: 999; width: 380px; max-height: 560px; background: var(--white); box-shadow: 0 20px 60px rgba(0,0,0,0.25); display: flex; flex-direction: column; opacity: 0; pointer-events: none; transform: translateY(16px) scale(0.97); transition: opacity 0.25s,transform 0.25s; border-top: 3px solid var(--gold); }
     .chat-panel.open { opacity: 1; pointer-events: all; transform: translateY(0) scale(1); }
     .chat-header { background: var(--dark); padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; }
     .chat-header-info { display: flex; align-items: center; gap: 10px; }
@@ -225,18 +219,18 @@
     .chat-header-status { font-size: 0.7rem; color: var(--gold); }
     .chat-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.1rem; cursor: pointer; padding: 4px; }
     .chat-close:hover { color: var(--white); }
-    .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; max-height: 380px; }
+    .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; max-height: 400px; }
     .chat-messages::-webkit-scrollbar { width: 3px; }
     .chat-messages::-webkit-scrollbar-thumb { background: var(--warm); }
-    .msg { max-width: 82%; }
+    .msg { max-width: 88%; }
     .msg-bot { align-self: flex-start; }
     .msg-user { align-self: flex-end; }
-    .msg-bubble { padding: 0.7rem 0.95rem; font-size: 0.85rem; line-height: 1.55; }
+    .msg-bubble { padding: 0.7rem 0.95rem; font-size: 0.84rem; line-height: 1.6; }
     .msg-bot .msg-bubble { background: #f2f0ed; color: var(--dark); border-left: 2px solid var(--gold); }
     .msg-user .msg-bubble { background: var(--maroon); color: var(--white); }
     .msg-time { font-size: 0.64rem; color: #aaa; margin-top: 3px; padding: 0 4px; }
     .chat-suggestions { padding: 0.5rem 1rem; display: flex; flex-wrap: wrap; gap: 6px; border-top: 1px solid #eee; }
-    .suggest-btn { background: rgba(201,135,38,0.08); border: 1px solid rgba(201,135,38,0.3); color: var(--brown); padding: 5px 10px; font-size: 0.72rem; cursor: pointer; font-family: 'Outfit', sans-serif; transition: background 0.15s; }
+    .suggest-btn { background: rgba(201,135,38,0.08); border: 1px solid rgba(201,135,38,0.3); color: var(--brown); padding: 5px 10px; font-size: 0.7rem; cursor: pointer; font-family: 'Outfit', sans-serif; transition: background 0.15s; }
     .suggest-btn:hover { background: rgba(201,135,38,0.18); }
     .chat-input-row { display: flex; border-top: 1px solid #eee; }
     .chat-input { flex: 1; border: none; padding: 0.85rem 1rem; font-family: 'Outfit', sans-serif; font-size: 0.85rem; color: var(--dark); outline: none; background: #fafafa; }
@@ -270,7 +264,7 @@
       .photo-strip .ps-photo:not(:first-child) { display: none; }
       .t-card { flex: 0 0 80vw; }
       .chat-fab { bottom: 16px; right: 16px; }
-      .chat-panel { width: calc(100vw - 40px); right: 20px; }
+      .chat-panel { width: calc(100vw - 32px); right: 16px; }
       .h-stat { padding-right: 1.2rem; margin-right: 1.2rem; }
     }
   </style>
@@ -385,18 +379,9 @@
 </section>
 
 <div class="photo-strip">
-  <div class="ps-photo">
-    <img src="https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=700&q=75&fit=crop&crop=faces,center" alt="Veteran" loading="lazy"/>
-    <div class="ps-photo-label">Service &amp; Sacrifice</div>
-  </div>
-  <div class="ps-photo">
-    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=75&fit=crop&crop=center" alt="New Home" loading="lazy"/>
-    <div class="ps-photo-label">Your New Beginning</div>
-  </div>
-  <div class="ps-photo">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=75&fit=crop&crop=center" alt="Dream Home" loading="lazy"/>
-    <div class="ps-photo-label">Built for Families</div>
-  </div>
+  <div class="ps-photo"><img src="https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=700&q=75&fit=crop&crop=faces,center" alt="Veteran" loading="lazy"/><div class="ps-photo-label">Service &amp; Sacrifice</div></div>
+  <div class="ps-photo"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=75&fit=crop&crop=center" alt="New Home" loading="lazy"/><div class="ps-photo-label">Your New Beginning</div></div>
+  <div class="ps-photo"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=75&fit=crop&crop=center" alt="Dream Home" loading="lazy"/><div class="ps-photo-label">Built for Families</div></div>
   <div class="photo-strip-overlay"></div>
 </div>
 
@@ -437,14 +422,13 @@
     <h2 class="section-h" style="color:var(--white)">Follow the <em>Journey</em></h2>
     <p class="social-intro">VA tips, client wins, and market updates — straight from the source.</p>
   </div>
-  <!-- JUICER EMBED — uncomment and replace YOUR_FEED_NAME when ready -->
+  <!-- JUICER EMBED — uncomment when ready -->
   <!-- <link rel="stylesheet" href="https://assets.juicer.io/embed.css"/>
   <div class="juicer-feed" data-feed-id="YOUR_FEED_NAME" data-per="9"></div>
   <script src="https://assets.juicer.io/embed.js" async></script> -->
   <div class="juicer-placeholder reveal">
     <strong>Instagram Feed — Coming Soon</strong><br/>
-    Sign up at juicer.io → connect Instagram → replace YOUR_FEED_NAME in the code.<br/>
-    Pairs with Metricool auto-posting for a hands-free content engine.
+    Sign up at juicer.io → connect Instagram → replace YOUR_FEED_NAME in the code above.
   </div>
 </section>
 
@@ -466,10 +450,7 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand-row">
-        <span class="footer-sfmc">SFMC</span>
-        <span class="footer-script">Service First</span>
-      </div>
+      <div class="footer-brand-row"><span class="footer-sfmc">SFMC</span><span class="footer-script">Service First</span></div>
       <div class="footer-hl">Home Lending · NMLS# 166487</div>
       <p class="footer-p">Established 1997. In-house underwriting. Speed, Service &amp; Synergy. Equal Housing Lender.</p>
     </div>
@@ -501,13 +482,15 @@
     <button class="chat-close" id="chatClose">✕</button>
   </div>
   <div class="chat-messages" id="chatMessages">
-    <div class="msg msg-bot"><div class="msg-bubble">Hi! I'm Matthew's VA loan assistant. Ask me anything about VA loans, rates, eligibility, or the process.</div><div class="msg-time">Just now</div></div>
+    <div class="msg msg-bot"><div class="msg-bubble">Hi! I'm Matthew's VA loan assistant. I can answer questions about VA loans, eligibility, rates, and the process. What can I help you with?</div><div class="msg-time">Just now</div></div>
   </div>
   <div class="chat-suggestions" id="chatSuggestions">
     <button class="suggest-btn" onclick="askQuestion('Do I qualify for a VA loan?')">Do I qualify?</button>
-    <button class="suggest-btn" onclick="askQuestion('What is an IRRRL refinance?')">What is IRRRL?</button>
-    <button class="suggest-btn" onclick="askQuestion('How much can I borrow?')">Loan limits?</button>
+    <button class="suggest-btn" onclick="askQuestion('What is the minimum credit score?')">Credit score?</button>
     <button class="suggest-btn" onclick="askQuestion('Tell me about the 25-day close guarantee')">25-day close?</button>
+    <button class="suggest-btn" onclick="askQuestion('Can I use my VA benefit again?')">Use VA again?</button>
+    <button class="suggest-btn" onclick="askQuestion('Texas disabled veteran property tax benefits')">TX tax benefit?</button>
+    <button class="suggest-btn" onclick="askQuestion('What is an IRRRL?')">IRRRL refi?</button>
   </div>
   <div class="chat-input-row">
     <input class="chat-input" id="chatInput" type="text" placeholder="Ask a VA loan question..." autocomplete="off"/>
@@ -517,23 +500,13 @@
 
 <script>
 // ══ GOOGLE SHEETS LIVE RATES ══
-// Sheet ID: 1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698
-// Tab: Daily_Rates
-// Structure:
-//   Row 1: "Last Updated:" | date (col B)
-//   Row 3: headers
-//   Row 4: VA Purchase       | rate | points
-//   Row 5: VA Jumbo Purchase | rate | points
-//   Row 6: VA IRRRL          | rate | points
-// IMPORTANT: Share sheet as "Anyone with link → Viewer"
-
 const SHEET_ID   = '1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698';
 const SHEET_NAME = 'Daily_Rates';
 
 const LOAN_META = {
-  'va purchase':          { badge:'VA',   cls:'badge-va',    desc:'$0 down · No PMI · Primary residence',                note:'' },
-  'va jumbo':             { badge:'VA',   cls:'badge-va',    desc:'Loan amounts above conforming limit',                 note:'Loan amounts up to $2,000,000' },
-  'va irrrl':             { badge:'REFI', cls:'badge-irrrl', desc:'No appraisal required · Reduce your current VA rate', note:'' },
+  'va purchase':  { badge:'VA',   cls:'badge-va',    desc:'$0 down · No PMI · Primary residence', note:'' },
+  'va jumbo':     { badge:'VA',   cls:'badge-va',    desc:'Loan amounts above conforming limit',   note:'Standard up to $1,500,000 · Up to $2,000,000 with exception approval' },
+  'va irrrl':     { badge:'REFI', cls:'badge-irrrl', desc:'No appraisal required · Reduce your current VA rate', note:'' },
 };
 
 function getMeta(name) {
@@ -549,9 +522,7 @@ const FALLBACK = [
 ];
 
 function buildTable(rows, timestamp) {
-  let html = `<table class="rates-table"><thead><tr>
-    <th>Loan Type</th><th>Interest Rate</th><th>Points</th>
-  </tr></thead><tbody>`;
+  let html = `<table class="rates-table"><thead><tr><th>Loan Type</th><th>Interest Rate</th><th>Points</th></tr></thead><tbody>`;
   rows.forEach(r => {
     const m = getMeta(r.name);
     html += `<tr><td>
@@ -572,17 +543,10 @@ async function loadRates() {
     if (!res.ok) throw new Error('fail');
     const csv = await res.text();
     const lines = csv.split('\n').map(l => l.split(',').map(c => c.replace(/^"|"$/g,'').trim()));
-
-    // Find timestamp — look for row where col A contains "updated"
     let timestamp = null;
     for (const line of lines) {
-      if ((line[0]||'').toLowerCase().includes('updated') && line[1]) {
-        timestamp = line[1];
-        break;
-      }
+      if ((line[0]||'').toLowerCase().includes('updated') && line[1]) { timestamp = line[1]; break; }
     }
-
-    // Find rate rows — any row where col A starts with "VA" and col B looks like a rate
     const rows = [];
     for (const line of lines) {
       const name = (line[0]||'').trim();
@@ -591,7 +555,6 @@ async function loadRates() {
         rows.push({ name, rate, points: line[2]||'—' });
       }
     }
-
     buildTable(rows.length ? rows : FALLBACK, timestamp);
   } catch(e) { buildTable(FALLBACK, null); }
 }
@@ -603,7 +566,6 @@ const cards = Array.from(track.querySelectorAll('.t-card'));
 const dotsEl = document.getElementById('tDots');
 let cur = 0;
 const vis = () => window.innerWidth < 640 ? 1 : window.innerWidth < 960 ? 2 : 3;
-
 function buildDots() {
   dotsEl.innerHTML = '';
   for (let i=0; i<=cards.length-vis(); i++) {
@@ -625,31 +587,91 @@ buildDots();
 setInterval(() => moveTo(cur < cards.length-vis() ? cur+1 : 0), 5500);
 window.addEventListener('resize', () => { cur=0; moveTo(0); buildDots(); });
 
-// ══ AI CHAT ══
+// ══ AI CHAT — 17 Q&A ══
 document.getElementById('chatFab').onclick = () => document.getElementById('chatPanel').classList.toggle('open');
 document.getElementById('chatClose').onclick = () => document.getElementById('chatPanel').classList.remove('open');
 
 const KB = [
-  {k:['qualify','eligible','veteran','active duty','service member','surviving spouse'], a:`You may qualify if you are:\n• Active duty service member (90+ days)\n• Veteran with honorable discharge\n• National Guard/Reserve (6+ years)\n• Surviving spouse of a veteran who died in service\n\nMatthew pulls your COE at no cost. Call **(469) 634-4500**.`},
-  {k:['irrrl','streamline','refinance','lower rate','reduce rate'], a:`The **VA IRRRL** lets you lower your current VA rate with minimal paperwork and **no appraisal required**.\n\nSee today's IRRRL rate in the table above. Call **(469) 634-4500)** to see if it makes sense.`},
-  {k:['25 day','25-day','guarantee','close fast','closing guarantee'], a:`SFMC offers a **25-Day Guarantee Close** on VA loans. In-house underwriting means no third-party delays. Matthew controls the timeline from application to keys.\n\nCall **(469) 634-4500** to get started.`},
-  {k:['down payment','zero down','0 down'], a:`VA loans require **$0 down payment** — finance up to 100% of the home's value.`},
-  {k:['pmi','mortgage insurance'], a:`VA loans have **no PMI ever** — saving $150–$300/month vs. conventional loans.`},
-  {k:['jumbo','2 million','large loan'], a:`SFMC offers VA Jumbo loans up to **$2,000,000** with $0 down. See today's rate in the table above.`},
-  {k:['limit','how much','borrow','maximum'], a:`No VA loan limit with full entitlement. SFMC offers up to **$2 million**. Call **(469) 634-4500** for your exact number.`},
-  {k:['close','closing','fast','how long','timeline'], a:`SFMC guarantees closing in **25 days** on most VA loans with in-house underwriting.`},
-  {k:['rate','rates','interest','today','current'], a:`Today's VA rates are shown live in the table on this page — updated directly by Matthew.\n\nFor your personalized rate call **(469) 634-4500**.`},
-  {k:['funding fee','fee','cost'], a:`VA Funding Fee ranges **1.25%–3.3%**. You may be **exempt** with VA disability compensation. Matthew confirms during application.`},
-  {k:['apply','start','begin'], a:`Start in ~10 minutes:\n\n👉 Click "Start Application" above\n📞 Or call **(469) 634-4500)**`},
-  {k:['credit','fico','score'], a:`Most lenders look for **620+**. Call Matthew at **(469) 634-4500)** — he can often work with you on a plan.`},
+  // 1. Do I qualify?
+  { k:['qualify','eligible','active duty','service member','surviving spouse','who can get'],
+    a:`You may qualify for a VA loan if you are:\n• Active duty service member with at least 90 days of service\n• Veteran with an honorable discharge\n• National Guard or Reserve with at least 6 years of service\n• Surviving spouse of a veteran who died in service or from a service-related disability\n\nMatthew can pull your Certificate of Eligibility at no cost. Call **(469) 634-4500**.` },
+
+  // 2. IRRRL
+  { k:['irrrl','streamline','lower rate','reduce rate','streamline refinance'],
+    a:`The VA IRRRL (Streamline Refinance) may help lower your current VA rate with reduced paperwork and no appraisal in many cases.\n• Minimum FICO is generally 600\n• Scores below 600 may be considered with automated underwriting approval and an approved exception\n• Max loan amount is subject to county conforming limits\n\nSee today's IRRRL rate in the table above. Call **(469) 634-4500)** to see if it makes sense for you.` },
+
+  // 3. 25-Day Close
+  { k:['25 day','25-day','guarantee close','closing guarantee','close fast','how fast'],
+    a:`SFMC offers a 25-Day Close Guarantee on VA loans. In-house underwriting helps reduce delays and keeps Matthew in control of the timeline from application to keys.\n\nCall **(469) 634-4500)** to get started.` },
+
+  // 4. Down Payment
+  { k:['down payment','zero down','0 down','no down'],
+    a:`VA loans allow eligible borrowers to buy with **$0 down payment**, financing up to 100% of the home's value.\n\nCall **(469) 634-4500)** to review your eligibility.` },
+
+  // 5. PMI
+  { k:['pmi','mortgage insurance','monthly insurance'],
+    a:`VA loans have **no monthly PMI**, which can save many borrowers $150 to $300 per month compared to conventional financing.\n\nCall **(469) 634-4500)** to compare options.` },
+
+  // 6. VA Jumbo / High Balance
+  { k:['jumbo','high balance','large loan','million','max loan','loan over','1.5','2 million','2,000,000'],
+    a:`SFMC offers VA High Balance and Jumbo VA financing for larger loan amounts.\n• Standard guidelines support loan amounts up to **$1,500,000**\n• Loan amounts above $1,500,000 and up to **$2,000,000** may be available with review and exception approval\n• Minimum FICO is generally 600. Scores below 600 may be considered with automated underwriting approval and an approved exception\n• No foreclosure or bankruptcy in the last 2 years\n• No housing late payments in the last 12 months\n\nCall **(469) 634-4500)** to discuss your scenario.` },
+
+  // 7. Loan Limits
+  { k:['limit','how much','borrow','maximum','loan amount','entitlement amount'],
+    a:`VA loans do not have a standard loan limit for borrowers with full entitlement, subject to approval and qualifying guidelines.\n• Standard guidelines support loan amounts up to **$1,500,000**\n• Loan amounts above $1,500,000 and up to **$2,000,000** may be available with review and exception approval\n• Minimum FICO is generally 600. Scores below 600 may be considered with automated underwriting approval and an approved exception\n\nCall Matthew at **(469) 634-4500)** for your exact qualifying amount.` },
+
+  // 8. Timeline / closing
+  { k:['how long','timeline','when can i close','close date'],
+    a:`Most VA loans can close quickly, and SFMC offers a **25-Day Close Guarantee** on eligible files using in-house underwriting.\n\nCall **(469) 634-4500)** to discuss your timeline.` },
+
+  // 9. Today's Rates
+  { k:['rate','rates','interest rate','today','current rate','what are rates'],
+    a:`Today's VA rates are shown live in the table on this page. For a personalized quote based on your credit, entitlement, and scenario, call **(469) 634-4500)**.` },
+
+  // 10. Funding Fee
+  { k:['funding fee','fee','cost','closing cost','how much does it cost'],
+    a:`The VA Funding Fee typically ranges from **1.25% to 3.3%**, depending on your usage and down payment.\n• Some veterans may be exempt due to VA disability compensation\n• Your Certificate of Eligibility confirms your exact funding fee status\n\nCall **(469) 634-4500)** for details.` },
+
+  // 11. How to Apply
+  { k:['apply','start','begin','get started','how do i apply'],
+    a:`Getting started takes about **10 minutes**.\n\n👉 Click "Start Application" above\n📞 Or call **(469) 634-4500)**` },
+
+  // 12. Credit Score
+  { k:['credit','fico','score','minimum credit','credit score','minimum score'],
+    a:`SFMC generally looks for a **600 minimum FICO** on VA loans.\n• Scores below 600 may be considered with automated underwriting approval and an approved exception\n• Larger loan amounts may require additional review\n\nCall Matthew at **(469) 634-4500)** to discuss your scenario.` },
+
+  // 13. DTI
+  { k:['dti','debt to income','debt ratio','income ratio','how much debt'],
+    a:`VA loans generally target a debt-to-income ratio of **41%**, but higher ratios may be possible — sometimes up to **50%** — with strong compensating factors.\n\nCall Matthew at **(469) 634-4500)** to run your numbers.` },
+
+  // 14. Certificate of Eligibility
+  { k:['certificate of eligibility','coe','how do i get my coe','prove eligibility'],
+    a:`Your **Certificate of Eligibility (COE)** confirms your VA benefit and helps determine your available entitlement and funding fee status.\n• The COE must be dated within 120 days of closing\n• Matthew pulls it for you at no cost\n\nCall **(469) 634-4500)** to get started.` },
+
+  // 15. Bonus Entitlement / Second VA loan
+  { k:['bonus entitlement','used entitlement','second va loan','another va loan','have a va loan','can i get another','already have va'],
+    a:`You may still be able to use your VA benefit again even if you already have a VA loan. Many veterans have remaining or bonus entitlement that may allow them to buy another home with VA financing.\n\nMatthew can pull your COE at no cost to determine:\n• How much entitlement you have remaining\n• Whether bonus entitlement may apply\n• What loan amount you may still qualify for\n\nCall **(469) 634-4500)** for an exact answer.` },
+
+  // 16. Sell and buy same day
+  { k:['sell and buy','same day closing','sell my va home','restore entitlement','sell current','transfer va'],
+    a:`Yes. In many cases you can sell your current VA-financed home and buy your next VA home on the same day. We can structure the transactions so your current VA loan closes first, then your entitlement is restored for the new purchase.\n\nCall Matthew at **(469) 634-4500)** to coordinate the timing.` },
+
+  // 17. Texas disabled veteran tax benefit
+  { k:['property tax','texas tax','disabled veteran','disability exemption','texas veteran','tax benefit','tax exemption','tax break'],
+    a:`Texas offers valuable **property tax benefits** for veterans with service-related disabilities, including partial or full exemptions based on disability rating.\n\nWe close your loan using that tax benefit in the payment calculation so your numbers reflect the reduced property tax as accurately as possible.\n\nCall Matthew at **(469) 634-4500)** to review your eligibility and estimated payment.` },
 ];
 
 function getAnswer(q) {
   const l = q.toLowerCase();
-  for (const item of KB) { if (item.k.some(k=>l.includes(k))) return item.a; }
-  return `Great question. Call Matthew directly:\n\n📞 **(469) 634-4500**\n🌐 Or click "Start Application" above.\n\nHe specializes in VA loans and gives straight answers in minutes.`;
+  // Check for multi-word phrases first before single words
+  for (const item of KB) {
+    if (item.k.some(k => l.includes(k))) return item.a;
+  }
+  return `Great question. Call Matthew directly at **(469) 634-4500)** or click "Start Application" above. He specializes in VA loans and can usually give you a clear answer in minutes.`;
 }
+
 function fmt(t) { return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br/>'); }
+
 function addMsg(text, role) {
   const msgs = document.getElementById('chatMessages');
   const w = document.createElement('div');
@@ -657,6 +679,7 @@ function addMsg(text, role) {
   w.innerHTML = `<div class="msg-bubble">${fmt(text)}</div><div class="msg-time">Just now</div>`;
   msgs.appendChild(w); msgs.scrollTop = msgs.scrollHeight;
 }
+
 function showTyping() {
   const msgs = document.getElementById('chatMessages');
   const w = document.createElement('div'); w.className='msg msg-bot'; w.id='ti';
@@ -664,13 +687,16 @@ function showTyping() {
   msgs.appendChild(w); msgs.scrollTop=msgs.scrollHeight;
 }
 function removeTyping() { const t=document.getElementById('ti'); if(t)t.remove(); }
+
 function askQuestion(q) {
   document.getElementById('chatSuggestions').style.display='none';
   addMsg(q,'user'); showTyping();
   setTimeout(()=>{removeTyping();addMsg(getAnswer(q),'bot');}, 850+Math.random()*450);
 }
+
 document.getElementById('chatSend').onclick = sendChat;
 document.getElementById('chatInput').onkeydown = e => { if(e.key==='Enter') sendChat(); };
+
 function sendChat() {
   const inp=document.getElementById('chatInput'); const v=inp.value.trim(); if(!v)return;
   inp.value=''; document.getElementById('chatSuggestions').style.display='none';
