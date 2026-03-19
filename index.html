@@ -89,7 +89,8 @@
     .loan-type-desc { font-size: 0.76rem; color: #8a9099; margin-top: 2px; }
     .loan-type-note { font-size: 0.73rem; color: var(--maroon); margin-top: 3px; font-weight: 600; }
     .rate-big { font-size: 1.05rem; font-weight: 600; color: var(--maroon); }
-    .rate-pts { color: #5a6470; }
+    .rate-apr { font-size: 0.95rem; color: #5a6470; }
+    .rate-pts { color: #8a9099; }
     .rates-badge { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px; margin-left: 8px; vertical-align: middle; }
     .badge-va { background: rgba(102,19,17,0.1); color: var(--maroon); }
     .badge-irrrl { background: rgba(112,115,71,0.12); color: var(--olive); }
@@ -115,8 +116,6 @@
     .b-icon { width: 36px; height: 36px; background: rgba(201,135,38,0.15); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%); }
     .b-title { font-weight: 600; font-size: 0.95rem; color: var(--white); }
     .b-desc { font-size: 0.82rem; color: rgba(255,255,255,0.42); margin-top: 2px; line-height: 1.5; }
-
-    /* Matthew photo — clean, circular, no quote */
     .benefits-visual { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
     .matt-photo-wrap { position: relative; width: 220px; height: 220px; flex-shrink: 0; }
     .matt-photo-wrap::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--gold); opacity: 0.5; }
@@ -130,13 +129,11 @@
     .matt-btn-apply:hover { background: var(--gold-lt); }
     .matt-btn-call { display: flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid rgba(255,255,255,0.2); color: var(--white); padding: 0.7rem 1.2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.82rem; text-decoration: none; transition: border-color 0.2s,color 0.2s; }
     .matt-btn-call:hover { border-color: var(--gold); color: var(--gold); }
-
     .dark2-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: #f0ede8; clip-path: polygon(0 60%,100% 0,100% 100%,0 100%); }
 
     .process-section { background: #f0ede8; padding: 100px 6% 120px; position: relative; }
     .process-section .section-h { color: var(--dark); }
     .process-section .section-h em { color: var(--brown); }
-    .process-section .tag-text { color: var(--gold); }
     .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; margin-top: 3.5rem; }
     .process-step { background: rgba(36,46,56,0.04); padding: 2.5rem 2rem; position: relative; border-top: 2px solid transparent; transition: border-color 0.3s,background 0.3s; }
     .process-step:hover { border-color: var(--gold); background: rgba(201,135,38,0.06); }
@@ -154,6 +151,7 @@
     .ps-photo-label { position: absolute; bottom: 20px; left: 20px; z-index: 2; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
     .photo-strip-overlay { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(26,33,41,0.7) 0%,transparent 30%,transparent 70%,rgba(26,33,41,0.7) 100%); pointer-events: none; z-index: 1; }
 
+    /* ══ TESTIMONIALS — ORIGINAL WHITE STYLE ══ */
     .testimonials { background: var(--white); padding: 100px 6% 80px; position: relative; }
     .test-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
     .testimonials .section-h { color: var(--dark); }
@@ -224,7 +222,7 @@
     .cta-call { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); color: var(--white); padding: 0.95rem 2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.05em; transition: border-color 0.2s,color 0.2s; }
     .cta-call:hover { border-color: var(--gold); color: var(--gold); }
 
-    footer { background: var(--dark2); padding: 50px 6% 30px; border-top: 1px solid rgba(201,135,38,0.15); }
+    footer { background: var(--dark2); padding: 50px 6% 0; border-top: 1px solid rgba(201,135,38,0.15); }
     .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .footer-brand-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
     .footer-sfmc { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--cream); letter-spacing: 0.04em; }
@@ -238,7 +236,13 @@
     .fc-val { font-size: 0.85rem; color: var(--white); }
     .fc-val a { color: var(--white); text-decoration: none; }
     .fc-val a:hover { color: var(--gold); }
-    .footer-legal { font-size: 0.68rem; color: rgba(255,255,255,0.2); line-height: 1.8; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
+
+    /* ══ COMPLIANCE LINKS ══ */
+    .compliance-section { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 0 1.5rem; display: grid; grid-template-columns: repeat(3,1fr); gap: 0.5rem 3rem; }
+    .compliance-col-title { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 0.75rem; grid-column: 1 / -1; padding-top: 0.5rem; }
+    .compliance-link { font-size: 0.72rem; color: rgba(255,255,255,0.35); text-decoration: none; line-height: 2; transition: color 0.2s; white-space: nowrap; }
+    .compliance-link:hover { color: var(--gold-lt); }
+    .footer-legal { font-size: 0.68rem; color: rgba(255,255,255,0.18); line-height: 1.8; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; padding: 1.5rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.04); }
     .eq-symbol { font-size: 1.4rem; opacity: 0.3; }
 
     .chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1000; width: 60px; height: 60px; background: var(--maroon); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 8px 30px rgba(102,19,17,0.5); clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s,transform 0.2s; }
@@ -287,6 +291,7 @@
       .photo-strip .ps-photo:last-child { display: none; }
       .cta-inner { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
+      .compliance-section { grid-template-columns: 1fr 1fr; }
       .t-card { flex: 0 0 calc((100% - 24px) / 2); }
       .benefits-visual { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     }
@@ -297,6 +302,7 @@
       .photo-strip { grid-template-columns: 1fr; height: 260px; }
       .photo-strip .ps-photo:not(:first-child) { display: none; }
       .t-card { flex: 0 0 80vw; }
+      .compliance-section { grid-template-columns: 1fr; }
       .chat-fab { bottom: 16px; right: 16px; }
       .chat-panel { width: calc(100vw - 32px); right: 16px; }
       .h-stat { padding-right: 1.2rem; margin-right: 1.2rem; }
@@ -309,10 +315,7 @@
   <div class="nav-left">
     <div>
       <div style="display:flex;align-items:center;gap:10px;">
-        <div class="nav-logo-block">
-          <span class="nav-logo-sfmc">SFMC</span>
-          <span class="nav-logo-hl">Home Lending</span>
-        </div>
+        <div class="nav-logo-block"><span class="nav-logo-sfmc">SFMC</span><span class="nav-logo-hl">Home Lending</span></div>
         <span class="nav-script">Service First</span>
       </div>
       <span class="nav-nmls">NMLS# 166487</span>
@@ -334,10 +337,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-bar"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">VA Home Loan Specialist · Matthew Royal NMLS# 430390</span>
-    </div>
+    <div class="hero-eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">VA Home Loan Specialist · Matthew Royal NMLS# 430390</span></div>
     <span class="hero-script">Service First.</span>
     <h1 class="hero-h1">Your VA Benefit.<br/>Your Dream Home.</h1>
     <p class="hero-p">You served. Now let that service open the door to homeownership with $0 down, no PMI, and a team that closes fast.</p>
@@ -366,7 +366,7 @@
   </div>
   <div class="rates-footer reveal" style="transition-delay:0.15s">
     <div class="rates-note-wrap">
-      <p class="rates-note">¹ Rates assume a 740+ credit score, owner-occupied primary residence, and standard loan conditions. Rates subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
+      <p class="rates-note">¹ Interest rates assume a 740+ credit score, owner-occupied primary residence, and standard loan conditions. ² APR includes fees and is based on the same assumptions. Rates and APR subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
       <p class="rates-timestamp" id="ratesTimestamp"></p>
     </div>
     <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="rates-cta-btn">Lock My Rate →</a>
@@ -427,6 +427,7 @@
   <div class="photo-strip-overlay"></div>
 </div>
 
+<!-- ══ TESTIMONIALS — ORIGINAL WHITE STYLE ══ -->
 <section class="testimonials">
   <div class="test-header reveal">
     <div>
@@ -531,11 +532,44 @@
       <div class="footer-col-title">Company</div>
       <div class="footer-contact-row"><span class="fc-icon">📍</span><div><div class="fc-label">Headquarters</div><div class="fc-val">5408 W. Plano Pkwy<br/>Plano, TX 75093</div></div></div>
       <div class="footer-contact-row"><span class="fc-icon">⭐</span><div><div class="fc-label">Client Reviews</div><div class="fc-val"><a href="https://www.experience.com/reviews/division/service-first-mortgage-65945" target="_blank">Experience.com →</a></div></div></div>
+      <div class="footer-contact-row"><span class="fc-icon">🏠</span><div><div class="fc-label">SFMC Home Lending</div><div class="fc-val"><a href="https://sfmc.com" target="_blank">sfmc.com →</a></div></div></div>
     </div>
   </div>
+
+  <!-- ══ COMPLIANCE LINKS ══ -->
+  <div class="compliance-section">
+    <div class="compliance-col-title">Resources &amp; Compliance</div>
+    <a href="https://sfmc.com/apply/" target="_blank" class="compliance-link">Apply For a Mortgage</a>
+    <a href="https://sfmc.com/loanofficers/" target="_blank" class="compliance-link">Find a Loan Officer</a>
+    <a href="https://sfmc.com/builderpartners/" target="_blank" class="compliance-link">Builder Partners</a>
+    <a href="https://sfmc.com/rateprotection/" target="_blank" class="compliance-link">Rate Protection</a>
+    <a href="https://sfmc.com/ratebuydown/" target="_blank" class="compliance-link">Rate Buy Down</a>
+    <a href="https://sfmc.com/certifiedbuyer/" target="_blank" class="compliance-link">Certified Buyer</a>
+    <a href="https://sfmc.com/yourcredit/" target="_blank" class="compliance-link">Your Credit</a>
+    <a href="https://sfmc.com/loanoptions/" target="_blank" class="compliance-link">Loan Options</a>
+    <a href="https://sfmc.com/theloanprocess/" target="_blank" class="compliance-link">The Loan Process</a>
+    <a href="https://sfmc.com/contact/" target="_blank" class="compliance-link">Contact</a>
+    <a href="https://sfmc.com/about/" target="_blank" class="compliance-link">About</a>
+    <a href="https://sfmc.com/careers/" target="_blank" class="compliance-link">Careers</a>
+    <a href="https://apply.workable.com/sfmclp/" target="_blank" class="compliance-link">Current Openings</a>
+    <a href="https://sfmc.com/marketing/" target="_blank" class="compliance-link">Marketing</a>
+    <a href="https://sfmc.com/servicing/" target="_blank" class="compliance-link">Servicing</a>
+    <a href="https://sfmc.com/payment/" target="_blank" class="compliance-link">Make a Payment</a>
+    <a href="https://sfmc.com/accessibility/" target="_blank" class="compliance-link">Accessibility</a>
+    <a href="https://sfmc.com/equal-housing-lender/" target="_blank" class="compliance-link">Equal Housing Lender</a>
+    <a href="https://sfmc.com/licensing-and-disclosures/" target="_blank" class="compliance-link">Licensing and Disclosures</a>
+    <a href="https://sfmc.com/licensed-states/" target="_blank" class="compliance-link">Licensed States</a>
+    <a href="https://sfmc.com/optout/" target="_blank" class="compliance-link">Opt-out</a>
+    <a href="https://sfmc.com/privacy-policy/" target="_blank" class="compliance-link">Privacy Policy</a>
+    <a href="https://sfmc.com/spanishtranslation/" target="_blank" class="compliance-link">Spanish Translation</a>
+    <a href="https://sfmc.com/texas-department-of-savings-mortgage-lending/" target="_blank" class="compliance-link">Texas Dept. of Savings Mortgage Lending</a>
+    <a href="https://sfmc.com/texas-administrative-code-disclosures/" target="_blank" class="compliance-link">Texas Administrative Code Disclosures</a>
+    <a href="https://sfmc.com/transparency-in-coverage/" target="_blank" class="compliance-link">Transparency in Coverage</a>
+  </div>
+
   <div class="footer-legal">
     <span class="eq-symbol">⊕</span>
-    <span>Equal Housing Lender. Licensed as SFMC, LP; Service First Mortgage in TX. NMLS# 166487. Matthew Royal NMLS# 430390. This is not a commitment to lend. All loans subject to credit approval. VA loans available to eligible veterans, active duty service members, and surviving spouses. 25-day close guarantee subject to timely receipt of all required documents. Rates subject to change without notice.</span>
+    <span>Equal Housing Lender. Licensed as SFMC, LP; Service First Mortgage in TX. NMLS# 166487. Matthew Royal NMLS# 430390. This is not a commitment to lend. All loans subject to credit approval. VA loans available to eligible veterans, active duty service members, and surviving spouses. 25-day close guarantee subject to timely receipt of all required documents. Rates and APR subject to change without notice. © 2026 SFMC Home Lending.</span>
   </div>
 </footer>
 
@@ -567,11 +601,36 @@
 
 <script>
 const SHEET_ID='1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698',SHEET_NAME='Daily_Rates';
-const LOAN_META={'va purchase':{badge:'VA',cls:'badge-va',desc:'$0 down · No PMI · Primary residence',note:''},'va jumbo':{badge:'VA',cls:'badge-va',desc:'Loan amounts above conforming limit',note:'Standard up to $1,500,000 · Up to $2,000,000 with exception approval'},'va irrrl':{badge:'REFI',cls:'badge-irrrl',desc:'No appraisal required · Reduce your current VA rate',note:''}};
+const LOAN_META={
+  'va purchase':{badge:'VA',cls:'badge-va',desc:'$0 down · No PMI · Primary residence',note:''},
+  'va jumbo':{badge:'VA',cls:'badge-va',desc:'Loan amounts above conforming limit',note:'Standard up to $1,500,000 · Up to $2,000,000 with exception approval'},
+  'va irrrl':{badge:'REFI',cls:'badge-irrrl',desc:'No appraisal required · Reduce your current VA rate',note:''},
+};
 function getMeta(n){const l=(n||'').toLowerCase();for(const[k,v]of Object.entries(LOAN_META)){if(l.includes(k))return v;}return{badge:'VA',cls:'badge-va',desc:'',note:''};}
-const FALLBACK=[{name:'VA Purchase',rate:'5.375%',points:'0.875%'},{name:'VA Jumbo Purchase',rate:'5.500%',points:'1.000%'},{name:'VA IRRRL - Refinance',rate:'5.490%',points:'0.750%'}];
-function buildTable(rows,ts){let h=`<table class="rates-table"><thead><tr><th>Loan Type</th><th>Interest Rate</th><th>Points</th></tr></thead><tbody>`;rows.forEach(r=>{const m=getMeta(r.name);h+=`<tr><td><div class="loan-type-name">${r.name} <span class="rates-badge ${m.cls}">${m.badge}</span></div><div class="loan-type-desc">${m.desc}</div>${m.note?`<div class="loan-type-note">▸ ${m.note}</div>`:''}</td><td><span class="rate-big">${r.rate}</span></td><td><span class="rate-pts">${r.points}</span></td></tr>`;});h+='</tbody></table>';document.getElementById('ratesContainer').innerHTML=h;document.getElementById('ratesTimestamp').textContent=ts?`Rates as of ${ts}`:'';}
-async function loadRates(){try{const res=await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`);if(!res.ok)throw new Error();const lines=(await res.text()).split('\n').map(l=>l.split(',').map(c=>c.replace(/^"|"$/g,'').trim()));let ts=null;for(const l of lines){if((l[0]||'').toLowerCase().includes('updated')&&l[1]){ts=l[1];break;}}const rows=[];for(const l of lines){const n=(l[0]||'').trim(),r=(l[1]||'').trim();if(n.toUpperCase().startsWith('VA')&&r&&r.includes('%'))rows.push({name:n,rate:r,points:l[2]||'—'});}buildTable(rows.length?rows:FALLBACK,ts);}catch(e){buildTable(FALLBACK,null);}}
+const FALLBACK=[
+  {name:'VA Purchase',rate:'5.375%',apr:'5.622%',points:'0.875%'},
+  {name:'VA Jumbo Purchase',rate:'5.500%',apr:'5.750%',points:'1.000%'},
+  {name:'VA IRRRL - Refinance',rate:'5.490%',apr:'5.641%',points:'0.750%'},
+];
+function buildTable(rows,ts){
+  let h=`<table class="rates-table"><thead><tr><th>Loan Type</th><th>Interest Rate¹</th><th>APR²</th><th>Points</th></tr></thead><tbody>`;
+  rows.forEach(r=>{const m=getMeta(r.name);h+=`<tr><td><div class="loan-type-name">${r.name} <span class="rates-badge ${m.cls}">${m.badge}</span></div><div class="loan-type-desc">${m.desc}</div>${m.note?`<div class="loan-type-note">▸ ${m.note}</div>`:''}</td><td><span class="rate-big">${r.rate}</span></td><td><span class="rate-apr">${r.apr||'—'}</span></td><td><span class="rate-pts">${r.points}</span></td></tr>`;});
+  h+='</tbody></table>';
+  document.getElementById('ratesContainer').innerHTML=h;
+  document.getElementById('ratesTimestamp').textContent=ts?`Rates as of ${ts}`:'';
+}
+async function loadRates(){
+  try{
+    const res=await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`);
+    if(!res.ok)throw new Error();
+    const lines=(await res.text()).split('\n').map(l=>l.split(',').map(c=>c.replace(/^"|"$/g,'').trim()));
+    let ts=null;
+    for(const l of lines){if((l[0]||'').toLowerCase().includes('updated')&&l[1]){ts=l[1];break;}}
+    const rows=[];
+    for(const l of lines){const n=(l[0]||'').trim(),r=(l[1]||'').trim();if(n.toUpperCase().startsWith('VA')&&r&&r.includes('%')){rows.push({name:n,rate:r,points:l[2]||'—',apr:l[3]||'—'});}}
+    buildTable(rows.length?rows:FALLBACK,ts);
+  }catch(e){buildTable(FALLBACK,null);}
+}
 loadRates();
 
 const track=document.getElementById('tTrack'),cards=Array.from(track.querySelectorAll('.t-card')),dotsEl=document.getElementById('tDots');
@@ -590,21 +649,21 @@ document.getElementById('chatClose').onclick=()=>document.getElementById('chatPa
 const KB=[
   {k:['qualify','eligible','active duty','service member','surviving spouse','who can get'],a:`You may qualify for a VA loan if you are:\n• Active duty service member with at least 90 days of service\n• Veteran with an honorable discharge\n• National Guard or Reserve with at least 6 years of service\n• Surviving spouse of a veteran who died in service or from a service-related disability\n\nMatthew can pull your Certificate of Eligibility at no cost. Call **(469) 634-4500**.`},
   {k:['irrrl','streamline','lower rate','reduce rate','streamline refinance'],a:`The VA IRRRL (Streamline Refinance) may help lower your current VA rate with reduced paperwork and no appraisal in many cases.\n• Minimum FICO is generally 600\n• Scores below 600 may be considered with automated underwriting approval and an approved exception\n• Max loan amount is subject to county conforming limits\n\nSee today's IRRRL rate in the table above. Call **(469) 634-4500** to see if it makes sense for you.`},
-  {k:['25 day','25-day','guarantee close','closing guarantee','close fast','how fast'],a:`SFMC offers a **25-Day Close Guarantee** on VA loans. In-house underwriting helps reduce delays and keeps Matthew in control of the timeline from application to keys.\n\nCall **(469) 634-4500** to get started.`},
+  {k:['25 day','25-day','guarantee close','closing guarantee','close fast','how fast'],a:`SFMC offers a **25-Day Close Guarantee** on VA loans. In-house underwriting keeps Matthew in control of the timeline from application to keys.\n\nCall **(469) 634-4500** to get started.`},
   {k:['down payment','zero down','0 down','no down'],a:`VA loans allow eligible borrowers to buy with **$0 down payment**, financing up to 100% of the home's value.\n\nCall **(469) 634-4500** to review your eligibility.`},
   {k:['pmi','mortgage insurance','monthly insurance'],a:`VA loans have **no monthly PMI**, which can save many borrowers $150 to $300 per month compared to conventional financing.`},
-  {k:['jumbo','high balance','large loan','million','max loan','loan over'],a:`SFMC offers VA High Balance and Jumbo VA financing for larger loan amounts.\n• Standard guidelines support loan amounts up to **$1,500,000**\n• Loan amounts above $1,500,000 and up to **$2,000,000** may be available with review and exception approval\n• Minimum FICO is generally 600. Scores below 600 may be considered with automated underwriting approval and an approved exception\n• No foreclosure or bankruptcy in the last 2 years\n• No housing late payments in the last 12 months\n\nCall **(469) 634-4500** to discuss your scenario.`},
-  {k:['limit','how much','borrow','maximum','loan amount','entitlement amount'],a:`VA loans do not have a standard loan limit for borrowers with full entitlement, subject to qualifying guidelines.\n• Standard guidelines support up to **$1,500,000**\n• Up to **$2,000,000** may be available with review and exception approval\n\nCall Matthew at **(469) 634-4500** for your exact qualifying amount.`},
-  {k:['how long','timeline','when can i close','close date'],a:`Most VA loans can close quickly, and SFMC offers a **25-Day Close Guarantee** on eligible files.\n\nCall **(469) 634-4500** to discuss your timeline.`},
-  {k:['rate','rates','interest rate','today','current rate','what are rates'],a:`Today's VA rates are shown live in the table on this page. For a personalized quote based on your credit, entitlement, and scenario, call **(469) 634-4500**.`},
-  {k:['funding fee','fee','cost','closing cost'],a:`The VA Funding Fee typically ranges from **1.25% to 3.3%**, depending on your usage and down payment.\n• Some veterans may be exempt due to VA disability compensation\n• Your Certificate of Eligibility confirms your exact funding fee status\n\nCall **(469) 634-4500** for details.`},
+  {k:['jumbo','high balance','large loan','million','max loan','loan over'],a:`SFMC offers VA High Balance and Jumbo VA financing.\n• Standard guidelines support up to **$1,500,000**\n• Up to **$2,000,000** may be available with review and exception approval\n• Minimum FICO is generally 600. Below 600 may be considered with automated underwriting approval and an approved exception\n• No foreclosure or bankruptcy in last 2 years\n• No housing late payments in last 12 months\n\nCall **(469) 634-4500** to discuss.`},
+  {k:['limit','how much','borrow','maximum','loan amount','entitlement amount'],a:`No standard loan limit with full entitlement.\n• Standard up to **$1,500,000** · Up to **$2,000,000** with exception\n\nCall Matthew at **(469) 634-4500** for your exact qualifying amount.`},
+  {k:['how long','timeline','when can i close','close date'],a:`SFMC offers a **25-Day Close Guarantee** on eligible VA files.\n\nCall **(469) 634-4500** to discuss your timeline.`},
+  {k:['rate','rates','interest rate','apr','today','current rate'],a:`Today's VA rates and APR are shown live in the table on this page. For a personalized quote call **(469) 634-4500**.`},
+  {k:['funding fee','fee','cost','closing cost'],a:`The VA Funding Fee typically ranges from **1.25% to 3.3%**, depending on usage and down payment.\n• Some veterans may be exempt due to VA disability compensation\n• Your COE confirms your exact funding fee status\n\nCall **(469) 634-4500** for details.`},
   {k:['apply','start','begin','get started','how do i apply'],a:`Getting started takes about **10 minutes**.\n\n👉 Click "Start Application" above\n📞 Or call **(469) 634-4500**`},
-  {k:['credit','fico','score','minimum credit','credit score','minimum score'],a:`SFMC generally looks for a **600 minimum FICO** on VA loans.\n• Scores below 600 may be considered with automated underwriting approval and an approved exception\n• Larger loan amounts may require additional review\n\nCall Matthew at **(469) 634-4500** to discuss your scenario.`},
-  {k:['dti','debt to income','debt ratio','income ratio','how much debt'],a:`VA loans generally target a debt-to-income ratio of **41%**, but higher ratios may be possible — sometimes up to **50%** — with strong compensating factors.\n\nCall Matthew at **(469) 634-4500** to run your numbers.`},
-  {k:['certificate of eligibility','coe','how do i get my coe','prove eligibility'],a:`Your **Certificate of Eligibility (COE)** confirms your VA benefit and helps determine your available entitlement and funding fee status.\n• The COE must be dated within 120 days of closing\n• Matthew pulls it for you at no cost\n\nCall **(469) 634-4500** to get started.`},
-  {k:['bonus entitlement','used entitlement','second va loan','another va loan','have a va loan','can i get another','already have va'],a:`You may still be able to use your VA benefit again. Many veterans have remaining or bonus entitlement that may allow them to buy another home.\n\nMatthew can pull your COE at no cost to determine:\n• How much entitlement you have remaining\n• Whether bonus entitlement may apply\n• What loan amount you may still qualify for\n\nCall **(469) 634-4500** for an exact answer.`},
-  {k:['sell and buy','same day closing','sell my va home','restore entitlement','sell current','transfer va'],a:`Yes. In many cases you can sell your current VA-financed home and buy your next VA home on the same day. We structure the transactions so your current VA loan closes first, then your entitlement is restored.\n\nCall Matthew at **(469) 634-4500** to coordinate the timing.`},
-  {k:['property tax','texas tax','disabled veteran','disability exemption','texas veteran','tax benefit','tax exemption','tax break'],a:`Texas offers valuable **property tax benefits** for veterans with service-related disabilities, including partial or full exemptions based on disability rating.\n\nWe close your loan using that tax benefit in the payment calculation so your numbers reflect the reduced property tax as accurately as possible.\n\nCall Matthew at **(469) 634-4500** to review your eligibility and estimated payment.`},
+  {k:['credit','fico','score','minimum credit','credit score','minimum score'],a:`SFMC generally looks for a **600 minimum FICO** on VA loans.\n• Below 600 may be considered with automated underwriting approval and an approved exception\n• Larger loan amounts may require additional review\n\nCall Matthew at **(469) 634-4500** to discuss your scenario.`},
+  {k:['dti','debt to income','debt ratio','income ratio','how much debt'],a:`VA loans generally target a DTI of **41%**, but up to **50%** may be possible with strong compensating factors.\n\nCall Matthew at **(469) 634-4500** to run your numbers.`},
+  {k:['certificate of eligibility','coe','how do i get my coe','prove eligibility'],a:`Your **COE** confirms your VA benefit, entitlement, and funding fee status.\n• Must be dated within 120 days of closing\n• Matthew pulls it for you at no cost\n\nCall **(469) 634-4500** to get started.`},
+  {k:['bonus entitlement','used entitlement','second va loan','another va loan','have a va loan','can i get another','already have va'],a:`You may still use your VA benefit again. Many veterans have remaining or bonus entitlement.\n\nMatthew can pull your COE at no cost to determine:\n• Remaining entitlement · Bonus entitlement eligibility · Qualifying loan amount\n\nCall **(469) 634-4500** for an exact answer.`},
+  {k:['sell and buy','same day closing','sell my va home','restore entitlement','sell current','transfer va'],a:`Yes. In many cases you can sell your current VA-financed home and buy your next VA home on the same day. Your current VA loan closes first, then entitlement is restored for the new purchase.\n\nCall Matthew at **(469) 634-4500** to coordinate.`},
+  {k:['property tax','texas tax','disabled veteran','disability exemption','texas veteran','tax benefit','tax exemption','tax break'],a:`Texas offers **property tax benefits** for veterans with service-related disabilities, including partial or full exemptions based on disability rating.\n\nWe close your loan using that tax benefit in the payment calculation so your numbers are as accurate as possible.\n\nCall Matthew at **(469) 634-4500** to review your eligibility.`},
 ];
 function getAnswer(q){const l=q.toLowerCase();for(const i of KB){if(i.k.some(k=>l.includes(k)))return i.a;}return`Great question. Call Matthew directly at **(469) 634-4500** or click "Start Application" above. He specializes in VA loans and can usually give you a clear answer in minutes.`;}
 function fmt(t){return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br/>');}
@@ -615,7 +674,6 @@ function askQuestion(q){document.getElementById('chatSuggestions').style.display
 document.getElementById('chatSend').onclick=sendChat;
 document.getElementById('chatInput').onkeydown=e=>{if(e.key==='Enter')sendChat();};
 function sendChat(){const inp=document.getElementById('chatInput');const v=inp.value.trim();if(!v)return;inp.value='';document.getElementById('chatSuggestions').style.display='none';addMsg(v,'user');showTyping();setTimeout(()=>{removeTyping();addMsg(getAnswer(v),'bot');},850+Math.random()*450);}
-
 const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 </script>
