@@ -380,7 +380,9 @@
     </div>
   </div>
   <div class="nav-right">
-    <a href="tel:4696344500" class="nav-call">📞 (469) 634-4500</a>
+
+</a>
+<a href="tel:4696344500" class="nav-call">(469) 634-4500</a>
     <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="nav-apply">Start Application</a>
   </div>
 </nav>
@@ -410,7 +412,10 @@
       <div class="h-stat"><div class="h-stat-n">5★</div><div class="h-stat-l">Experience.com</div></div>
     </div>
   </div>
-  <div class="hero-clip"></div>
+ <div class="hero-reviews" style="position:absolute;right:12%;top:40%;transform:translateY(-50%);z-index:10;display:flex;align-items:center;justify-content:center;">
+  <div class="elfsight-app-49602bed-f065-4ff0-912c-291346da11b7" data-elfsight-app-lazy></div>
+</div>
+<div class="hero-clip"></div>
 </section>
 
 <section class="rates-section">
@@ -424,7 +429,7 @@
   </div>
   <div class="rates-footer reveal" style="transition-delay:0.15s">
     <div class="rates-note-wrap">
-      <p class="rates-note">¹ Interest rates assume a 740+ credit score, owner-occupied primary residence, and standard loan conditions. ² APR includes fees based on the same assumptions. Rates and APR subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
+      <p class="rates-note">¹ Rates shown based on the following scenario: $500,000 loan amount · 780 FICO credit score · Owner-occupied primary residence · VA Jumbo based on a $1,000,000 loan amount. ² APR includes lender fees and is based on the same scenario assumptions. Individual rates will vary based on credit profile, loan amount, and market conditions. Rates subject to change without notice. Not a commitment to lend. Equal Housing Lender · SFMC NMLS# 166487 · Matthew Royal NMLS# 430390</p>
       <p class="rates-timestamp" id="ratesTimestamp"></p>
     </div>
     <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="rates-cta-btn">Lock My Rate →</a>
@@ -448,7 +453,7 @@
     </div>
     <div class="benefits-visual reveal" style="transition-delay:0.15s">
       <div class="matt-photo-wrap">
-        <img src="matt_royal.avif" alt="Matthew Royal — VA Loan Specialist" loading="lazy"/>
+        <img src="http://veteranlowrates.com/wp-content/uploads/2026/03/matt_royal.avif" alt="Matthew Royal — VA Loan Specialist" loading="lazy"/>
       </div>
       <div class="matt-name-badge">
         <div class="matt-name">Matthew Royal</div>
@@ -515,7 +520,11 @@
   </div>
   <div class="white-clip"></div>
 </section>
-
+<!-- Google Reviews -->
+<section style="background:var(--white);padding:60px 6%;">
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-faadd436-c410-4c38-bfce-804b03f43543" data-elfsight-app-lazy></div>
+</section>
 <section class="giving-section">
   <div class="giving-inner">
     <div class="giving-left reveal">
@@ -664,7 +673,7 @@ const SHEET_ID='1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698',SHEET_NAME='Daily_
 const LOAN_META={
   'va purchase':{badge:'VA',cls:'badge-va',desc:'$0 down · No PMI · Primary residence',note:''},
   'va jumbo':{badge:'VA',cls:'badge-va',desc:'Loan amounts above conforming limit',note:'Standard up to $1,500,000 · Up to $2,000,000 with exception approval'},
-  'va irrrl':{badge:'REFI',cls:'badge-irrrl',desc:'No appraisal required · Reduce your current rate',note:''},
+'va irrrl':{badge:'REFI',cls:'badge-irrrl',desc:'No appraisal required · Reduce your current rate',note:'No lender fees or title admin fees charged'},
 };
 function getMeta(n){const l=(n||'').toLowerCase();for(const[k,v]of Object.entries(LOAN_META)){if(l.includes(k))return v;}return{badge:'VA',cls:'badge-va',desc:'',note:''};}
 const FALLBACK=[
