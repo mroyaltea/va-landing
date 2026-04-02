@@ -27,6 +27,8 @@
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--dark2); }
     ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+    /* ══ NAV ══ */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; background: rgba(26,33,41,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(201,135,38,0.2); }
     .nav-left { display: flex; align-items: center; gap: 16px; }
     .nav-logo-block { background: var(--cream); padding: 6px 12px 5px; display: flex; flex-direction: column; line-height: 1.15; }
@@ -37,7 +39,13 @@
     .nav-sep { width: 1px; height: 32px; background: rgba(255,255,255,0.12); }
     .nav-officer-name { font-size: 0.85rem; font-weight: 500; color: var(--white); }
     .nav-officer-nmls { font-size: 0.72rem; color: var(--muted); }
-    .nav-domain-badge { display: flex; align-items: center; gap: 6px; padding: 4px 12px; border: 1px solid rgba(201,135,38,0.4); background: rgba(201,135,38,0.08); }
+    /* VeteranLowRates.com nav badge */
+    .nav-domain-badge {
+      display: flex; align-items: center; gap: 6px;
+      padding: 4px 12px;
+      border: 1px solid rgba(201,135,38,0.4);
+      background: rgba(201,135,38,0.08);
+    }
     .nav-domain-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
     .nav-domain-text { font-size: 0.72rem; color: var(--gold); font-weight: 500; letter-spacing: 0.05em; }
@@ -46,6 +54,8 @@
     .nav-call:hover { color: var(--gold); }
     .nav-apply { background: var(--maroon); color: var(--white); padding: 0.55rem 1.4rem; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); }
     .nav-apply:hover { background: var(--maroon2); }
+
+    /* ══ HERO ══ */
     .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
     .hero-img { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1580424917967-a8867a6e676e?w=1600&q=80&fit=crop&crop=faces,center'); background-size: cover; background-position: center 30%; filter: brightness(0.35); transform: scale(1.04); animation: slowZoom 12s ease-in-out infinite alternate; }
     @keyframes slowZoom { from{transform:scale(1.04)} to{transform:scale(1.00)} }
@@ -63,17 +73,26 @@
     .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
     .btn-ghost { background: transparent; color: var(--white); padding: 0.9rem 2.2rem; border: 1px solid rgba(255,255,255,0.3); font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s,color 0.2s; }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
-    .hero-url-callout { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 2.5rem; padding: 8px 16px; background: rgba(201,135,38,0.1); border-left: 3px solid var(--gold); }
+
+    /* VeteranLowRates.com URL callout in hero */
+    .hero-url-callout {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 2.5rem;
+      padding: 8px 16px;
+      background: rgba(201,135,38,0.1);
+      border-left: 3px solid var(--gold);
+    }
     .hero-url-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
     .hero-url-value { font-size: 0.88rem; font-weight: 600; color: var(--gold); letter-spacing: 0.05em; }
+
     .hero-stats { display: flex; flex-wrap: wrap; }
     .h-stat { padding: 0 2rem 0 0; border-right: 1px solid rgba(255,255,255,0.12); margin-right: 2rem; }
     .h-stat:last-child { border-right: none; margin-right: 0; }
     .h-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
     .h-stat-l { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 4px; }
-    /* COMPLIANCE: qualifier text under $0 Down Payment */
-    .h-stat-qualifier { font-size: 0.58em; font-weight: 400; margin-top: 4px; opacity: 0.65; line-height: 1.4; text-transform: none; letter-spacing: 0.03em; }
     .hero-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--cream); clip-path: polygon(0 100%,100% 0,100% 100%); z-index: 3; }
+
+    /* ══ RATES ══ */
     .rates-section { background: var(--cream); padding: 80px 6% 100px; position: relative; }
     .section-tag { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
     .tag-line { width: 30px; height: 1px; background: var(--gold); }
@@ -82,8 +101,6 @@
     .section-h em { font-style: italic; color: var(--brown); }
     .rates-disclaimer { font-size: 0.8rem; color: #8a9099; margin-bottom: 2.2rem; line-height: 1.5; }
     .rates-disclaimer a { color: var(--gold); }
-    /* COMPLIANCE: "Rates valid until" styled in maroon for visibility */
-    .rates-valid { font-weight: 600; color: var(--maroon); }
     .rates-table-wrap { overflow-x: auto; }
     .rates-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
     .rates-table thead tr { border-bottom: 2px solid var(--dark); }
@@ -113,6 +130,8 @@
     .rates-spinner { display: inline-block; width: 18px; height: 18px; border: 2px solid rgba(201,135,38,0.2); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 8px; vertical-align: middle; }
     @keyframes spin { to{transform:rotate(360deg)} }
     .cream-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 100%,100% 60%,100% 100%); }
+
+    /* ══ VA BENEFITS ══ */
     .va-benefits { background: var(--dark2); padding: 90px 6% 110px; position: relative; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
     .va-benefits .section-h { color: var(--white); }
@@ -138,6 +157,8 @@
     .matt-btn-call { display: flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid rgba(255,255,255,0.2); color: var(--white); padding: 0.7rem 1.2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.82rem; text-decoration: none; transition: border-color 0.2s,color 0.2s; }
     .matt-btn-call:hover { border-color: var(--gold); color: var(--gold); }
     .dark2-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: #f0ede8; clip-path: polygon(0 60%,100% 0,100% 100%,0 100%); }
+
+    /* ══ PROCESS ══ */
     .process-section { background: #f0ede8; padding: 100px 6% 120px; position: relative; }
     .process-section .section-h { color: var(--dark); }
     .process-section .section-h em { color: var(--brown); }
@@ -150,12 +171,16 @@
     .ps-arrow { position: absolute; top: 50%; right: -12px; transform: translateY(-50%); color: var(--gold); font-size: 1rem; opacity: 0.4; z-index: 2; }
     .process-step:last-child .ps-arrow { display: none; }
     .light-clip-bottom { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--white); clip-path: polygon(0 100%,100% 60%,100% 100%); }
+
+    /* ══ PHOTO STRIP ══ */
     .photo-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 380px; overflow: hidden; position: relative; background: var(--dark); }
     .ps-photo { overflow: hidden; position: relative; }
     .ps-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.5) saturate(0.8); transition: filter 0.5s,transform 0.5s; }
     .ps-photo:hover img { filter: brightness(0.7) saturate(1); transform: scale(1.04); }
     .ps-photo-label { position: absolute; bottom: 20px; left: 20px; z-index: 2; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
     .photo-strip-overlay { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(26,33,41,0.7) 0%,transparent 30%,transparent 70%,rgba(26,33,41,0.7) 100%); pointer-events: none; z-index: 1; }
+
+    /* ══ TESTIMONIALS — ORIGINAL WHITE ══ */
     .testimonials { background: var(--white); padding: 100px 6% 80px; position: relative; }
     .test-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
     .testimonials .section-h { color: var(--dark); }
@@ -180,6 +205,8 @@
     .t-dot { width: 6px; height: 6px; background: rgba(36,46,56,0.15); border-radius: 50%; cursor: pointer; transition: background 0.2s,transform 0.2s; }
     .t-dot.active { background: var(--gold); transform: scale(1.3); }
     .white-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark); clip-path: polygon(0 100%,100% 0,100% 100%); }
+
+    /* ══ BOOT CAMPAIGN ══ */
     .giving-section { background: var(--dark); padding: 90px 6%; position: relative; overflow: hidden; }
     .giving-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg,var(--maroon),var(--gold),var(--maroon)); }
     .giving-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; position: relative; z-index: 2; }
@@ -204,12 +231,16 @@
     .boot-badge-text { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
     .boot-badge-text strong { color: var(--white); font-weight: 600; display: block; margin-bottom: 2px; }
     .giving-clip { position: absolute; bottom: -1px; left: 0; right: 0; height: 80px; background: var(--dark2); clip-path: polygon(0 60%,100% 0,100% 100%); }
+
+    /* ══ SOCIAL ══ */
     .social-section { background: var(--dark2); padding: 80px 6%; }
     .social-section .section-h { color: var(--white); }
     .social-section .section-h em { color: var(--gold-lt); }
     .social-intro { font-size: 0.9rem; color: rgba(255,255,255,0.45); margin-top: 0.5rem; margin-bottom: 2.5rem; }
     .juicer-placeholder { border: 1px dashed rgba(201,135,38,0.3); padding: 3rem; text-align: center; color: rgba(255,255,255,0.3); font-size: 0.85rem; line-height: 1.8; }
     .juicer-placeholder strong { color: var(--gold); }
+
+    /* ══ CTA ══ */
     .cta-section { position: relative; padding: 0; overflow: hidden; }
     .cta-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80&fit=crop'); background-size: cover; background-position: center; filter: brightness(0.18) saturate(0.6); }
     .cta-inner { position: relative; z-index: 2; padding: 100px 6%; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
@@ -217,20 +248,33 @@
     .cta-script { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 2.5rem; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
     .cta-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 600; color: var(--white); line-height: 1.2; margin-bottom: 0.8rem; }
     .cta-p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
-    .cta-domain-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 1rem; padding: 6px 14px; border: 1px solid rgba(201,135,38,0.3); background: rgba(201,135,38,0.08); }
+    /* VeteranLowRates.com CTA domain badge */
+    .cta-domain-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 1rem; padding: 6px 14px;
+      border: 1px solid rgba(201,135,38,0.3);
+      background: rgba(201,135,38,0.08);
+    }
     .cta-domain-badge span { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.08em; }
     .cta-btns { display: flex; flex-direction: column; gap: 0.9rem; min-width: 220px; }
     .cta-apply { display: block; text-align: center; background: var(--gold); color: var(--dark2); padding: 1rem 2rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s; }
     .cta-apply:hover { background: var(--gold-lt); }
     .cta-call { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); color: var(--white); padding: 0.95rem 2rem; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.05em; transition: border-color 0.2s,color 0.2s; }
     .cta-call:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ══ FOOTER ══ */
     footer { background: var(--dark2); padding: 50px 6% 0; border-top: 1px solid rgba(201,135,38,0.15); }
     .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .footer-brand-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
     .footer-sfmc { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--cream); letter-spacing: 0.04em; }
     .footer-script { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.6rem; color: var(--gold); line-height: 1; }
     .footer-hl { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm); }
-    .footer-domain-line { display: inline-flex; align-items: center; gap: 8px; margin-top: 0.7rem; padding: 4px 10px; background: rgba(201,135,38,0.1); border-left: 2px solid var(--gold); }
+    .footer-domain-line {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 0.7rem; padding: 4px 10px;
+      background: rgba(201,135,38,0.1);
+      border-left: 2px solid var(--gold);
+    }
     .footer-domain-line span { font-size: 0.75rem; color: var(--gold); font-weight: 500; letter-spacing: 0.06em; }
     .footer-p { font-size: 0.8rem; color: rgba(255,255,255,0.28); line-height: 1.7; margin-top: 0.8rem; }
     .footer-col-title { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; font-weight: 500; }
@@ -246,6 +290,8 @@
     .compliance-link:hover { color: var(--gold-lt); }
     .footer-legal { font-size: 0.68rem; color: rgba(255,255,255,0.18); line-height: 1.8; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; padding: 1.5rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.04); }
     .eq-symbol { font-size: 1.4rem; opacity: 0.3; }
+
+    /* ══ CHAT ══ */
     .chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1000; width: 60px; height: 60px; background: var(--maroon); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 8px 30px rgba(102,19,17,0.5); clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%); transition: background 0.2s,transform 0.2s; }
     .chat-fab:hover { background: var(--maroon2); transform: scale(1.06); }
     .chat-fab .fab-badge { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); color: var(--dark2); font-size: 0.62rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
@@ -284,6 +330,7 @@
     @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease,transform 0.65s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 960px) {
       .two-col,.giving-inner { grid-template-columns: 1fr; gap: 3rem; }
       .process-grid { grid-template-columns: 1fr 1fr; }
@@ -326,13 +373,15 @@
       <div class="nav-officer-name">Matthew Royal</div>
       <div class="nav-officer-nmls">Loan Officer · NMLS# 430390</div>
     </div>
+    <!-- VeteranLowRates.com live indicator -->
     <div class="nav-domain-badge">
       <div class="nav-domain-dot"></div>
       <span class="nav-domain-text">VeteranLowRates.com</span>
     </div>
   </div>
   <div class="nav-right">
-    <a href="tel:4696344500" class="nav-call">(469) 634-4500</a>
+
+<a href="tel:4696344500" class="nav-call">(469) 634-4500</a>
     <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="nav-apply">Start Application</a>
   </div>
 </nav>
@@ -350,34 +399,29 @@
       <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank" class="btn-gold">Get My Free Rate Quote</a>
       <a href="tel:4696344500" class="btn-ghost">📞 &nbsp;(469) 634-4500</a>
     </div>
+    <!-- VeteranLowRates.com URL callout -->
     <div class="hero-url-callout">
       <span class="hero-url-label">Find us at</span>
       <span class="hero-url-value">VeteranLowRates.com</span>
     </div>
     <div class="hero-stats">
-      <!-- COMPLIANCE CHANGE 1: Added qualifier under $0 Down Payment -->
-      <div class="h-stat">
-        <div class="h-stat-n">$0</div>
-        <div class="h-stat-l">Down Payment<div class="h-stat-qualifier">for qualified veterans<br/>based on available entitlement</div></div>
-      </div>
-      <!-- COMPLIANCE CHANGE 2: Changed "No PMI" to "No Monthly PMI" -->
-      <div class="h-stat"><div class="h-stat-n">No Monthly PMI</div><div class="h-stat-l">Ever</div></div>
+<div class="h-stat"><div class="h-stat-n">$0</div><div class="h-stat-l">Down Payment<div style="font-size:0.72em;font-weight:400;margin-top:5px;color:rgba(255,255,255,0.65);text-transform:none;letter-spacing:0.02em;">for qualified veterans<br/>based on available entitlement</div></div></div>
+<div class="h-stat"><div class="h-stat-n">No Monthly PMI</div><div class="h-stat-l">Ever</div></div>
       <div class="h-stat"><div class="h-stat-n">25 Days</div><div class="h-stat-l">Guarantee Close</div></div>
       <div class="h-stat"><div class="h-stat-n">5★</div><div class="h-stat-l">Experience.com</div></div>
     </div>
   </div>
-  <div class="hero-reviews" style="position:absolute;right:12%;top:40%;transform:translateY(-50%);z-index:10;display:flex;align-items:center;justify-content:center;">
-    <div class="elfsight-app-49602bed-f065-4ff0-912c-291346da11b7" data-elfsight-app-lazy></div>
-  </div>
-  <div class="hero-clip"></div>
+ <div class="hero-reviews" style="position:absolute;right:12%;top:40%;transform:translateY(-50%);z-index:10;display:flex;align-items:center;justify-content:center;">
+  <div class="elfsight-app-49602bed-f065-4ff0-912c-291346da11b7" data-elfsight-app-lazy></div>
+</div>
+<div class="hero-clip"></div>
 </section>
 
 <section class="rates-section">
   <div class="reveal">
     <div class="section-tag"><span class="tag-line"></span><span class="tag-text">Today's Veteran Low Rates</span></div>
     <h2 class="section-h">The Lowest VA Rates for <em>Those Who Served</em></h2>
-    <!-- COMPLIANCE CHANGE 3: "Rates valid until 5:00 PM CST [date]" — date injected from Google Sheet B1 via JS -->
-    <p class="rates-disclaimer"><span id="rates-valid-until" class="rates-valid"></span> Rates change based on creditworthiness, loan amount, and market conditions. Call <strong>(469) 634-4500</strong> or <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank">apply online</a> for your personalized rate.</p>
+    <p class="rates-disclaimer">Rates updated daily at VeteranLowRates.com. Rates change based on creditworthiness, loan amount, and market conditions. Call <strong>(469) 634-4500</strong> or <a href="https://digitalmortgage.candidcrm.com/Service-First-Mortgage/005V400000HqPn3&00Dal00001JZyBT" target="_blank">apply online</a> for your personalized rate.</p>
   </div>
   <div class="rates-table-wrap reveal" style="transition-delay:0.1s" id="ratesContainer">
     <div class="rates-loading"><span class="rates-spinner"></span>Loading current rates...</div>
@@ -475,13 +519,11 @@
   </div>
   <div class="white-clip"></div>
 </section>
-
 <!-- Google Reviews -->
 <section style="background:var(--white);padding:60px 6%;">
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-faadd436-c410-4c38-bfce-804b03f43543" data-elfsight-app-lazy></div>
 </section>
-
 <section class="giving-section">
   <div class="giving-inner">
     <div class="giving-left reveal">
@@ -562,6 +604,7 @@
       <div class="footer-contact-row"><span class="fc-icon">🏠</span><div><div class="fc-label">SFMC Home Lending</div><div class="fc-val"><a href="https://sfmc.com" target="_blank">sfmc.com →</a></div></div></div>
     </div>
   </div>
+
   <div class="compliance-section">
     <div class="compliance-col-title">Resources &amp; Compliance</div>
     <a href="https://sfmc.com/apply/" target="_blank" class="compliance-link">Apply For a Mortgage</a>
@@ -591,6 +634,7 @@
     <a href="https://sfmc.com/texas-administrative-code-disclosures/" target="_blank" class="compliance-link">Texas Administrative Code Disclosures</a>
     <a href="https://sfmc.com/transparency-in-coverage/" target="_blank" class="compliance-link">Transparency in Coverage</a>
   </div>
+
   <div class="footer-legal">
     <span class="eq-symbol">⊕</span>
     <span>Equal Housing Lender. VeteranLowRates.com is operated by SFMC Home Lending. Licensed as SFMC, LP; Service First Mortgage in TX. NMLS# 166487. Matthew Royal NMLS# 430390. This is not a commitment to lend. All loans subject to credit approval. VA loans available to eligible veterans, active duty service members, and surviving spouses. 25-day close guarantee subject to timely receipt of all required documents. Rates and APR subject to change without notice. © 2026 SFMC Home Lending.</span>
@@ -628,7 +672,7 @@ const SHEET_ID='1Lx15YW8FOoV0OkykPv0raGLl9y_KzFnHw54RnQLu698',SHEET_NAME='Daily_
 const LOAN_META={
   'va purchase':{badge:'VA',cls:'badge-va',desc:'$0 down · No PMI · Primary residence',note:''},
   'va jumbo':{badge:'VA',cls:'badge-va',desc:'Loan amounts above conforming limit',note:'Standard up to $1,500,000 · Up to $2,000,000 with exception approval'},
-  'va irrrl':{badge:'REFI',cls:'badge-irrrl',desc:'No appraisal required · Reduce your current rate',note:'No lender fees or title admin fees charged'},
+'va irrrl':{badge:'REFI',cls:'badge-irrrl',desc:'No appraisal required · Reduce your current rate',note:'No lender fees or title admin fees charged'},
 };
 function getMeta(n){const l=(n||'').toLowerCase();for(const[k,v]of Object.entries(LOAN_META)){if(l.includes(k))return v;}return{badge:'VA',cls:'badge-va',desc:'',note:''};}
 const FALLBACK=[
@@ -641,10 +685,7 @@ function buildTable(rows,ts){
   rows.forEach(r=>{const m=getMeta(r.name);h+=`<tr><td><div class="loan-type-name">${r.name} <span class="rates-badge ${m.cls}">${m.badge}</span></div><div class="loan-type-desc">${m.desc}</div>${m.note?`<div class="loan-type-note">▸ ${m.note}</div>`:''}</td><td><span class="rate-big">${r.rate}</span></td><td><span class="rate-apr">${r.apr||'—'}</span></td><td><span class="rate-pts">${r.points}</span></td></tr>`;});
   h+='</tbody></table>';
   document.getElementById('ratesContainer').innerHTML=h;
-  /* COMPLIANCE CHANGE 3: Inject "Rates valid until 5:00 PM CST [date]" pulled from Google Sheet B1 */
-  const validEl=document.getElementById('rates-valid-until');
-  if(validEl)validEl.textContent=ts?'Rates valid until 5:00 PM CST '+ts+'.':'Rates updated daily at VeteranLowRates.com.';
-  document.getElementById('ratesTimestamp').textContent=ts?'Rates as of '+ts+' · VeteranLowRates.com':'';
+  document.getElementById('ratesTimestamp').textContent=ts?`Rates as of ${ts} · VeteranLowRates.com`:'';
 }
 async function loadRates(){
   try{
